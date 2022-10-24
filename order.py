@@ -11,10 +11,12 @@ class Order:
         status = "entered"
 
     def prepare(self):
+        status = "prepared"
         pass
 
     def complete(self):
         time_out = datetime.now()
+        status = "completed"
         pass
 
     def edit(self):
