@@ -1,26 +1,27 @@
 
-from datetime import datetime
+import pyodbc
 
 class Order:
-    def __init__(self, name: str, id: int, time_in):
+    def __init__(self, name: str, order_id: int, queue_number: int):
         name = name
-        id = id
-        time_in = datetime.now()
-        print(type(time_in))
-        time_out = None
-        status = "entered"
+        order_id = order_id  # PK
+        queue_number = queue_number
+        status = 's'
 
     def prepare(self):
-        status = "prepared"
+        status = 'p'
         pass
 
     def complete(self):
-        time_out = datetime.now()
-        status = "completed"
+        status = "c"
         pass
 
-    def edit(self):
+    def cancel(self):
+        status = 'x'
         pass
 
-    def cancel():
+    def edit_add(self, menu_id: int):
+        pass
+
+    def edit_remove(self, menu_id: int):
         pass

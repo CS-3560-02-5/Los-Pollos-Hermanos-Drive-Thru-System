@@ -1,4 +1,6 @@
 # Association Class
+import pyodbc
+
 class OrderItem:
     def __init__(self,
                  order_id: int, menu_id: int, quantity: int, notes: str):
