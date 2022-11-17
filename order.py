@@ -1,27 +1,23 @@
 
 import uuid
-
+from itertools import cycle
 class Order:
-    def __init__(self, name: str, queue_number: int):
-        name = name
-        order_id = uuid.uuid1().hex
-        queue_number = queue_number
-        status = 's'
+    queue = cycle(range(1, 200))
+
+    def __init__(self, name: str, *, order_id=uuid.uuid1().hex, status='s'):
+        self.name = name
+        self.order_id = order_id
+        self.queue_number = next(self.queue)
+        self.status = status
 
     def prepare(self):
-        status = 'p'
+        self.status = 'p'
         pass
 
     def complete(self):
-        status = "c"
+        self.status = "c"
         pass
 
     def cancel(self):
-        status = 'x'
-        pass
-
-    def edit_add(self, menu_id: int):
-        pass
-
-    def edit_remove(self, menu_id: int):
+        self.status = 'x'
         pass
