@@ -28,5 +28,12 @@ menu_items = []
 for index, item in bridge.get_menu_items().iterrows():
     menu_items.append(MenuItem.MenuItem(item["item_name"], item["item_id"], item["price"], item["item_description"], item["image"]))
 
+print([x.__dict__ for x in active_orders])
+print([x.item_id for x in menu_items])
+#### TESTING
+bridge.remove_order_item(active_orders[0], menu_items[4])
+
+'''
 while running:
     pass
+'''
