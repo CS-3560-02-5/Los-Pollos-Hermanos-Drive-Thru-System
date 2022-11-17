@@ -20,13 +20,13 @@
    <property name="geometry">
     <rect>
      <x>-40</x>
-     <y>-40</y>
+     <y>-30</y>
      <width>1241</width>
      <height>811</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -49,31 +49,31 @@ color: rgb(0, 170, 0);</string>
      <string>Done</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>650</y>
-      <width>231</width>
-      <height>51</height>
+      <x>60</x>
+      <y>50</y>
+      <width>251</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 0, 0);
-border-style: outset;
-border-width: 3px;
-border-color: rgb(0, 170, 0);
-font: 75 24pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 170, 0);</string>
+     <string notr="true">border-color: rgb(0, 170, 0);
+border-style: solid;
+border-width: 3px;</string>
     </property>
-    <property name="text">
-     <string>Done</string>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>350</x>
       <y>650</y>
       <width>231</width>
       <height>51</height>
@@ -91,7 +91,70 @@ color: rgb(0, 170, 0);</string>
      <string>Done</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>251</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 170, 0);
+border-style: solid;
+border-width: 3px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>650</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+border-style: outset;
+border-width: 3px;
+border-color: rgb(0, 170, 0);
+font: 75 24pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 0);</string>
+    </property>
+    <property name="text">
+     <string>Done</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>50</y>
+      <width>251</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 170, 0);
+border-style: solid;
+border-width: 3px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
       <x>890</x>
@@ -112,6 +175,35 @@ color: rgb(0, 170, 0);</string>
      <string>Done</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame_5">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>50</y>
+      <width>251</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 170, 0);
+border-style: solid;
+border-width: 3px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>frame_5</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>frame_4</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>frame</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_3</zorder>
   </widget>
  </widget>
  <resources/>
