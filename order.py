@@ -1,26 +1,23 @@
 
-from datetime import datetime
-
+import uuid
+from itertools import cycle
 class Order:
-    def __init__(self, name: str, id: int, time_in):
-        name = name
-        id = id
-        time_in = datetime.now()
-        print(type(time_in))
-        time_out = None
-        status = "entered"
+    queue = cycle(range(1, 200))
+
+    def __init__(self, name: str, *, order_id=uuid.uuid1().hex, status='s'):
+        self.name = name
+        self.order_id = order_id
+        self.queue_number = next(self.queue)
+        self.status = status
 
     def prepare(self):
-        status = "prepared"
+        self.status = 'p'
         pass
 
     def complete(self):
-        time_out = datetime.now()
-        status = "completed"
+        self.status = "c"
         pass
 
-    def edit(self):
-        pass
-
-    def cancel():
+    def cancel(self):
+        self.status = 'x'
         pass
