@@ -14,88 +14,78 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1109, 696)
+        Dialog.resize(1200, 800)
         Dialog.setStyleSheet("")
         self.widget = QtWidgets.QWidget(Dialog)
-        self.widget.setGeometry(QtCore.QRect(-40, -30, 1241, 811))
+        self.widget.setGeometry(QtCore.QRect(-40, -30, 1291, 861))
         self.widget.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.widget.setObjectName("widget")
-        self.pushButton = QtWidgets.QPushButton(self.widget)
-        self.pushButton.setGeometry(QtCore.QRect(70, 650, 231, 51))
-        self.pushButton.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"border-style: outset;\n"
-"border-width: 3px;\n"
-"border-color: rgb(0, 170, 0);\n"
-"font: 75 24pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.pushButton.setObjectName("pushButton")
-        self.frame = QtWidgets.QFrame(self.widget)
-        self.frame.setGeometry(QtCore.QRect(60, 50, 251, 661))
+        self.widget1 = QtWidgets.QWidget(self.widget)
+        self.widget1.setGeometry(QtCore.QRect(50, 40, 1181, 781))
+        self.widget1.setObjectName("widget1")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget1)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame = QtWidgets.QFrame(self.widget1)
         self.frame.setStyleSheet("border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
 "border-width: 3px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.pushButton_3 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_3.setGeometry(QtCore.QRect(350, 650, 231, 51))
-        self.pushButton_3.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"border-style: outset;\n"
-"border-width: 3px;\n"
-"border-color: rgb(0, 170, 0);\n"
-"font: 75 24pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.frame_3 = QtWidgets.QFrame(self.widget)
-        self.frame_3.setGeometry(QtCore.QRect(340, 50, 251, 661))
+        self.pushButton = QtWidgets.QPushButton(self.frame)
+        self.pushButton.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 24pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;")
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout.addWidget(self.frame)
+        self.frame_3 = QtWidgets.QFrame(self.widget1)
         self.frame_3.setStyleSheet("border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
 "border-width: 3px;")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_4.setGeometry(QtCore.QRect(620, 650, 231, 51))
-        self.pushButton_4.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"border-style: outset;\n"
-"border-width: 3px;\n"
-"border-color: rgb(0, 170, 0);\n"
-"font: 75 24pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.frame_4 = QtWidgets.QFrame(self.widget)
-        self.frame_4.setGeometry(QtCore.QRect(610, 50, 251, 661))
+        self.pushButton_3 = QtWidgets.QPushButton(self.frame_3)
+        self.pushButton_3.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton_3.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 24pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout.addWidget(self.frame_3)
+        self.frame_4 = QtWidgets.QFrame(self.widget1)
         self.frame_4.setStyleSheet("border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
 "border-width: 3px;")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
-        self.pushButton_5 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_5.setGeometry(QtCore.QRect(890, 650, 231, 51))
-        self.pushButton_5.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"border-style: outset;\n"
-"border-width: 3px;\n"
-"border-color: rgb(0, 170, 0);\n"
-"font: 75 24pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.frame_5 = QtWidgets.QFrame(self.widget)
-        self.frame_5.setGeometry(QtCore.QRect(880, 50, 251, 661))
+        self.pushButton_4 = QtWidgets.QPushButton(self.frame_4)
+        self.pushButton_4.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton_4.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 24pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;")
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.horizontalLayout.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.widget1)
         self.frame_5.setStyleSheet("border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
 "border-width: 3px;")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
-        self.frame_5.raise_()
-        self.pushButton_5.raise_()
+        self.pushButton_5 = QtWidgets.QPushButton(self.frame_5)
+        self.pushButton_5.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton_5.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 24pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;")
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.horizontalLayout.addWidget(self.frame_5)
         self.frame_4.raise_()
-        self.pushButton_4.raise_()
         self.frame_3.raise_()
+        self.frame_5.raise_()
         self.frame.raise_()
-        self.pushButton.raise_()
-        self.pushButton_3.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -103,10 +93,10 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButton.setText(_translate("Dialog", "Done"))
-        self.pushButton_3.setText(_translate("Dialog", "Done"))
-        self.pushButton_4.setText(_translate("Dialog", "Done"))
-        self.pushButton_5.setText(_translate("Dialog", "Done"))
+        self.pushButton.setText(_translate("Dialog", "DONE"))
+        self.pushButton_3.setText(_translate("Dialog", "DONE"))
+        self.pushButton_4.setText(_translate("Dialog", "DONE"))
+        self.pushButton_5.setText(_translate("Dialog", "DONE"))
 
 
 if __name__ == "__main__":
