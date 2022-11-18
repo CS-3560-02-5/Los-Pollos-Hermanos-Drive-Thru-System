@@ -3,6 +3,8 @@ import json
 import pandas as pd
 import Order
 import MenuItem
+import OrderItem
+
 
 class bridge:
     def __init__(self, json_file_str: str):
@@ -41,5 +43,8 @@ class bridge:
         self.mydb.commit()
 
     def edit_order_item(self, Order: Order, MenuItem: MenuItem, attribute: str):
-        with self.mydb.cursor() as cursor:
-            cursor.execute("update order_items set ")
+        if attribute in vars(OrderItem).keys():
+            with self.mydb.cursor() as cursor:
+                cursor.execute("update order_items set ")
+        else:
+            print("The attribute " + str(attribute) + " is not valid")
