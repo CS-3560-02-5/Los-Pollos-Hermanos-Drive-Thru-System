@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="backscreen" native="true">
    <property name="geometry">
     <rect>
      <x>-40</x>
@@ -26,7 +26,9 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);</string>
+    <string notr="true">QWidget#backscreen{
+background-color: rgb(0, 0, 0);
+}</string>
    </property>
    <widget class="QWidget" name="">
     <property name="geometry">
@@ -39,11 +41,13 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QFrame" name="frame">
+      <widget class="QFrame" name="frame1">
        <property name="styleSheet">
-        <string notr="true">border-color: rgb(0, 170, 0);
+        <string notr="true">QFrame#frame1{
+border-color: rgb(0, 170, 0);
 border-style: solid;
-border-width: 3px;</string>
+border-width: 3px;
+}</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -51,7 +55,7 @@ border-width: 3px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="pushButton1">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -63,20 +67,77 @@ border-width: 3px;</string>
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 170, 0);
 font: 24pt &quot;MS Shell Dlg 2&quot;;
-border-style: outset;</string>
+border-style: outset;
+border-width: 3px;</string>
         </property>
         <property name="text">
          <string>DONE</string>
         </property>
        </widget>
+       <widget class="QLabel" name="labeltitle1">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>12</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 0);
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Order : </string>
+        </property>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>60</y>
+          <width>118</width>
+          <height>3</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label1">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>251</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="text">
+         <string>this is a test</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QFrame" name="frame_3">
+      <widget class="QFrame" name="frame2">
        <property name="styleSheet">
-        <string notr="true">border-color: rgb(0, 170, 0);
+        <string notr="true">QFrame#frame2{
+border-color: rgb(0, 170, 0);
 border-style: solid;
-border-width: 3px;</string>
+border-width: 3px;
+}</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -84,7 +145,7 @@ border-width: 3px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="pushButton2">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -96,20 +157,77 @@ border-width: 3px;</string>
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 170, 0);
 font: 24pt &quot;MS Shell Dlg 2&quot;;
-border-style: outset;</string>
+border-style: outset;
+border-width: 3px;</string>
         </property>
         <property name="text">
          <string>DONE</string>
         </property>
        </widget>
+       <widget class="QLabel" name="labeltitle2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 0);
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Order : </string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_2">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>60</y>
+          <width>118</width>
+          <height>3</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>251</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="text">
+         <string>this is a test</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QFrame" name="frame_4">
+      <widget class="QFrame" name="frame3">
        <property name="styleSheet">
-        <string notr="true">border-color: rgb(0, 170, 0);
+        <string notr="true">QFrame#frame3{
+border-color: rgb(0, 170, 0);
 border-style: solid;
-border-width: 3px;</string>
+border-width: 3px;
+}</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -117,7 +235,7 @@ border-width: 3px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="pushButton3">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -129,20 +247,77 @@ border-width: 3px;</string>
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 170, 0);
 font: 24pt &quot;MS Shell Dlg 2&quot;;
-border-style: outset;</string>
+border-style: outset;
+border-width: 3px;</string>
         </property>
         <property name="text">
          <string>DONE</string>
         </property>
        </widget>
+       <widget class="QLabel" name="labeltitle3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 0);
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Order : </string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_3">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>60</y>
+          <width>118</width>
+          <height>3</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>251</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="text">
+         <string>this is a test</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QFrame" name="frame_5">
+      <widget class="QFrame" name="frame4">
        <property name="styleSheet">
-        <string notr="true">border-color: rgb(0, 170, 0);
+        <string notr="true">QFrame#frame4{
+border-color: rgb(0, 170, 0);
 border-style: solid;
-border-width: 3px;</string>
+border-width: 3px;
+}</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -150,7 +325,7 @@ border-width: 3px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="pushButton4">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -162,20 +337,75 @@ border-width: 3px;</string>
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 170, 0);
 font: 24pt &quot;MS Shell Dlg 2&quot;;
-border-style: outset;</string>
+border-style: outset;
+border-width: 3px;</string>
         </property>
         <property name="text">
          <string>DONE</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labeltitle4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 0);
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Order : </string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_4">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>60</y>
+          <width>118</width>
+          <height>3</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>251</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="text">
+         <string>this is a test</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
         </property>
        </widget>
       </widget>
      </item>
     </layout>
    </widget>
-   <zorder>frame_4</zorder>
-   <zorder>frame_3</zorder>
-   <zorder>frame_5</zorder>
-   <zorder>frame</zorder>
+   <zorder>frame3</zorder>
+   <zorder>frame2</zorder>
+   <zorder>frame4</zorder>
+   <zorder>frame1</zorder>
   </widget>
  </widget>
  <resources/>

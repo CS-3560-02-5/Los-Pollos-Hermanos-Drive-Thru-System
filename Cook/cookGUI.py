@@ -16,87 +16,225 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1200, 800)
         Dialog.setStyleSheet("")
-        self.widget = QtWidgets.QWidget(Dialog)
-        self.widget.setGeometry(QtCore.QRect(-40, -30, 1291, 861))
-        self.widget.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.backscreen = QtWidgets.QWidget(Dialog)
+        self.backscreen.setGeometry(QtCore.QRect(-40, -30, 1291, 861))
+        self.backscreen.setStyleSheet("QWidget#backscreen{\n"
+"background-color: rgb(0, 0, 0);\n"
+"}")
+        self.backscreen.setObjectName("backscreen")
+        self.widget = QtWidgets.QWidget(self.backscreen)
+        self.widget.setGeometry(QtCore.QRect(50, 40, 1181, 781))
         self.widget.setObjectName("widget")
-        self.widget1 = QtWidgets.QWidget(self.widget)
-        self.widget1.setGeometry(QtCore.QRect(50, 40, 1181, 781))
-        self.widget1.setObjectName("widget1")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.frame = QtWidgets.QFrame(self.widget1)
-        self.frame.setStyleSheet("border-color: rgb(0, 170, 0);\n"
+        self.frame1 = QtWidgets.QFrame(self.widget)
+        self.frame1.setStyleSheet("QFrame#frame1{\n"
+"border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
-"border-width: 3px;")
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(40, 710, 201, 51))
-        self.pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-width: 3px;\n"
+"}")
+        self.frame1.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame1.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame1.setObjectName("frame1")
+        self.pushButton1 = QtWidgets.QPushButton(self.frame1)
+        self.pushButton1.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton1.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
-"border-style: outset;")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.frame)
-        self.frame_3 = QtWidgets.QFrame(self.widget1)
-        self.frame_3.setStyleSheet("border-color: rgb(0, 170, 0);\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.pushButton1.setObjectName("pushButton1")
+        self.labeltitle1 = QtWidgets.QLabel(self.frame1)
+        self.labeltitle1.setGeometry(QtCore.QRect(16, 12, 261, 41))
+        self.labeltitle1.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 20pt \"MS Shell Dlg 2\";\n"
+"")
+        self.labeltitle1.setObjectName("labeltitle1")
+        self.line = QtWidgets.QFrame(self.frame1)
+        self.line.setGeometry(QtCore.QRect(80, 60, 118, 3))
+        self.line.setStyleSheet("background-color: rgb(0, 170, 0);")
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.label1 = QtWidgets.QLabel(self.frame1)
+        self.label1.setGeometry(QtCore.QRect(20, 80, 251, 601))
+        self.label1.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
+"color: rgb(0, 170, 0);")
+        self.label1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label1.setObjectName("label1")
+        self.horizontalLayout.addWidget(self.frame1)
+        self.frame2 = QtWidgets.QFrame(self.widget)
+        self.frame2.setStyleSheet("QFrame#frame2{\n"
+"border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
-"border-width: 3px;")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.pushButton_3 = QtWidgets.QPushButton(self.frame_3)
-        self.pushButton_3.setGeometry(QtCore.QRect(50, 710, 201, 51))
-        self.pushButton_3.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-width: 3px;\n"
+"}")
+        self.frame2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame2.setObjectName("frame2")
+        self.pushButton2 = QtWidgets.QPushButton(self.frame2)
+        self.pushButton2.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton2.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
-"border-style: outset;")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.horizontalLayout.addWidget(self.frame_3)
-        self.frame_4 = QtWidgets.QFrame(self.widget1)
-        self.frame_4.setStyleSheet("border-color: rgb(0, 170, 0);\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.pushButton2.setObjectName("pushButton2")
+        self.labeltitle2 = QtWidgets.QLabel(self.frame2)
+        self.labeltitle2.setGeometry(QtCore.QRect(20, 10, 261, 41))
+        self.labeltitle2.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 20pt \"MS Shell Dlg 2\";\n"
+"")
+        self.labeltitle2.setObjectName("labeltitle2")
+        self.line_2 = QtWidgets.QFrame(self.frame2)
+        self.line_2.setGeometry(QtCore.QRect(90, 60, 118, 3))
+        self.line_2.setStyleSheet("background-color: rgb(0, 170, 0);")
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.label2 = QtWidgets.QLabel(self.frame2)
+        self.label2.setGeometry(QtCore.QRect(20, 80, 251, 601))
+        self.label2.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
+"color: rgb(0, 170, 0);")
+        self.label2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label2.setObjectName("label2")
+        self.horizontalLayout.addWidget(self.frame2)
+        self.frame3 = QtWidgets.QFrame(self.widget)
+        self.frame3.setStyleSheet("QFrame#frame3{\n"
+"border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
-"border-width: 3px;")
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.pushButton_4 = QtWidgets.QPushButton(self.frame_4)
-        self.pushButton_4.setGeometry(QtCore.QRect(40, 710, 201, 51))
-        self.pushButton_4.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-width: 3px;\n"
+"}")
+        self.frame3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame3.setObjectName("frame3")
+        self.pushButton3 = QtWidgets.QPushButton(self.frame3)
+        self.pushButton3.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton3.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
-"border-style: outset;")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.horizontalLayout.addWidget(self.frame_4)
-        self.frame_5 = QtWidgets.QFrame(self.widget1)
-        self.frame_5.setStyleSheet("border-color: rgb(0, 170, 0);\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.pushButton3.setObjectName("pushButton3")
+        self.labeltitle3 = QtWidgets.QLabel(self.frame3)
+        self.labeltitle3.setGeometry(QtCore.QRect(10, 10, 261, 41))
+        self.labeltitle3.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 20pt \"MS Shell Dlg 2\";\n"
+"")
+        self.labeltitle3.setObjectName("labeltitle3")
+        self.line_3 = QtWidgets.QFrame(self.frame3)
+        self.line_3.setGeometry(QtCore.QRect(80, 60, 118, 3))
+        self.line_3.setStyleSheet("background-color: rgb(0, 170, 0);")
+        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.label3 = QtWidgets.QLabel(self.frame3)
+        self.label3.setGeometry(QtCore.QRect(20, 80, 251, 601))
+        self.label3.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
+"color: rgb(0, 170, 0);")
+        self.label3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label3.setObjectName("label3")
+        self.horizontalLayout.addWidget(self.frame3)
+        self.frame4 = QtWidgets.QFrame(self.widget)
+        self.frame4.setStyleSheet("QFrame#frame4{\n"
+"border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
-"border-width: 3px;")
-        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_5.setObjectName("frame_5")
-        self.pushButton_5 = QtWidgets.QPushButton(self.frame_5)
-        self.pushButton_5.setGeometry(QtCore.QRect(50, 710, 201, 51))
-        self.pushButton_5.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-width: 3px;\n"
+"}")
+        self.frame4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame4.setObjectName("frame4")
+        self.pushButton4 = QtWidgets.QPushButton(self.frame4)
+        self.pushButton4.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton4.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
-"border-style: outset;")
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.horizontalLayout.addWidget(self.frame_5)
-        self.frame_4.raise_()
-        self.frame_3.raise_()
-        self.frame_5.raise_()
-        self.frame.raise_()
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.pushButton4.setObjectName("pushButton4")
+        self.labeltitle4 = QtWidgets.QLabel(self.frame4)
+        self.labeltitle4.setGeometry(QtCore.QRect(20, 10, 261, 41))
+        self.labeltitle4.setStyleSheet("color: rgb(0, 170, 0);\n"
+"font: 20pt \"MS Shell Dlg 2\";\n"
+"")
+        self.labeltitle4.setObjectName("labeltitle4")
+        self.line_4 = QtWidgets.QFrame(self.frame4)
+        self.line_4.setGeometry(QtCore.QRect(90, 60, 118, 3))
+        self.line_4.setStyleSheet("background-color: rgb(0, 170, 0);")
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.label4 = QtWidgets.QLabel(self.frame4)
+        self.label4.setGeometry(QtCore.QRect(20, 80, 251, 601))
+        self.label4.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
+"color: rgb(0, 170, 0);")
+        self.label4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label4.setObjectName("label4")
+        self.horizontalLayout.addWidget(self.frame4)
+        self.frame3.raise_()
+        self.frame2.raise_()
+        self.frame4.raise_()
+        self.frame1.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.pushButton1.clicked.connect(self.changelabeltitle1)
+        self.pushButton2.clicked.connect(self.changelabeltitle2)
+        self.pushButton3.clicked.connect(self.changelabeltitle3)
+        self.pushButton4.clicked.connect(self.changelabeltitle4)
+
+# change frame 1
+    def changelabeltitle1(self):
+        orderNum = 1
+        menuItem = "Walter's Nuggies"
+        quantity = 14
+        itemNotes = "Medium Rare"
+        self.labeltitle1.setText("Order : " + str(orderNum))
+        self.label1.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
+
+# change frame 2
+    def changelabeltitle2(self):
+        orderNum = 2
+        menuItem = "Chick San"
+        quantity = 1
+        itemNotes = ""
+        self.labeltitle2.setText("Order : " + str(orderNum))
+        self.label2.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
+
+# change frame 3
+    def changelabeltitle3(self):
+        orderNum = 3
+        menuItem = ""
+        quantity = 1
+        itemNotes = ""
+        self.labeltitle3.setText("Order : " + str(orderNum))
+        self.label3.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
+
+# change frame 4
+    def changelabeltitle4(self):
+        orderNum = 4
+        menuItem = ""
+        quantity = 1
+        itemNotes = ""
+        self.labeltitle4.setText("Order : " + str(orderNum))
+        self.label4.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
+
+
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButton.setText(_translate("Dialog", "DONE"))
-        self.pushButton_3.setText(_translate("Dialog", "DONE"))
-        self.pushButton_4.setText(_translate("Dialog", "DONE"))
-        self.pushButton_5.setText(_translate("Dialog", "DONE"))
+        self.pushButton1.setText(_translate("Dialog", "DONE"))
+        self.labeltitle1.setText(_translate("Dialog", "Order : "))
+        self.label1.setText(_translate("Dialog", "this is a test"))
+        self.pushButton2.setText(_translate("Dialog", "DONE"))
+        self.labeltitle2.setText(_translate("Dialog", "Order : "))
+        self.label2.setText(_translate("Dialog", "this is a test"))
+        self.pushButton3.setText(_translate("Dialog", "DONE"))
+        self.labeltitle3.setText(_translate("Dialog", "Order : "))
+        self.label3.setText(_translate("Dialog", "this is a test"))
+        self.pushButton4.setText(_translate("Dialog", "DONE"))
+        self.labeltitle4.setText(_translate("Dialog", "Order : "))
+        self.label4.setText(_translate("Dialog", "this is a test"))
+
 
 
 if __name__ == "__main__":
@@ -107,3 +245,4 @@ if __name__ == "__main__":
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
+
