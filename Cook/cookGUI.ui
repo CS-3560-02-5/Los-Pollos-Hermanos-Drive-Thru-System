@@ -30,7 +30,7 @@
 background-color: rgb(0, 0, 0);
 }</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -402,10 +402,6 @@ color: rgb(0, 170, 0);</string>
      </item>
     </layout>
    </widget>
-   <zorder>frame3</zorder>
-   <zorder>frame2</zorder>
-   <zorder>frame4</zorder>
-   <zorder>frame1</zorder>
   </widget>
  </widget>
  <resources/>
