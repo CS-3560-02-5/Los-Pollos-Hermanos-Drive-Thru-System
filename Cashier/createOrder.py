@@ -15,36 +15,37 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1200, 800)
-        self.welwinbackg = QtWidgets.QWidget(Dialog)
-        self.welwinbackg.setGeometry(QtCore.QRect(0, -1, 1201, 801))
-        self.welwinbackg.setStyleSheet("QWidget#welwinbackg{\n"
+        self.firstbackground = QtWidgets.QWidget(Dialog)
+        self.firstbackground.setGeometry(QtCore.QRect(0, -1, 1201, 801))
+        self.firstbackground.setStyleSheet("QWidget#firstbackground{\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0.60199 rgba(255, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "}")
-        self.welwinbackg.setObjectName("welwinbackg")
-        self.welcometxt = QtWidgets.QLabel(self.welwinbackg)
-        self.welcometxt.setGeometry(QtCore.QRect(450, 50, 311, 151))
+        self.firstbackground.setObjectName("firstbackground")
+        self.welcometxt = QtWidgets.QLabel(self.firstbackground)
+        self.welcometxt.setGeometry(QtCore.QRect(420, 50, 411, 151))
         self.welcometxt.setStyleSheet("color: rgb(255, 1, 1);\n"
-"font: 72pt \"Informal Roman\";")
+"font: ;\n"
+"font: 72pt \"Gabriola\";")
         self.welcometxt.setObjectName("welcometxt")
-        self.createOrderbutton = QtWidgets.QPushButton(self.welwinbackg)
-        self.createOrderbutton.setGeometry(QtCore.QRect(720, 660, 301, 71))
+        self.createOrderbutton = QtWidgets.QPushButton(self.firstbackground)
+        self.createOrderbutton.setGeometry(QtCore.QRect(720, 660, 321, 71))
         self.createOrderbutton.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
-"font: 75 24pt \"Arial\";\n"
+"font: 75 22pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
         self.createOrderbutton.setObjectName("createOrderbutton")
-        self.label = QtWidgets.QLabel(self.welwinbackg)
+        self.label = QtWidgets.QLabel(self.firstbackground)
         self.label.setGeometry(QtCore.QRect(370, 230, 451, 351))
         self.label.setStyleSheet("image: url(:/newPrefix/Los_Pollos.webp);")
         self.label.setText("")
         self.label.setObjectName("label")
-        self.manageOrder = QtWidgets.QPushButton(self.welwinbackg)
-        self.manageOrder.setGeometry(QtCore.QRect(170, 660, 301, 71))
+        self.manageOrder = QtWidgets.QPushButton(self.firstbackground)
+        self.manageOrder.setGeometry(QtCore.QRect(170, 660, 321, 71))
         self.manageOrder.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
-"font: 75 24pt \"Arial\";\n"
+"font: 75 22pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
