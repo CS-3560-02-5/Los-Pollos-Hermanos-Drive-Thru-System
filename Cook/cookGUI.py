@@ -182,27 +182,28 @@ class Ui_Dialog(object):
         self.pushButton3.clicked.connect(self.changelabeltitle3)
         self.pushButton4.clicked.connect(self.changelabeltitle4)
 
-# change frame 1
+# change frame 1 on cookGUI
     def changelabeltitle1(self):
-        order = 2
-        orderArray = []
-        orderArraySTR = ""
-        orderNum = 1
+        test1 = 1
+        test2 = "Walter's Nuggies"
+        test3 = 14
+        test4 = "medium rare"
 
-        menuItem = "Walter's Nuggies"
-        quantity = 14
-        itemNotes = "Medium Rare"
-        
-        for i in range(order):
-                orderArray[i] = (str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
+        orderlength = 3
+        orderStr = ""
+        for item in range(orderlength):
+                quantity = str(test3)
+                name = str(test2)
+                note = str(test4)
+                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-        for i in orderArray:
-                orderArraySTR.join(str(orderArray[i]))
+        self.labeltitle1.setText("Order : " + str(test1))
+        self.label1.setText(orderStr)
+        print(orderStr)
 
-        self.labeltitle1.setText("Order : " + str(orderNum))
-        self.label1.setText(orderArraySTR)
 
-# change frame 2
+
+# change frame 2 on cookGUI
     def changelabeltitle2(self):
         orderNum = 2
         menuItem = "Chick San"
@@ -211,7 +212,7 @@ class Ui_Dialog(object):
         self.labeltitle2.setText("Order : " + str(orderNum))
         self.label2.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
 
-# change frame 3
+# change frame 3 on cookGUI
     def changelabeltitle3(self):
         orderNum = 3
         menuItem = ""
@@ -220,7 +221,7 @@ class Ui_Dialog(object):
         self.labeltitle3.setText("Order : " + str(orderNum))
         self.label3.setText(str(quantity) + ' : ' + menuItem + "\nnotes: " + itemNotes)
 
-# change frame 4
+# change frame 4 on cookGUI
     def changelabeltitle4(self):
         orderNum = 4
         menuItem = ""
