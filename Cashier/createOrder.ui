@@ -13,32 +13,33 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="welwinbackg" native="true">
+  <widget class="QWidget" name="firstbackground" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-1</y>
      <width>1201</width>
      <height>801</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget#welwinbackg{
+    <string notr="true">QWidget#firstbackground{
 background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0.60199 rgba(255, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));
 }</string>
    </property>
    <widget class="QLabel" name="welcometxt">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>420</x>
       <y>50</y>
-      <width>311</width>
+      <width>411</width>
       <height>151</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 1, 1);
-font: 72pt &quot;Informal Roman&quot;;</string>
+font: ;
+font: 72pt &quot;Gabriola&quot;;</string>
     </property>
     <property name="text">
      <string>Welcome</string>
@@ -49,14 +50,14 @@ font: 72pt &quot;Informal Roman&quot;;</string>
      <rect>
       <x>720</x>
       <y>660</y>
-      <width>301</width>
+      <width>321</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
-font: 75 24pt &quot;Arial&quot;;
+font: 75 22pt &quot;Arial&quot;;
 border-style: outset;
 border-width: 5px;
 border-color: rgb(21, 76, 152);</string>
@@ -68,7 +69,7 @@ border-color: rgb(21, 76, 152);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>370</x>
       <y>230</y>
       <width>451</width>
       <height>351</height>
@@ -84,16 +85,16 @@ border-color: rgb(21, 76, 152);</string>
    <widget class="QPushButton" name="manageOrder">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>170</x>
       <y>660</y>
-      <width>301</width>
+      <width>321</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
-font: 75 24pt &quot;Arial&quot;;
+font: 75 22pt &quot;Arial&quot;;
 border-style: outset;
 border-width: 5px;
 border-color: rgb(21, 76, 152);</string>
