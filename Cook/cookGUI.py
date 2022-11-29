@@ -14,21 +14,22 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1200, 800)
-        Dialog.setStyleSheet("")
+        Dialog.resize(1600, 900)
+        Dialog.setStyleSheet("QDialog#Dialog{\n"
+"background-color: rgb(0, 0, 0);}")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(Dialog)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.backscreen = QtWidgets.QWidget(Dialog)
-        self.backscreen.setGeometry(QtCore.QRect(-40, -30, 1291, 861))
+        self.backscreen.setEnabled(True)
         self.backscreen.setStyleSheet("QWidget#backscreen{\n"
 "background-color: rgb(0, 0, 0);\n"
 "}")
         self.backscreen.setObjectName("backscreen")
-        self.layoutWidget = QtWidgets.QWidget(self.backscreen)
-        self.layoutWidget.setGeometry(QtCore.QRect(50, 40, 1181, 781))
-        self.layoutWidget.setObjectName("layoutWidget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.backscreen)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.frame1 = QtWidgets.QFrame(self.layoutWidget)
+        self.frame1 = QtWidgets.QFrame(self.backscreen)
         self.frame1.setStyleSheet("QFrame#frame1{\n"
 "border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
@@ -38,45 +39,29 @@ class Ui_Dialog(object):
         self.frame1.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame1.setObjectName("frame1")
         self.pushButton1 = QtWidgets.QPushButton(self.frame1)
-        self.pushButton1.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton1.setGeometry(QtCore.QRect(90, 790, 201, 51))
         self.pushButton1.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.pushButton1.setObjectName("pushButton1")
         self.labeltitle1 = QtWidgets.QLabel(self.frame1)
-        self.labeltitle1.setGeometry(QtCore.QRect(16, 12, 261, 41))
+        self.labeltitle1.setGeometry(QtCore.QRect(16, 12, 351, 41))
         self.labeltitle1.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"MS Shell Dlg 2\";\n"
 "")
         self.labeltitle1.setObjectName("labeltitle1")
         self.line = QtWidgets.QFrame(self.frame1)
-        self.line.setGeometry(QtCore.QRect(80, 60, 118, 3))
+        self.line.setGeometry(QtCore.QRect(140, 60, 118, 3))
         self.line.setStyleSheet("background-color: rgb(0, 170, 0);")
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
-        self.label1 = QtWidgets.QLabel(self.frame1)
-        self.label1.setGeometry(QtCore.QRect(20, 80, 251, 601))
-        self.label1.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.label1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label1.setWordWrap(True)
-        self.label1.setObjectName("label1")
-        self.scrollArea = QtWidgets.QScrollArea(self.frame1)
-        self.scrollArea.setGeometry(QtCore.QRect(10, 80, 271, 611))
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollArea.setObjectName("scrollArea")
-        self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 269, 609))
-        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
-        self.verticalScrollBar = QtWidgets.QScrollBar(self.scrollAreaWidgetContents)
-        self.verticalScrollBar.setGeometry(QtCore.QRect(240, 190, 16, 160))
-        self.verticalScrollBar.setOrientation(QtCore.Qt.Vertical)
-        self.verticalScrollBar.setObjectName("verticalScrollBar")
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.listWidget_1 = QtWidgets.QListWidget(self.frame1)
+        self.listWidget_1.setGeometry(QtCore.QRect(10, 80, 361, 701))
+        self.listWidget_1.setObjectName("listWidget_1")
         self.horizontalLayout.addWidget(self.frame1)
-        self.frame2 = QtWidgets.QFrame(self.layoutWidget)
+        self.frame2 = QtWidgets.QFrame(self.backscreen)
         self.frame2.setStyleSheet("QFrame#frame2{\n"
 "border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
@@ -86,33 +71,29 @@ class Ui_Dialog(object):
         self.frame2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame2.setObjectName("frame2")
         self.pushButton2 = QtWidgets.QPushButton(self.frame2)
-        self.pushButton2.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton2.setGeometry(QtCore.QRect(100, 790, 201, 51))
         self.pushButton2.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.pushButton2.setObjectName("pushButton2")
         self.labeltitle2 = QtWidgets.QLabel(self.frame2)
-        self.labeltitle2.setGeometry(QtCore.QRect(20, 10, 261, 41))
+        self.labeltitle2.setGeometry(QtCore.QRect(20, 10, 341, 41))
         self.labeltitle2.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"MS Shell Dlg 2\";\n"
 "")
         self.labeltitle2.setObjectName("labeltitle2")
         self.line_2 = QtWidgets.QFrame(self.frame2)
-        self.line_2.setGeometry(QtCore.QRect(90, 60, 118, 3))
+        self.line_2.setGeometry(QtCore.QRect(140, 60, 118, 3))
         self.line_2.setStyleSheet("background-color: rgb(0, 170, 0);")
         self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
-        self.label2 = QtWidgets.QLabel(self.frame2)
-        self.label2.setGeometry(QtCore.QRect(20, 80, 251, 601))
-        self.label2.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.label2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label2.setWordWrap(True)
-        self.label2.setObjectName("label2")
+        self.listWidget_2 = QtWidgets.QListWidget(self.frame2)
+        self.listWidget_2.setGeometry(QtCore.QRect(10, 80, 361, 701))
+        self.listWidget_2.setObjectName("listWidget_2")
         self.horizontalLayout.addWidget(self.frame2)
-        self.frame3 = QtWidgets.QFrame(self.layoutWidget)
+        self.frame3 = QtWidgets.QFrame(self.backscreen)
         self.frame3.setStyleSheet("QFrame#frame3{\n"
 "border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
@@ -122,33 +103,29 @@ class Ui_Dialog(object):
         self.frame3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame3.setObjectName("frame3")
         self.pushButton3 = QtWidgets.QPushButton(self.frame3)
-        self.pushButton3.setGeometry(QtCore.QRect(40, 710, 201, 51))
+        self.pushButton3.setGeometry(QtCore.QRect(90, 790, 201, 51))
         self.pushButton3.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.pushButton3.setObjectName("pushButton3")
         self.labeltitle3 = QtWidgets.QLabel(self.frame3)
-        self.labeltitle3.setGeometry(QtCore.QRect(10, 10, 261, 41))
+        self.labeltitle3.setGeometry(QtCore.QRect(10, 10, 351, 41))
         self.labeltitle3.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"MS Shell Dlg 2\";\n"
 "")
         self.labeltitle3.setObjectName("labeltitle3")
         self.line_3 = QtWidgets.QFrame(self.frame3)
-        self.line_3.setGeometry(QtCore.QRect(80, 60, 118, 3))
+        self.line_3.setGeometry(QtCore.QRect(140, 60, 118, 3))
         self.line_3.setStyleSheet("background-color: rgb(0, 170, 0);")
         self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_3.setObjectName("line_3")
-        self.label3 = QtWidgets.QLabel(self.frame3)
-        self.label3.setGeometry(QtCore.QRect(20, 80, 251, 601))
-        self.label3.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.label3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label3.setWordWrap(True)
-        self.label3.setObjectName("label3")
+        self.listWidget_3 = QtWidgets.QListWidget(self.frame3)
+        self.listWidget_3.setGeometry(QtCore.QRect(10, 80, 361, 701))
+        self.listWidget_3.setObjectName("listWidget_3")
         self.horizontalLayout.addWidget(self.frame3)
-        self.frame4 = QtWidgets.QFrame(self.layoutWidget)
+        self.frame4 = QtWidgets.QFrame(self.backscreen)
         self.frame4.setStyleSheet("QFrame#frame4{\n"
 "border-color: rgb(0, 170, 0);\n"
 "border-style: solid;\n"
@@ -158,32 +135,30 @@ class Ui_Dialog(object):
         self.frame4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame4.setObjectName("frame4")
         self.pushButton4 = QtWidgets.QPushButton(self.frame4)
-        self.pushButton4.setGeometry(QtCore.QRect(50, 710, 201, 51))
+        self.pushButton4.setGeometry(QtCore.QRect(100, 790, 201, 51))
         self.pushButton4.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 24pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.pushButton4.setObjectName("pushButton4")
         self.labeltitle4 = QtWidgets.QLabel(self.frame4)
-        self.labeltitle4.setGeometry(QtCore.QRect(20, 10, 261, 41))
+        self.labeltitle4.setGeometry(QtCore.QRect(20, 10, 351, 41))
         self.labeltitle4.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"MS Shell Dlg 2\";\n"
 "")
         self.labeltitle4.setObjectName("labeltitle4")
         self.line_4 = QtWidgets.QFrame(self.frame4)
-        self.line_4.setGeometry(QtCore.QRect(90, 60, 118, 3))
+        self.line_4.setGeometry(QtCore.QRect(140, 60, 118, 3))
         self.line_4.setStyleSheet("background-color: rgb(0, 170, 0);")
         self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_4.setObjectName("line_4")
-        self.label4 = QtWidgets.QLabel(self.frame4)
-        self.label4.setGeometry(QtCore.QRect(20, 80, 251, 601))
-        self.label4.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
-"color: rgb(0, 170, 0);")
-        self.label4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label4.setWordWrap(True)
-        self.label4.setObjectName("label4")
+        self.listWidget_4 = QtWidgets.QListWidget(self.frame4)
+        self.listWidget_4.setGeometry(QtCore.QRect(10, 80, 361, 701))
+        self.listWidget_4.setObjectName("listWidget_4")
         self.horizontalLayout.addWidget(self.frame4)
+        self.horizontalLayout_2.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3.addWidget(self.backscreen)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -193,16 +168,12 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.pushButton1.setText(_translate("Dialog", "DONE"))
         self.labeltitle1.setText(_translate("Dialog", "Order : "))
-        self.label1.setText(_translate("Dialog", "this is a test"))
         self.pushButton2.setText(_translate("Dialog", "DONE"))
         self.labeltitle2.setText(_translate("Dialog", "Order : "))
-        self.label2.setText(_translate("Dialog", "this is a test"))
         self.pushButton3.setText(_translate("Dialog", "DONE"))
         self.labeltitle3.setText(_translate("Dialog", "Order : "))
-        self.label3.setText(_translate("Dialog", "this is a test"))
         self.pushButton4.setText(_translate("Dialog", "DONE"))
         self.labeltitle4.setText(_translate("Dialog", "Order : "))
-        self.label4.setText(_translate("Dialog", "this is a test"))
 
 
 if __name__ == "__main__":
