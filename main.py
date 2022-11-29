@@ -7,8 +7,6 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-
-
 import managerAttatched
 
 ############ Open all interfaces here
@@ -20,6 +18,7 @@ running = True
 ####### Initial setup of running environment
 bridge = data_bridge.bridge("sql.json")
 
+'''
 # Rebuild all currently active orders
 active_orders = []
 for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
@@ -42,10 +41,12 @@ for index, item in bridge.get_menu_items().iterrows():
 print([x.__dict__ for x in active_orders])
 print([x.__dict__ for x in active_order_items])
 print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
+'''
 
 app = QtWidgets.QApplication(sys.argv)
 manager_win = QtWidgets.QMainWindow()
-managerAttatched.managerAttatched(bridge.get_active_orders(), manager_win)
+
+managerAttatched.managerAttatched(bridge.get_menu_items().loc[:, 'item_name':'price'], manager_win)
 sys.exit(app.exec_())
 
 
