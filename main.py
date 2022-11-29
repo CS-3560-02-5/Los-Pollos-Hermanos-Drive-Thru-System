@@ -2,6 +2,14 @@ import MenuItem
 import OrderItem
 import Order
 import data_bridge
+import sys
+from PyQt5 import QtCore, QtWidgets
+sys.path.append("Manager")
+sys.path.append("Cook")
+sys.path.append("Cashier")
+
+
+import managerAttatched
 
 ############ Open all interfaces here
 
@@ -15,7 +23,6 @@ bridge = data_bridge.bridge("sql.json")
 # Rebuild all currently active orders
 active_orders = []
 for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
-    #active_orders.append(Order.Order(order["customer_name"], order_id=order["order_id"], order_status=order["order_status"]))
     active_orders.append(Order.Order(**order))
 
 
@@ -35,6 +42,12 @@ for index, item in bridge.get_menu_items().iterrows():
 print([x.__dict__ for x in active_orders])
 print([x.__dict__ for x in active_order_items])
 print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
+
+app = QtWidgets.QApplication(sys.argv)
+manager_win = QtWidgets.QMainWindow()
+managerAttatched.managerAttatched(bridge.get_active_orders(), manager_win)
+sys.exit(app.exec_())
+
 
 '''
 bridge.add_menu_item(9, "The Tester", "Purely to test the add function", 4.20, menu_items[0].image)        # create menu_items test
