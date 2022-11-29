@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>800</height>
+    <width>1600</width>
+    <height>901</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-1</y>
-     <width>1201</width>
-     <height>801</height>
+     <y>0</y>
+     <width>1601</width>
+     <height>901</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -30,16 +30,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0
    <widget class="QLabel" name="welcometxt">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>600</x>
       <y>50</y>
-      <width>411</width>
+      <width>461</width>
       <height>151</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 1, 1);
 font: ;
-font: 72pt &quot;Gabriola&quot;;</string>
+font: 86pt &quot;Gabriola&quot;;</string>
     </property>
     <property name="text">
      <string>Welcome</string>
@@ -48,16 +48,16 @@ font: 72pt &quot;Gabriola&quot;;</string>
    <widget class="QPushButton" name="createOrderbutton">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>660</y>
-      <width>321</width>
-      <height>71</height>
+      <x>970</x>
+      <y>720</y>
+      <width>381</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
-font: 75 22pt &quot;Arial&quot;;
+font: 75 26pt &quot;Arial&quot;;
 border-style: outset;
 border-width: 5px;
 border-color: rgb(21, 76, 152);</string>
@@ -67,12 +67,15 @@ border-color: rgb(21, 76, 152);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>230</y>
-      <width>451</width>
-      <height>351</height>
+      <x>520</x>
+      <y>190</y>
+      <width>561</width>
+      <height>501</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -85,16 +88,16 @@ border-color: rgb(21, 76, 152);</string>
    <widget class="QPushButton" name="manageOrder">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>660</y>
-      <width>321</width>
-      <height>71</height>
+      <x>250</x>
+      <y>720</y>
+      <width>381</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
-font: 75 22pt &quot;Arial&quot;;
+font: 75 26pt &quot;Arial&quot;;
 border-style: outset;
 border-width: 5px;
 border-color: rgb(21, 76, 152);</string>

@@ -12,57 +12,46 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog(object):
-    # This creates the widget objects in proper containers
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1200, 800)
-
-        # Background widget
+        Dialog.resize(1600, 901)
         self.firstbackground = QtWidgets.QWidget(Dialog)
-        self.firstbackground.setGeometry(QtCore.QRect(0, -1, 1201, 801))
+        self.firstbackground.setGeometry(QtCore.QRect(0, 0, 1601, 901))
         self.firstbackground.setStyleSheet("QWidget#firstbackground{\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0.60199 rgba(255, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "}")
         self.firstbackground.setObjectName("firstbackground")
-
-        # Welcome text
         self.welcometxt = QtWidgets.QLabel(self.firstbackground)
-        self.welcometxt.setGeometry(QtCore.QRect(420, 50, 411, 151))
+        self.welcometxt.setGeometry(QtCore.QRect(600, 50, 461, 151))
         self.welcometxt.setStyleSheet("color: rgb(255, 1, 1);\n"
 "font: ;\n"
-"font: 72pt \"Gabriola\";")
+"font: 86pt \"Gabriola\";")
         self.welcometxt.setObjectName("welcometxt")
-
-        # Create Order Button
         self.createOrderbutton = QtWidgets.QPushButton(self.firstbackground)
-        self.createOrderbutton.setGeometry(QtCore.QRect(720, 660, 321, 71))
+        self.createOrderbutton.setGeometry(QtCore.QRect(970, 720, 381, 101))
         self.createOrderbutton.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
-"font: 75 22pt \"Arial\";\n"
+"font: 75 26pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
         self.createOrderbutton.setObjectName("createOrderbutton")
-
-        # Logo
         self.label = QtWidgets.QLabel(self.firstbackground)
-        self.label.setGeometry(QtCore.QRect(370, 230, 451, 351))
+        self.label.setEnabled(True)
+        self.label.setGeometry(QtCore.QRect(520, 190, 561, 501))
         self.label.setStyleSheet("image: url(:/newPrefix/Los_Pollos.webp);")
         self.label.setText("")
         self.label.setObjectName("label")
-
-        # Manage Order Button
         self.manageOrder = QtWidgets.QPushButton(self.firstbackground)
-        self.manageOrder.setGeometry(QtCore.QRect(170, 660, 321, 71))
+        self.manageOrder.setGeometry(QtCore.QRect(250, 720, 381, 101))
         self.manageOrder.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
-"font: 75 22pt \"Arial\";\n"
+"font: 75 26pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
         self.manageOrder.setObjectName("manageOrder")
 
-        # This sets the text and titles of the widgets.
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
@@ -72,8 +61,6 @@ class Ui_Dialog(object):
         self.welcometxt.setText(_translate("Dialog", "Welcome"))
         self.createOrderbutton.setText(_translate("Dialog", "Create New Order"))
         self.manageOrder.setText(_translate("Dialog", "Manage Order"))
-
-# importing logo image source
 import logosource
 
 
