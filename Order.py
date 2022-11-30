@@ -17,8 +17,10 @@ class Order:
 
     def complete(self):
         self.order_status = "c"
+        self.queue_num = 0
         pass
 
     def cancel(self):
         self.order_status = 'x'
+        self.queue_num = 0
         pass
