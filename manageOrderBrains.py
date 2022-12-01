@@ -1,39 +1,30 @@
 from manageOrder import *
 import sys
 from PyQt5 import *
+import data_bridge
 
 
 
 class manageOrder(Ui_MainWindow):
     def __init__(self, window):
+        bridge = data_bridge.bridge("sql.json")
         #create ui
         self.setupUi(window)
         #button clickability
         self.backButton.clicked.connect(self.clickBack)
         self.manageButton.clicked.connect(self.clickManage)
         
-        order1 = 'Order 1'
-        order2 = "order 2"
-
+        active_orders = []
+        for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
+            active_orders.append(order_id=order["order_id"])
+        print(active_orders)
         #fills the list with dummy data
         self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
-        self.ordersList.addItem(order1)
-        self.ordersList.addItem(order2)
+       
 
     #this literally crashes the program but it closes it :)
     def clickBack(self):
-        self.close()
+        print("back test")
 
     def clickManage(self):
         print("Manage test")
