@@ -21,6 +21,7 @@ class manageOrder(Ui_MainWindow):
             active_orders.append(Order.Order(**order))
         print([x.__dict__ for x in active_orders])
         print(len(active_orders))
+        print([x.__dict__ for x in active_orders])
         #fills the list with dummy data
        
 
