@@ -33,7 +33,7 @@ class Ui_MainWindow(object):
 "border-width: 2px;")
         self.ordersLabel.setObjectName("ordersLabel")
         self.verticalLayout_2.addWidget(self.ordersLabel)
-        self.ordersList = QtWidgets.QListView(self.widget)
+        self.ordersList = QtWidgets.QListWidget(self.widget)
         self.ordersList.setStyleSheet("background-color: rgb(89, 89, 89);\n"
 "font: 36pt \"Courier New\";\n"
 "color: rgb(0, 255, 0);\n"

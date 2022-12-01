@@ -1,6 +1,6 @@
 from manageOrder import *
 import sys
-from PyQt5 import *
+
 
 
 class manageOrder(Ui_MainWindow):
@@ -9,18 +9,35 @@ class manageOrder(Ui_MainWindow):
         self.backButton.clicked.connect(self.clickBack)
         self.manageButton.clicked.connect(self.clickManage)
         
+        order1 = 'Order 1'
+        order2 = "order 2"
+
+        
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+        self.ordersList.addItem(order1)
+        self.ordersList.addItem(order2)
+
 
     def clickBack(self):
-        print("back test")
+        self.close()
 
     def clickManage(self):
         print("Manage test")
 
     def clickList(self):
         print("Test List")
-        
-    def getOrder(self):
-       self.ordersList.clicked.connect(self.clickList)
+
 
 app = QtWidgets.QApplication(sys.argv)
 MainWindow = QtWidgets.QMainWindow()
