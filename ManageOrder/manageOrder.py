@@ -24,51 +24,51 @@ class Ui_MainWindow(object):
         self.widget.setObjectName("widget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label = QtWidgets.QLabel(self.widget)
-        self.label.setStyleSheet("font: 28pt \"Courier New\";\n"
+        self.ordersLabel = QtWidgets.QLabel(self.widget)
+        self.ordersLabel.setStyleSheet("font: 28pt \"Courier New\";\n"
 "background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);\n"
 "border-color: rgb(0, 255, 0);\n"
 "border-style: outset;\n"
 "border-width: 2px;")
-        self.label.setObjectName("label")
-        self.verticalLayout_2.addWidget(self.label)
-        self.listView = QtWidgets.QListView(self.widget)
-        self.listView.setStyleSheet("background-color: rgb(89, 89, 89);\n"
+        self.ordersLabel.setObjectName("ordersLabel")
+        self.verticalLayout_2.addWidget(self.ordersLabel)
+        self.ordersList = QtWidgets.QListView(self.widget)
+        self.ordersList.setStyleSheet("background-color: rgb(89, 89, 89);\n"
 "font: 36pt \"Courier New\";\n"
 "color: rgb(0, 255, 0);\n"
 "border-color: rgb(0, 255, 0);\n"
 "selection-background-color: rgb(255, 0, 0);\n"
 "border-style: outset;\n"
 "border-width: 3px;")
-        self.listView.setObjectName("listView")
-        self.verticalLayout_2.addWidget(self.listView)
+        self.ordersList.setObjectName("ordersList")
+        self.verticalLayout_2.addWidget(self.ordersList)
         self.widget_2 = QtWidgets.QWidget(self.widget)
         self.widget_2.setObjectName("widget_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem = QtWidgets.QSpacerItem(600, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
-        self.pushButton_2 = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton_2.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+        self.backButton = QtWidgets.QPushButton(self.widget_2)
+        self.backButton.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
 "border-color: rgb(0, 255, 0);\n"
 "font: 28pt \"Courier New\";")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.backButton.setObjectName("backButton")
+        self.horizontalLayout.addWidget(self.backButton)
         spacerItem1 = QtWidgets.QSpacerItem(25, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
-        self.pushButton = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+        self.manageButton = QtWidgets.QPushButton(self.widget_2)
+        self.manageButton.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
 "border-color: rgb(0, 255, 0);\n"
 "font: 28pt \"Courier New\";")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.manageButton.setObjectName("manageButton")
+        self.horizontalLayout.addWidget(self.manageButton)
         self.verticalLayout_2.addWidget(self.widget_2)
         self.verticalLayout.addWidget(self.widget)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -79,9 +79,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "ORDERS"))
-        self.pushButton_2.setText(_translate("MainWindow", "GO BACK"))
-        self.pushButton.setText(_translate("MainWindow", "MANAGE"))
+        self.ordersLabel.setText(_translate("MainWindow", "ORDERS"))
+        self.backButton.setText(_translate("MainWindow", "GO BACK"))
+        self.manageButton.setText(_translate("MainWindow", "MANAGE"))
 
 
 if __name__ == "__main__":
