@@ -1,5 +1,9 @@
 from cookGUI import *
 import sys
+import pandas as pd
+import sqlalchemy
+import data_bridge
+import Order
 
 class cookAttached(Ui_cookGUI):
     #making constructor
@@ -14,19 +18,33 @@ class cookAttached(Ui_cookGUI):
 
     #edit slot 1
     def updateOrderSlot1(self):
+
+        #find all active orders in db and add them to active_order
+        active_orders = []
+        for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
+            active_orders.append(Order.Order(**order))
+        print([x.dict for x in active_orders])
+
         #initializing test array to pull data from
         orderArray = [1,"walter's Nuggies",14,"medium rare"]
 
+    
+
         orderlength = 3
         orderStr = ""
+
+        #setting data from array to one string 
         for item in range(orderlength):
                 quantity = str(orderArray[2])
                 name = str(orderArray[1])
                 note = str(orderArray[3])
                 orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-        self.orderNum1.setText(str(orderArray[0]))
-        self.textArea1.setText(orderStr)
+        self.orderNum1.setText(str(orderArray[0]))  #show order number on GUI
+        self.textArea1.setText(orderStr)            #show completed order string on gui
+
+        #make order as completed after chef clicks done
+
 
     #edit slot 2
     def updateOrderSlot2(self):
