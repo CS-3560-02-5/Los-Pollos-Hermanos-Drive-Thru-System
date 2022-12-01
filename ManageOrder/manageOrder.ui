@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>528</height>
+    <height>333</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,7 @@ border-width: 2px;</string>
         </widget>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget">
+        <widget class="QListView" name="listView">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(89, 89, 89);
 font: 36pt &quot;Courier New&quot;;
@@ -47,16 +47,6 @@ selection-background-color: rgb(255, 0, 0);
 border-style: outset;
 border-width: 3px;</string>
          </property>
-         <item>
-          <property name="text">
-           <string>Order 1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Order 2</string>
-          </property>
-         </item>
         </widget>
        </item>
        <item>

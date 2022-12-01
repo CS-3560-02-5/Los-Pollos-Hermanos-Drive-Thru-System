@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(900, 528)
+        MainWindow.resize(900, 333)
         MainWindow.setStyleSheet("background-color: rgb(89, 89, 89);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -33,20 +33,16 @@ class Ui_MainWindow(object):
 "border-width: 2px;")
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
-        self.listWidget = QtWidgets.QListWidget(self.widget)
-        self.listWidget.setStyleSheet("background-color: rgb(89, 89, 89);\n"
+        self.listView = QtWidgets.QListView(self.widget)
+        self.listView.setStyleSheet("background-color: rgb(89, 89, 89);\n"
 "font: 36pt \"Courier New\";\n"
 "color: rgb(0, 255, 0);\n"
 "border-color: rgb(0, 255, 0);\n"
 "selection-background-color: rgb(255, 0, 0);\n"
 "border-style: outset;\n"
 "border-width: 3px;")
-        self.listWidget.setObjectName("listWidget")
-        item = QtWidgets.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtWidgets.QListWidgetItem()
-        self.listWidget.addItem(item)
-        self.verticalLayout_2.addWidget(self.listWidget)
+        self.listView.setObjectName("listView")
+        self.verticalLayout_2.addWidget(self.listView)
         self.widget_2 = QtWidgets.QWidget(self.widget)
         self.widget_2.setObjectName("widget_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
@@ -84,13 +80,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "ORDERS"))
-        __sortingEnabled = self.listWidget.isSortingEnabled()
-        self.listWidget.setSortingEnabled(False)
-        item = self.listWidget.item(0)
-        item.setText(_translate("MainWindow", "Order 1"))
-        item = self.listWidget.item(1)
-        item.setText(_translate("MainWindow", "Order 2"))
-        self.listWidget.setSortingEnabled(__sortingEnabled)
         self.pushButton_2.setText(_translate("MainWindow", "GO BACK"))
         self.pushButton.setText(_translate("MainWindow", "MANAGE"))
 
