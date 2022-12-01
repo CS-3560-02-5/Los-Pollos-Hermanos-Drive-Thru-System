@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'cookGUI.ui'
+# Form implementation generated from reading ui file '.\Cook\cookGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -9,8 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-
 class Ui_cookGUI(object):
     def setupUi(self, cookGUI):
         cookGUI.setObjectName("cookGUI")
@@ -268,7 +266,6 @@ class Ui_cookGUI(object):
         self.verticalLayout_8.addWidget(self.widget_11)
         self.horizontalLayout.addWidget(self.orderSlot4)
         cookGUI.setCentralWidget(self.centralwidget)
-
         self.retranslateUi(cookGUI)
         QtCore.QMetaObject.connectSlotsByName(cookGUI)
 
@@ -291,7 +288,6 @@ class Ui_cookGUI(object):
         self.orderNum4.setText(_translate("cookGUI", "00"))
         self.textArea4.setText(_translate("cookGUI", "this is a test"))
         self.doneButton4.setText(_translate("cookGUI", "DONE"))
-
 
 if __name__ == "__main__":
     import sys
