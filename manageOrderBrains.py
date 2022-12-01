@@ -2,6 +2,7 @@ from manageOrder import *
 import sys
 from PyQt5 import *
 import data_bridge
+import Order
 
 
 
@@ -16,15 +17,17 @@ class manageOrder(Ui_MainWindow):
         
         active_orders = []
         for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
-            active_orders.append(order_id=order["order_id"])
-        print(active_orders)
+            #active_orders.append(order_id=order["order_id"])
+            active_orders.append(Order.Order(**order))
+        print([x.__dict__ for x in active_orders])
+        print(len(active_orders))
         #fills the list with dummy data
-        self.ordersList.addItem(order1)
        
 
     #this literally crashes the program but it closes it :)
     def clickBack(self):
         print("back test")
+        self.ordersList.addItem("russel Rickards")
 
     def clickManage(self):
         print("Manage test")
