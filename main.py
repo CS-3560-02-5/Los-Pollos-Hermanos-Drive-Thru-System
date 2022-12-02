@@ -9,6 +9,9 @@ sys.path.append("Cook")
 sys.path.append("Cashier")
 import manageOrderListGUI
 import manageOrderListGUIAttached
+import managerAttatched
+import cookAttatched
+from traits.api import *
 
 ############ Open all interfaces here
 
@@ -17,7 +20,10 @@ import manageOrderListGUIAttached
 running = True
 
 ####### Initial setup of running environment
-class collector():
+
+
+
+class collector(HasTraits):
     def __init__(self):
         self.bridge = data_bridge.bridge("sql.json")
         # Rebuild all currently active orders
@@ -36,8 +42,32 @@ class collector():
         for index, item in self.bridge.get_menu_items().iterrows():
             self.menu_items.append(MenuItem.MenuItem(**item))
     
+    def save(self):
+        pass
+
+class Event(HasTraits):
+    def __init__(self):
+        super().__init__()
+        self.collector = collector()
+        self.collector.on_trait_change(Event._anytrait_changed)
+
+    def _anytrait_changed(obj, name, old, new):
+        is_list = name.endswith('_items')
+        if is_list:
+            name = name[0:name.rindex('_items')]
+        current_val = getattr(obj, name)
+        if is_list:
+            # new handles all the events(removed/changed/added to the list)
+            if any(new.added):
+                print("{} added to {} which is now {}".format(new.added, name, current_val))
+            if any(new.removed):
+                print("{} removed from {} which is now {}".format(new.removed, name, current_val))
+        else:
+            print('The {} trait changed from {} to {} '.format(name, old, (getattr(obj, name))))
+
 
 mass = collector()
+
 '''
 #### TESTING
 print([x.__dict__ for x in orders])
