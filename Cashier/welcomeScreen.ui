@@ -21,7 +21,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QWidget" name="widget" native="true">
+     <widget class="QWidget" name="topWidget" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -30,7 +30,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="welcomeLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -53,13 +53,13 @@ font: 86pt &quot;Gabriola&quot;;</string>
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_2" native="true">
+     <widget class="QWidget" name="middleWidget" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <property name="bottomMargin">
         <number>95</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="logoLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -84,7 +84,7 @@ font: 86pt &quot;Gabriola&quot;;</string>
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_3" native="true">
+     <widget class="QWidget" name="buttomWidget" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -115,7 +115,7 @@ font: 86pt &quot;Gabriola&quot;;</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="manageOrderBtn">
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
@@ -147,7 +147,7 @@ border-color: rgb(21, 76, 152);
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="createOrderBtn">
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
