@@ -17,6 +17,8 @@ class Order:
         self.queue_num = next(self.queue)
         self.order_status = order_status
 
+    def getQueue(self):
+        return self.queue_num
     def prepare(self):
         self.order_status = 'p'
 
