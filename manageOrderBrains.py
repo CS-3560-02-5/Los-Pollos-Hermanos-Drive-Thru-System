@@ -1,29 +1,28 @@
 from manageOrder import *
 import sys
 from PyQt5 import *
-import data_bridge
-import Order
+from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtCore import Qt
+from PyQt5.uic import loadUi
 
 
 
-class manageOrder(Ui_MainWindow):
-    def __init__(self, window):
-        bridge = data_bridge.bridge("sql.json")
-        #create ui
-        self.setupUi(window)
+class manageOrder(Ui_MainWindow, QMainWindow):
+    def __init__(self, orders, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
+        self.orders = orders
+        self.setupDisplay(self.orders)
+        self.setupButtons()
+        self.show()
         #button clickability
+
+
+    def setupDisplay(self, orders):
+        self.ordersList.addItems([x.customer_name for x in orders])
+    def setupButtons(self):
         self.backButton.clicked.connect(self.clickBack)
         self.manageButton.clicked.connect(self.clickManage)
-        
-        active_orders = []
-        for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
-            active_orders.append(Order.Order(**order))
-        print([x.__dict__ for x in active_orders])
-        
-        order1 = "order1"
-        #fills the list with dummy data
-        self.ordersList.addItem(order1)
-
     #this literally crashes the program but it closes it :)
     def clickBack(self):
         print("back test")
@@ -32,12 +31,4 @@ class manageOrder(Ui_MainWindow):
     def clickManage(self):
         print("Manage test")
 
-    def clickList(self):
-        print("Test List")
-
-#creates the window
-app = QtWidgets.QApplication(sys.argv)
-MainWindow = QtWidgets.QMainWindow()
-ui = manageOrder(MainWindow)
-MainWindow.show()
-app.exec_()
+        

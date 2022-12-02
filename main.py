@@ -9,6 +9,7 @@ sys.path.append("Cook")
 sys.path.append("Cashier")
 import managerAttatched
 import cookAttatched
+import manageOrderBrains
 
 ############ Open all interfaces here
 
@@ -22,7 +23,7 @@ class collector():
         self.bridge = data_bridge.bridge("sql.json")
         # Rebuild all currently active orders
         self.orders = []
-        for index, order in self.bridge.get_orders().sort_values(by=["queue_num"]).iterrows():
+        for index, order in self.bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
             self.orders.append(Order.Order(**order))
 
         # Rebuild all items attatched to the active orders
@@ -48,12 +49,17 @@ print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
 
 
 app = QtWidgets.QApplication(sys.argv)
+manage_order = QtWidgets.QMainWindow()
+manageOrderBrains.manageOrder(mass.orders, manage_order)
+app.exec()
+print[[x.item_name for x in mass.orders]]
+'''
 manager_win = QtWidgets.QMainWindow()
 managerAttatched.managerAttatched(mass.menu_items, manager_win)
 app.exec_()
 print([x.item_name for x in mass.menu_items])
 ##### FIND A WAY TO SYNC THE ATTRTIBUTES TO THE DATABASE
-
+'''
 
 
 '''
