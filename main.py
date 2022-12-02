@@ -7,8 +7,8 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-import managerAttatched
-import cookAttatched
+import manageOrderListGUI
+import manageOrderListGUIAttached
 
 ############ Open all interfaces here
 
@@ -22,7 +22,7 @@ class collector():
         self.bridge = data_bridge.bridge("sql.json")
         # Rebuild all currently active orders
         self.orders = []
-        for index, order in self.bridge.get_orders().sort_values(by=["queue_num"]).iterrows():
+        for index, order in self.bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
             self.orders.append(Order.Order(**order))
 
         # Rebuild all items attatched to the active orders
@@ -47,11 +47,15 @@ print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
 
 
 
+# app = QtWidgets.QApplication(sys.argv)
+# manager_win = QtWidgets.QMainWindow()
+# managerAttatched.managerAttatched(mass.menu_items, manager_win)
+# app.exec_()
+# print([x.item_name for x in mass.menu_items])
 app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-managerAttatched.managerAttatched(mass.menu_items, manager_win)
+manageOrderList_win = QtWidgets.QMainWindow()
+manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
 app.exec_()
-print([x.item_name for x in mass.menu_items])
 ##### FIND A WAY TO SYNC THE ATTRTIBUTES TO THE DATABASE
 
 
