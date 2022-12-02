@@ -3,6 +3,7 @@ from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt
 
+sys.path.append("Cashier")
 from welcomeScreen import *
 from selectingItems import *
 from finishOrder import *
