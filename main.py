@@ -7,6 +7,8 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
+import manageOrderListGUI
+import manageOrderListGUIAttached
 import managerAttatched
 import cookAttatched
 from traits.api import *
@@ -75,11 +77,15 @@ print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
 
 
 
+# app = QtWidgets.QApplication(sys.argv)
+# manager_win = QtWidgets.QMainWindow()
+# managerAttatched.managerAttatched(mass.menu_items, manager_win)
+# app.exec_()
+# print([x.item_name for x in mass.menu_items])
 app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-managerAttatched.managerAttatched(mass.menu_items, manager_win)
+manageOrderList_win = QtWidgets.QMainWindow()
+manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
 app.exec_()
-print([x.item_name for x in mass.menu_items])
 ##### FIND A WAY TO SYNC THE ATTRTIBUTES TO THE DATABASE
 
 
