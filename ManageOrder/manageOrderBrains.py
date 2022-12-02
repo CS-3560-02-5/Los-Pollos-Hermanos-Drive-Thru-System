@@ -3,7 +3,7 @@ import sys
 from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt
-import manageOrd
+
 
 
 
@@ -31,12 +31,12 @@ class manageOrder(Ui_MainWindow, QMainWindow):
         self.ordersList.addItem("russel Rickards")
 
     def clickManage(self):
-        
+        '''
         print("Manage test")
         app = QtWidgets.QApplication(sys.argv)
         manageOrderList_win = QtWidgets.QMainWindow()
         manageOrderListGUIAttached.manageOrderListGUIAttached(self.ordersList.currentItem().text()  , self.menu_items, manageOrderList_win)
         app.exec_()
-
+        '''
 
         
