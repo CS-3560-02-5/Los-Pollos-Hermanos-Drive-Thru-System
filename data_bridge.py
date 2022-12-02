@@ -115,6 +115,11 @@ class bridge:
             self.mydb.commit()
         else:
             print("The attribute " + str(attribute) + " is not a valid value")
+    
+    def update_order(self, Order: Order):
+        """Update an order in the database"""
+        for attr in Order.__dict__:
+            self.edit_order(Order, attr, Order.__dict__[attr])
 
     ################# OrderItem Operations #################
 
