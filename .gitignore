@@ -2,6 +2,6 @@ sql.json
 manageOrder.cpython-311.pyc
 *.pem
 /__pycache__
-/Manager/__pycache__
+/Cashier/__pycache__
 /Cook/__pycache__
-/Cahsier/__pycache__
+/Manager/__pycache__

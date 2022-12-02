@@ -89,3 +89,4 @@ MainWindow = QtWidgets.QMainWindow()
 ui = cookGUIAttached(MainWindow)
 MainWindow.show()
 app.exec_()
+
