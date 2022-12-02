@@ -1,7 +1,7 @@
-from managerOrderListGUI import *
+from manageOrderListGUI import *
 import sys
 
-class managerOrderListGUIAttached(Ui_MainWindow):
+class manageOrderListGUIAttached(Ui_MainWindow):
     #constructor
     def __init__(self, orderItems, window):
         self.setupUi(window)
@@ -30,6 +30,6 @@ class managerOrderListGUIAttached(Ui_MainWindow):
 #runs the application
 app = QtWidgets.QApplication(sys.argv)
 MainWindow = QtWidgets.QMainWindow()
-ui = managerOrderListGUIAttached(MainWindow)
+ui = manageOrderListGUIAttached(MainWindow)
 MainWindow.show()
 app.exec_()
