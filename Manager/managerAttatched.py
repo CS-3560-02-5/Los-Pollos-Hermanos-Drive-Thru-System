@@ -2,7 +2,6 @@ from managerGUI import Ui_manager_QWidget
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QDialog
-from PyQt5.uic import loadUi
 import sys
 from editDialog import Ui_edit_Dialog
 
@@ -33,16 +32,19 @@ class managerAttatched(Ui_manager_QWidget, QMainWindow):
         print("works")
 
     def editMenuItem_GUI(self):
-        index = next((i for i, item in enumerate(self.menu_items) if item.item_name == self.menuItems_listWidget.currentItem().text()), -1)
-        current_item = self.menu_items[index]
-        self.edit_dlg.ui.itemName_plainTextEdit.setPlainText(current_item.item_name)
-        self.edit_dlg.ui.description_plainTextEdit.setPlainText(current_item.item_description)
-        self.edit_dlg.ui.price_plainTextEdit.setPlainText(str(current_item.price))
-        self.edit_dlg.exec_()
-        current_item.item_name = self.edit_dlg.ui.itemName_plainTextEdit.toPlainText()
-        current_item.item_description = self.edit_dlg.ui.description_plainTextEdit.toPlainText()
-        current_item.price = float(self.edit_dlg.ui.price_plainTextEdit.toPlainText())
-        self.menu_items[index] = current_item
+        try:
+            index = next((i for i, item in enumerate(self.menu_items) if item.item_name == self.menuItems_listWidget.currentItem().text()), -1)
+            current_item = self.menu_items[index]
+            self.edit_dlg.ui.itemName_plainTextEdit.setPlainText(current_item.item_name)
+            self.edit_dlg.ui.description_plainTextEdit.setPlainText(current_item.item_description)
+            self.edit_dlg.ui.price_plainTextEdit.setPlainText(str(current_item.price))
+            self.edit_dlg.exec_()
+            current_item.item_name = self.edit_dlg.ui.itemName_plainTextEdit.toPlainText()
+            current_item.item_description = self.edit_dlg.ui.description_plainTextEdit.toPlainText()
+            current_item.price = float(self.edit_dlg.ui.price_plainTextEdit.toPlainText())
+            self.menu_items[index] = current_item
+        except:
+            pass
 
 
 class editDialog(QDialog):
