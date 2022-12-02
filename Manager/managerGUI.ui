@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>506</height>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,7 +59,7 @@ border-width: 3px;</string>
   <widget class="QPushButton" name="editItem_pushButton">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>220</x>
      <y>430</y>
      <width>121</width>
      <height>31</height>
@@ -96,7 +96,7 @@ border-width: 3px;</string>
     <string>Remove Item</string>
    </property>
   </widget>
-  <widget class="QTableView" name="menuItems_tableView">
+  <widget class="QListWidget" name="menuItems_listWidget">
    <property name="geometry">
     <rect>
      <x>40</x>

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_manager_QWidget(object):
     def setupUi(self, manager_QWidget):
         manager_QWidget.setObjectName("manager_QWidget")
-        manager_QWidget.resize(567, 506)
+        manager_QWidget.resize(567, 499)
         manager_QWidget.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.menuItems_label = QtWidgets.QLabel(manager_QWidget)
         self.menuItems_label.setGeometry(QtCore.QRect(40, 50, 151, 41))
@@ -33,7 +33,7 @@ class Ui_manager_QWidget(object):
 "border-width: 3px;")
         self.addItem_pushButton.setObjectName("addItem_pushButton")
         self.editItem_pushButton = QtWidgets.QPushButton(manager_QWidget)
-        self.editItem_pushButton.setGeometry(QtCore.QRect(210, 430, 121, 31))
+        self.editItem_pushButton.setGeometry(QtCore.QRect(220, 430, 121, 31))
         self.editItem_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 13pt \"MS Shell Dlg 2\";\n"
@@ -48,14 +48,14 @@ class Ui_manager_QWidget(object):
 "border-style: outset;\n"
 "border-width: 3px;")
         self.removeItem_pushButton.setObjectName("removeItem_pushButton")
-        self.menuItems_tableView = QtWidgets.QTableView(manager_QWidget)
-        self.menuItems_tableView.setGeometry(QtCore.QRect(40, 110, 491, 211))
-        self.menuItems_tableView.setStyleSheet("color: rgb(0, 170, 0);\n"
+        self.menuItems_listWidget = QtWidgets.QListWidget(manager_QWidget)
+        self.menuItems_listWidget.setGeometry(QtCore.QRect(40, 110, 491, 211))
+        self.menuItems_listWidget.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
-        self.menuItems_tableView.setObjectName("menuItems_tableView")
+        self.menuItems_listWidget.setObjectName("menuItems_listWidget")
 
         self.retranslateUi(manager_QWidget)
         QtCore.QMetaObject.connectSlotsByName(manager_QWidget)
@@ -67,7 +67,7 @@ class Ui_manager_QWidget(object):
         self.addItem_pushButton.setText(_translate("manager_QWidget", "Add Item"))
         self.editItem_pushButton.setText(_translate("manager_QWidget", "Edit Item"))
         self.removeItem_pushButton.setText(_translate("manager_QWidget", "Remove Item"))
-        self.menuItems_tableView.setWhatsThis(_translate("manager_QWidget", "<html><head/><body><p><br/></p></body></html>"))
+        self.menuItems_listWidget.setWhatsThis(_translate("manager_QWidget", "<html><head/><body><p><br/></p></body></html>"))
 
 
 if __name__ == "__main__":
