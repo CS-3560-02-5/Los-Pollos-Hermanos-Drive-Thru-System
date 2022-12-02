@@ -1,9 +1,9 @@
 from cookGUI import *
 import sys
-import pandas as pd
-import sqlalchemy
-import data_bridge
-import Order
+#import pandas as pd
+#import sqlalchemy
+#import data_bridge
+#import Order
 
 class cookAttached(Ui_cookGUI):
     #making constructor
@@ -20,15 +20,13 @@ class cookAttached(Ui_cookGUI):
     def updateOrderSlot1(self):
 
         #find all active orders in db and add them to active_order
-        active_orders = []
+        '''active_orders = []
         for index, order in bridge.get_active_orders().sort_values(by=["queue_num"]).iterrows():
             active_orders.append(Order.Order(**order))
-        print([x.dict for x in active_orders])
+        print([x.dict for x in active_orders])'''
 
         #initializing test array to pull data from
         orderArray = [1,"walter's Nuggies",14,"medium rare"]
-
-    
 
         orderlength = 3
         orderStr = ""
