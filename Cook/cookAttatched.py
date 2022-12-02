@@ -84,9 +84,10 @@ class cookGUIAttached(Ui_cookGUI):
         self.textArea4.setText(orderStr)
         print(orderStr)
 
-app = QtWidgets.QApplication(sys.argv)
-MainWindow = QtWidgets.QMainWindow()
-ui = cookGUIAttached(MainWindow)
-MainWindow.show()
-app.exec_()
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = cookGUIAttached(MainWindow)
+    MainWindow.show()
+    app.exec_()
 
