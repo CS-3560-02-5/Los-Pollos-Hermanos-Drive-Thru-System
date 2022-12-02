@@ -66,7 +66,7 @@ border-color: rgb(0, 0, 0);</string>
         </widget>
        </item>
        <item>
-        <widget class="QListView" name="orderList_View">
+        <widget class="QListWidget" name="orderList_ListWidget">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>

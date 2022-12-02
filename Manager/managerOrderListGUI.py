@@ -44,20 +44,20 @@ class Ui_MainWindow(object):
         self.manageOrderList_label.setAlignment(QtCore.Qt.AlignCenter)
         self.manageOrderList_label.setObjectName("manageOrderList_label")
         self.verticalLayout_2.addWidget(self.manageOrderList_label)
-        self.orderList_View = QtWidgets.QListView(self.orderListWidget)
+        self.orderList_ListWidget = QtWidgets.QListWidget(self.orderListWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.orderList_View.sizePolicy().hasHeightForWidth())
-        self.orderList_View.setSizePolicy(sizePolicy)
-        self.orderList_View.setMinimumSize(QtCore.QSize(400, 0))
-        self.orderList_View.setMaximumSize(QtCore.QSize(10000, 16777215))
-        self.orderList_View.setStyleSheet("background-color: rgb(136, 136, 136);\n"
+        sizePolicy.setHeightForWidth(self.orderList_ListWidget.sizePolicy().hasHeightForWidth())
+        self.orderList_ListWidget.setSizePolicy(sizePolicy)
+        self.orderList_ListWidget.setMinimumSize(QtCore.QSize(400, 0))
+        self.orderList_ListWidget.setMaximumSize(QtCore.QSize(10000, 16777215))
+        self.orderList_ListWidget.setStyleSheet("background-color: rgb(136, 136, 136);\n"
 "color: rgb(0, 255, 0);\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
-        self.orderList_View.setObjectName("orderList_View")
-        self.verticalLayout_2.addWidget(self.orderList_View)
+        self.orderList_ListWidget.setObjectName("orderList_ListWidget")
+        self.verticalLayout_2.addWidget(self.orderList_ListWidget)
         self.horizontalLayout.addWidget(self.orderListWidget)
         self.OrderListButtonWidget = QtWidgets.QWidget(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)

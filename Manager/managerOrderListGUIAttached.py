@@ -3,7 +3,7 @@ import sys
 
 class managerOrderListGUIAttached(Ui_MainWindow):
     #constructor
-    def __init__(self, window):
+    def __init__(self, orderItems, window):
         self.setupUi(window)
         #calls clickEdit function
         self.editOrder_but.clicked.connect(self.clickEdit)
@@ -13,8 +13,8 @@ class managerOrderListGUIAttached(Ui_MainWindow):
         self.back_but.clicked.connect(self.clickBack)
         #sets the order number label text
         self.manageOrderList_label.setText("Order #Bar")
-        #Order list
-        #self.orderList_View
+        #Order list widget
+        #self.orderList_ListWidget
         
     #allows the editing of order    
     def clickEdit(self):
