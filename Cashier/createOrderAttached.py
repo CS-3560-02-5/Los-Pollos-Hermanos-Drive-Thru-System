@@ -1,15 +1,17 @@
-import createOrder
-from PyQt5 import QtCore, QTWidgets
+from createOrder import Ui_Dialog
+from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMainWindow
 
-class createOrderAttached(createOrder.Ui_Dialog):
+class createOrderAttached(Ui_Dialog):
     def __init__(self):
         super().__init__()
-        self.setupUI(self)
+        self.setupUi(self)
         self.show
         
 if __name__ == "__main__":
     UI = createOrderAttached()
     import sys
-    app = QTWidgets.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     manager_MainWindow = createOrderAttached()
     sys.exit(app.exec_())
