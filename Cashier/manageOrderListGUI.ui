@@ -22,6 +22,9 @@
     <height>16777215</height>
    </size>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -66,7 +69,7 @@ border-color: rgb(0, 0, 0);</string>
         </widget>
        </item>
        <item>
-        <widget class="QListWidget" name="orderList_ListWidget">
+        <widget class="QTableWidget" name="orderList_TableWidget">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -81,7 +84,7 @@ border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="maximumSize">
           <size>
-           <width>10000</width>
+           <width>10000000</width>
            <height>16777215</height>
           </size>
          </property>
@@ -89,8 +92,89 @@ border-color: rgb(0, 0, 0);</string>
           <string notr="true">background-color: rgb(136, 136, 136);
 color: rgb(0, 255, 0);
 border: 2px solid #ccc;
-border-color: rgb(0, 0, 0);</string>
+border-color: rgb(0, 0, 0);
+font: 8pt &quot;Arial&quot;;</string>
          </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="cornerButtonEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>true</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>Row 1</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Item</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Quantity</string>
+          </property>
+          <property name="background">
+           <color>
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="background">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+          <property name="foreground">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="foreground">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>

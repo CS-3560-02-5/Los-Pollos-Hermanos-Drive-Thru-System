@@ -61,14 +61,14 @@ class Event(HasTraits):
         else:
             print('The {} trait changed from {} to {} '.format(name, old, (getattr(obj, name))))
 
-
 mass = collector()
 
-
-
-
+#This runs manageOrderListGUIAttached
 app = QtWidgets.QApplication(sys.argv)
 manager_win = QtWidgets.QMainWindow()
 managerAttatched.managerAttatched(mass.menu_items, manager_win)
 manage_order = QtWidgets.QMainWindow()
 manageOrderBrains.manageOrder(mass, manage_order)
+# manageOrderList_win = QtWidgets.QMainWindow()
+# manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
+app.exec_()
