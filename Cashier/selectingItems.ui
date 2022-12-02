@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1763</width>
-    <height>900</height>
+    <width>1860</width>
+    <height>1035</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,7 +42,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.449, x2:0, y2:1, stop:0
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="widget_2" native="true">
+           <widget class="QWidget" name="menuTop" native="true">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(255, 255, 255);
 border-color: rgb(0, 0, 0);
@@ -51,7 +51,7 @@ border-width: 2px;</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="foodSide">
                <property name="styleSheet">
                 <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -64,7 +64,7 @@ font: 26pt &quot;Forte&quot;;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="sidesSide">
                <property name="styleSheet">
                 <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -76,7 +76,7 @@ font: 26pt &quot;Forte&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="drinkSide">
                <property name="styleSheet">
                 <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -91,7 +91,7 @@ font: 26pt &quot;Forte&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_3" native="true">
+           <widget class="QWidget" name="menuBnts" native="true">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -100,7 +100,7 @@ font: 26pt &quot;Forte&quot;;</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="QWidget" name="widget" native="true">
+              <widget class="QWidget" name="foodBtns" native="true">
                <layout class="QVBoxLayout" name="verticalLayout_7">
                 <property name="spacing">
                  <number>20</number>
@@ -118,20 +118,43 @@ font: 26pt &quot;Forte&quot;;</string>
                  <number>20</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="widget_8" native="true">
+                 <widget class="QWidget" name="chickSanWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_8">
-                   <item>
-                    <widget class="QLabel" name="label">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="chickSanPicBtn">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/chickSan.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/chickSan.png</normaloff>:/images/menuImages/chickSan.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_5">
+                    <widget class="QPushButton" name="chickSanBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -146,20 +169,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget_7" native="true">
+                 <widget class="QWidget" name="waltersNuggiesWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_9">
-                   <item>
-                    <widget class="QLabel" name="label_2">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="waltersNuggiesPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/waltersNuggies.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/waltersNuggies.png</normaloff>:/images/menuImages/waltersNuggies.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_6">
+                    <widget class="QPushButton" name="waltersNuggiesBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -174,20 +214,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget_6" native="true">
+                 <widget class="QWidget" name="wangBangWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_10">
-                   <item>
-                    <widget class="QLabel" name="label_3">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="wanBangPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/wangBang.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/wangBang.png</normaloff>:/images/menuImages/wangBang.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_7">
+                    <widget class="QPushButton" name="wanBangBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -205,7 +262,7 @@ font: 20pt &quot;Forte&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="widget_5" native="true">
+              <widget class="QWidget" name="sidesBtns" native="true">
                <layout class="QVBoxLayout" name="verticalLayout_12">
                 <property name="spacing">
                  <number>20</number>
@@ -223,20 +280,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  <number>20</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="widget_9" native="true">
+                 <widget class="QWidget" name="lastFFriesWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_13">
-                   <item>
-                    <widget class="QLabel" name="label_5">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="lastFFriesPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/lastFridaysFries.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/lastFridaysFries.png</normaloff>:/images/menuImages/lastFridaysFries.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_9">
+                    <widget class="QPushButton" name="lastFFriesBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -251,20 +325,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget_10" native="true">
+                 <widget class="QWidget" name="holyBreadWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_14">
-                   <item>
-                    <widget class="QLabel" name="label_6">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="holyBreadPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/holyBread.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/holyBread.png</normaloff>:/images/menuImages/holyBread.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_10">
+                    <widget class="QPushButton" name="holyBreadBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -279,20 +370,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget_11" native="true">
+                 <widget class="QWidget" name="mackWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_15">
-                   <item>
-                    <widget class="QLabel" name="label_7">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="mackPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>245</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/mack.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/mack.png</normaloff>:/images/menuImages/mack.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_11">
+                    <widget class="QPushButton" name="mackBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -310,7 +418,7 @@ font: 20pt &quot;Forte&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="widget_4" native="true">
+              <widget class="QWidget" name="drinksBtns" native="true">
                <layout class="QVBoxLayout" name="verticalLayout_16">
                 <property name="spacing">
                  <number>20</number>
@@ -328,20 +436,37 @@ font: 20pt &quot;Forte&quot;;</string>
                  <number>200</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="widget_12" native="true">
+                 <widget class="QWidget" name="seaWtrWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_17">
-                   <item>
-                    <widget class="QLabel" name="label_8">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="seaWtrPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>222</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/seasonedWater.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/seasonedWater.png</normaloff>:/images/menuImages/seasonedWater.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_12">
+                    <widget class="QPushButton" name="seaWtrBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
@@ -356,24 +481,41 @@ font: 20pt &quot;Forte&quot;;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget_13" native="true">
+                 <widget class="QWidget" name="diMoxWid" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_18">
-                   <item>
-                    <widget class="QLabel" name="label_9">
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QPushButton" name="diMoxPicBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>222</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">image: url(:/images/menuImages/dihydrogenMonoxide.png);</string>
+                      <string notr="true">border: none;
+background-color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="icon">
+                      <iconset resource="menuImages.qrc">
+                       <normaloff>:/images/menuImages/dihydrogenMonoxide.png</normaloff>:/images/menuImages/dihydrogenMonoxide.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>500</width>
+                       <height>175</height>
+                      </size>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_13">
+                    <widget class="QPushButton" name="diMoxBtn">
                      <property name="styleSheet">
                       <string notr="true">border: none;
 color: rgb(255, 0, 0);
-font: 14pt &quot;Forte&quot;;</string>
+font: 20pt &quot;Forte&quot;;</string>
                      </property>
                      <property name="text">
                       <string>Dihydrogen Monoxide</string>
@@ -416,7 +558,7 @@ border-width: 2px;
            <number>0</number>
           </property>
           <item>
-           <widget class="QWidget" name="widget_15" native="true">
+           <widget class="QWidget" name="summaryOdrNumSec" native="true">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -443,7 +585,7 @@ border-width: 2px;
               <number>0</number>
              </property>
              <item>
-              <widget class="QFrame" name="frame">
+              <widget class="QFrame" name="orderLabelFrm">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -470,7 +612,7 @@ font: 22pt &quot;Arial&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_2">
+              <widget class="QFrame" name="orderNumFrm">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -497,7 +639,7 @@ font: 22pt &quot;Arial&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_14" native="true">
+           <widget class="QWidget" name="summaryFramesSec" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_2">
              <property name="topMargin">
               <number>0</number>
@@ -506,7 +648,7 @@ font: 22pt &quot;Arial&quot;;</string>
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="widget_16" native="true">
+              <widget class="QWidget" name="orderFrame1" native="true">
                <layout class="QVBoxLayout" name="verticalLayout_3">
                 <property name="spacing">
                  <number>0</number>
@@ -524,148 +666,121 @@ font: 22pt &quot;Arial&quot;;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QFrame" name="frame_11">
+                 <widget class="QLabel" name="order1Label">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 20pt &quot;Footlight MT Light&quot;;
+color: black;</string>
+                  </property>
+                  <property name="text">
+                   <string>chick Sen</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="order1Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_24">
+                  <layout class="QHBoxLayout" name="horizontalLayout_12">
                    <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>0</number>
+                    <number>7</number>
                    </property>
                    <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
                     <number>0</number>
                    </property>
                    <property name="bottomMargin">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="label_17">
+                    <widget class="QLineEdit" name="order1Qty">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">font: 20pt &quot;Footlight MT Light&quot;;
-color: black;</string>
-                     </property>
-                     <property name="text">
-                      <string>chick Sen</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <string notr="true">font: 18pt &quot;Arial&quot;;</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QFrame" name="frame_19">
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
+                    <widget class="QPushButton" name="order1UpBtn">
+                     <property name="text">
+                      <string/>
                      </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                     <property name="icon">
+                      <iconset resource="iconsImages.qrc">
+                       <normaloff>:/icons/iconsImages/1200px-Green-Up-Arrow.svg.png</normaloff>:/icons/iconsImages/1200px-Green-Up-Arrow.svg.png</iconset>
                      </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_24">
-                      <property name="spacing">
-                       <number>7</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>0</number>
-                      </property>
-                      <item>
-                       <widget class="QLineEdit" name="lineEdit_31">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>50</width>
-                          <height>50</height>
-                         </size>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">font: 18pt &quot;Arial&quot;;</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="pushButton_8">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="iconsImages.qrc">
-                          <normaloff>:/icons/iconsImages/1200px-Green-Up-Arrow.svg.png</normaloff>:/icons/iconsImages/1200px-Green-Up-Arrow.svg.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>30</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="pushButton_59">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="iconsImages.qrc">
-                          <normaloff>:/icons/iconsImages/1200px-RedDownArrow.svg.png</normaloff>:/icons/iconsImages/1200px-RedDownArrow.svg.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>30</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="pushButton_60">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="iconsImages.qrc">
-                          <normaloff>:/icons/iconsImages/1024px-Black_close_x.svg.png</normaloff>:/icons/iconsImages/1024px-Black_close_x.svg.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>30</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLineEdit" name="lineEdit_32">
-                        <property name="styleSheet">
-                         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
-                        </property>
-                        <property name="text">
-                         <string>Notes: </string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="order1DownBtn">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="iconsImages.qrc">
+                       <normaloff>:/icons/iconsImages/1200px-RedDownArrow.svg.png</normaloff>:/icons/iconsImages/1200px-RedDownArrow.svg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="order1CancelBtn">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="iconsImages.qrc">
+                       <normaloff>:/icons/iconsImages/1024px-Black_close_x.svg.png</normaloff>:/icons/iconsImages/1024px-Black_close_x.svg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="order1Notes">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>Notes: </string>
+                     </property>
                     </widget>
                    </item>
                   </layout>
@@ -675,7 +790,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_4">
+              <widget class="QFrame" name="orderFrame2">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -699,7 +814,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_10">
+                 <widget class="QLabel" name="order2Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -719,7 +834,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_12">
+                 <widget class="QFrame" name="order2Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -737,7 +852,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_3">
+                    <widget class="QLineEdit" name="order2Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -756,7 +871,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_14">
+                    <widget class="QPushButton" name="order2UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -773,7 +888,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_17">
+                    <widget class="QPushButton" name="order2DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -790,7 +905,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_18">
+                    <widget class="QPushButton" name="order2CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -807,7 +922,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_4">
+                    <widget class="QLineEdit" name="order2Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -823,7 +938,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_10">
+              <widget class="QFrame" name="orderFrame3">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -844,7 +959,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_11">
+                 <widget class="QLabel" name="order3Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -864,7 +979,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_13">
+                 <widget class="QFrame" name="order3Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -879,7 +994,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_17">
+                    <widget class="QLineEdit" name="order3Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -898,7 +1013,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_15">
+                    <widget class="QPushButton" name="order3UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -915,7 +1030,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_38">
+                    <widget class="QPushButton" name="order3DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -932,7 +1047,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_39">
+                    <widget class="QPushButton" name="order3CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -949,7 +1064,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_18">
+                    <widget class="QLineEdit" name="order3Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -965,7 +1080,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_9">
+              <widget class="QFrame" name="orderFrame4">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -989,7 +1104,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_12">
+                 <widget class="QLabel" name="order4Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1009,7 +1124,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_14">
+                 <widget class="QFrame" name="order4Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1024,7 +1139,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_21">
+                    <widget class="QLineEdit" name="order4Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1043,7 +1158,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_16">
+                    <widget class="QPushButton" name="order4UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1060,7 +1175,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_44">
+                    <widget class="QPushButton" name="order4DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1077,7 +1192,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_45">
+                    <widget class="QPushButton" name="order4CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1094,7 +1209,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_22">
+                    <widget class="QLineEdit" name="order4Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -1110,7 +1225,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_5">
+              <widget class="QFrame" name="orderFrame5">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -1134,7 +1249,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_13">
+                 <widget class="QLabel" name="order5Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1154,7 +1269,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_15">
+                 <widget class="QFrame" name="order5Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1169,7 +1284,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_23">
+                    <widget class="QLineEdit" name="order5Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1188,7 +1303,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_19">
+                    <widget class="QPushButton" name="order5UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1205,7 +1320,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_47">
+                    <widget class="QPushButton" name="order5DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1222,7 +1337,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_48">
+                    <widget class="QPushButton" name="order5CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1239,7 +1354,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_24">
+                    <widget class="QLineEdit" name="order5Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -1255,7 +1370,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_8">
+              <widget class="QFrame" name="orderFrame6">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -1276,7 +1391,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_14">
+                 <widget class="QLabel" name="order6Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1296,7 +1411,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_16">
+                 <widget class="QFrame" name="order6Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1314,7 +1429,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_25">
+                    <widget class="QLineEdit" name="order6Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1333,7 +1448,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_20">
+                    <widget class="QPushButton" name="order6UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1350,7 +1465,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_50">
+                    <widget class="QPushButton" name="order6DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1367,7 +1482,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_51">
+                    <widget class="QPushButton" name="order6CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1384,7 +1499,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_26">
+                    <widget class="QLineEdit" name="order6Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -1400,7 +1515,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_6">
+              <widget class="QFrame" name="orderFrame7">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -1424,7 +1539,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_15">
+                 <widget class="QLabel" name="order7Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1444,7 +1559,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_17">
+                 <widget class="QFrame" name="order7Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1462,7 +1577,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_27">
+                    <widget class="QLineEdit" name="order7Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1481,7 +1596,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_21">
+                    <widget class="QPushButton" name="order7UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1498,7 +1613,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_53">
+                    <widget class="QPushButton" name="order7DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1515,7 +1630,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_54">
+                    <widget class="QPushButton" name="order7CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1532,7 +1647,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_28">
+                    <widget class="QLineEdit" name="order7Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -1548,7 +1663,7 @@ color: black;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_7">
+              <widget class="QFrame" name="orderFrame8">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -1572,7 +1687,7 @@ color: black;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_16">
+                 <widget class="QLabel" name="order8Label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1592,7 +1707,7 @@ color: black;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="frame_18">
+                 <widget class="QFrame" name="order8Btns">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1616,7 +1731,7 @@ color: black;</string>
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_29">
+                    <widget class="QLineEdit" name="order8Qty">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1635,7 +1750,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_22">
+                    <widget class="QPushButton" name="order8UpBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1652,7 +1767,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_56">
+                    <widget class="QPushButton" name="order8DownBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1669,7 +1784,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_57">
+                    <widget class="QPushButton" name="order8CancelBtn">
                      <property name="text">
                       <string/>
                      </property>
@@ -1686,7 +1801,7 @@ color: black;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_30">
+                    <widget class="QLineEdit" name="order8Notes">
                      <property name="styleSheet">
                       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
                      </property>
@@ -1705,7 +1820,7 @@ color: black;</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="ignore">
             <property name="styleSheet">
              <string notr="true">border: none;
 color: rgb(255, 255, 255);
