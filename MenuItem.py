@@ -1,3 +1,4 @@
+import data_bridge
 
 class MenuItem:
     def __init__(self, item_name: str, item_id: int, price: float, item_description: str, image):
@@ -7,5 +8,5 @@ class MenuItem:
         self.item_description = item_description
         self.image = image
 
-    def disable():
+    def remove(self):
         pass

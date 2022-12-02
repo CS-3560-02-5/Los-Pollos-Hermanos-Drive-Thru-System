@@ -1,5 +1,11 @@
 import uuid
 from itertools import cycle
+import OrderItem
+import MenuItem
+from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMainWindow
+import sys
 
 
 class Order:
@@ -11,14 +17,19 @@ class Order:
         self.queue_num = next(self.queue)
         self.order_status = order_status
 
+    def getQueue(self):
+        return self.queue_num
     def prepare(self):
         self.order_status = 'p'
-        pass
 
     def complete(self):
         self.order_status = "c"
-        pass
+        self.queue_num = 0
 
     def cancel(self):
         self.order_status = 'x'
-        pass
+        self.queue_num = 0
+    def createOrderItem(self, menuItem: MenuItem, *, quantity=1, notes=None):
+        return OrderItem.OrderItem(self.order_id, menuItem.item_id, quantity=quantity, notes=notes)
+        
+        
