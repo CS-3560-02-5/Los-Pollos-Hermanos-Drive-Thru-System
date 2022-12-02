@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="newPrefix">
+  <qresource prefix="logo">
     <file>Los_Pollos.webp</file>
   </qresource>
 </RCC>
