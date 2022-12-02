@@ -14,11 +14,6 @@ import cookAttatched
 import manageOrderBrains
 from traits.api import *
 
-############ Open all interfaces here
-
-
-###################################
-running = True
 
 ####### Initial setup of running environment
 
@@ -69,12 +64,6 @@ class Event(HasTraits):
 
 mass = collector()
 
-'''
-#### TESTING
-print([x.__dict__ for x in orders])
-print([x.__dict__ for x in active_order_items])
-print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
-'''
 
 
 
@@ -84,41 +73,3 @@ managerAttatched.managerAttatched(mass.menu_items, manager_win)
 manage_order = QtWidgets.QMainWindow()
 manageOrderBrains.manageOrder(mass, manage_order)
 app.exec()
-
-
-'''
-manager_win = QtWidgets.QMainWindow()
-managerAttatched.managerAttatched(mass.menu_items, manager_win)
-
-manageOrderList_win = QtWidgets.QMainWindow()
-manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
-app.exec_()
-##### FIND A WAY TO SYNC THE ATTRTIBUTES TO THE DATABASE
-'''
-
-
-'''
-bridge.add_menu_item(9, "The Tester", "Purely to test the add function", 4.20, menu_items[0].image)        # create menu_items test
-bridge.edit_menu_item(menu_items[8], "item_description", "This is the updated value!")                    # update menu_items test
-bridge.remove_menu_item(menu_items[8])                                                                 # delete menu_items test
-'''
-
-'''
-bridge.add_order_item(orders[1], menu_items[7], notes="This is seasoned water for eddard stark")    # create order_items test
-bridge.edit_order_item(active_order_items[-1], "quantity", 6)                                           # update order_items test
-bridge.remove_order_item(active_order_items[-1])                                                       # delete order_items test
-'''
-
-'''
-test = Order.Order("Test Tester")
-bridge.add_order(test.order_id, test.queue_num, test.customer_name, test.order_status)                    # create orders test
-bridge.add_order_item(orders[1], menu_items[3], notes="this will be deleted soon!")
-bridge.add_order_item(orders[1], menu_items[2], notes="this will be deleted as well!")
-bridge.edit_order(orders[1], "order_status", 'x')                                               # update orders test
-bridge.remove_order(orders[1])                                                                 # delete orders test
-'''
-
-'''
-while running:
-    pass
-'''
