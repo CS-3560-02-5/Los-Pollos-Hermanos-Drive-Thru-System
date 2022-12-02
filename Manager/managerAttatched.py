@@ -4,7 +4,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QDialog
 from PyQt5.uic import loadUi
 import sys
-from editDialog import Ui_edit_Dialog
+from Manager.editDialog import Ui_edit_Dialog
 
 
 class managerAttatched(Ui_manager_QWidget, QMainWindow):

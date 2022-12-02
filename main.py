@@ -50,7 +50,7 @@ print([(x.item_name + ": " + str(x.item_id)) for x in menu_items])
 
 app = QtWidgets.QApplication(sys.argv)
 manage_order = QtWidgets.QMainWindow()
-manageOrderBrains.manageOrder(mass.orders, manage_order)
+manageOrderBrains.manageOrder(mass, manage_order)
 app.exec()
 print[[x.item_name for x in mass.orders]]
 '''
