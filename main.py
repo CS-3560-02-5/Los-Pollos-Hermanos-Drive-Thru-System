@@ -37,33 +37,26 @@ class collector(HasTraits):
         self.menu_items = []
         for index, item in self.bridge.get_menu_items().iterrows():
             self.menu_items.append(MenuItem.MenuItem(**item))
+
+    @observe("menu_items")
+    def update_menu_items(self, event):
+        print("Menu items changed")
+        pass
     
-    def save(self):
+    @observe("orders")
+    def update_orders(self, event):
+        print("Orders changed")
         pass
 
-class Event(HasTraits):
-    def __init__(self):
-        super().__init__()
-        self.collector = collector()
-        self.collector.on_trait_change(Event._anytrait_changed)
-
-    def _anytrait_changed(obj, name, old, new):
-        is_list = name.endswith('_items')
-        if is_list:
-            name = name[0:name.rindex('_items')]
-        current_val = getattr(obj, name)
-        if is_list:
-            # new handles all the events(removed/changed/added to the list)
-            if any(new.added):
-                print("{} added to {} which is now {}".format(new.added, name, current_val))
-            if any(new.removed):
-                print("{} removed from {} which is now {}".format(new.removed, name, current_val))
-        else:
-            print('The {} trait changed from {} to {} '.format(name, old, (getattr(obj, name))))
+    @observe("log")
+    def update_order_items(self, event):
+        print("Order items changed")
+        pass
 
 
 mass = collector()
-
+mass.orders[1].complete()
+print(mass.orders[1].__dict__)
 
 
 
@@ -72,3 +65,4 @@ manager_win = QtWidgets.QMainWindow()
 managerAttatched.managerAttatched(mass.menu_items, manager_win)
 manage_order = QtWidgets.QMainWindow()
 manageOrderBrains.manageOrder(mass, manage_order)
+app.exec()
