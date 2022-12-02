@@ -1,4 +1,5 @@
 from Cook.cookGUI import *
+
 import sys
 from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
@@ -76,7 +77,6 @@ class cookAttached(Ui_cookGUI):
     def updateOrderSlot4(self):
         #initializing test array to pull data from
         orderArray = [1,"walter's Nuggies",14,"medium rare"]
-
         orderlength = 3
         orderStr = ""
         for item in range(orderlength):
@@ -93,3 +93,4 @@ MainWindow = QtWidgets.QMainWindow()
 ui = cookAttached(MainWindow)
 MainWindow.show()
 app.exec_()
+
