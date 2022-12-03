@@ -37,10 +37,14 @@ class manageOrder(Ui_MainWindow, QMainWindow):
         sys.exit(ret)'''
     
     def clickManage(self):
+        orderName = self.ordersList.currentItem().text()
+        for order in self.mass.orders:
+            orderID = next(i.order_id for i in self.mass.orders if i.customer_name == orderName)
+        print(orderID)
         self.manageOrderItems = QtWidgets.QMainWindow()
         self.ui = manageOrderListGUIAttached.Ui_MainWindow()
         self.ui.setupUi(self.manageOrderItems)
-        manageOrderListGUIAttached.Ui_MainWindow(self.ordersList.currentItem().text()  , self.mass)
+        manageOrderListGUIAttached.Ui_MainWindow(orderID , self.mass.menu_items)
         self.manageOrderItems.show()
         
         
