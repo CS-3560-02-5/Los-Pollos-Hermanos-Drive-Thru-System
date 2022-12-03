@@ -33,6 +33,7 @@ class collector(HasTraits):
             self.log[order.order_id] = []
             for index, item in self.bridge.get_order_items(order).iterrows():
                 self.log[order.order_id].append(OrderItem.OrderItem(**item))
+    
         # Rebuild all menu items
         self.menu_items = []
         for index, item in self.bridge.get_menu_items().iterrows():
@@ -61,15 +62,14 @@ class Event(HasTraits):
         else:
             print('The {} trait changed from {} to {} '.format(name, old, (getattr(obj, name))))
 
-
 mass = collector()
 
-
-
-
+#This runs manageOrderListGUIAttached
 app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-managerAttatched.managerAttatched(mass.menu_items, manager_win)
-manage_order = QtWidgets.QMainWindow()
-manageOrderBrains.manageOrder(mass, manage_order)
-app.exec()
+# manager_win = QtWidgets.QMainWindow()
+# managerAttatched.managerAttatched(mass.menu_items, manager_win)
+# manage_order = QtWidgets.QMainWindow()
+# manageOrderBrains.manageOrder(mass, manage_order)
+manageOrderList_win = QtWidgets.QMainWindow()
+manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, mass.log[0].quantity, mass.log[0].notes, manageOrderList_win)
+app.exec_()
