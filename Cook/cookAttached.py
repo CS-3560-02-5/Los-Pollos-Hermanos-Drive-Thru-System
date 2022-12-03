@@ -1,4 +1,4 @@
-from Cook.cookGUI import *
+from cookGUI import *
 
 import sys
 from PyQt5 import *
