@@ -7,7 +7,8 @@ import sys
 
 class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
     #constructor
-    def __init__(self, orderItems, menuItems, parent = None):
+    def __init__(self, mass, parent = None):
+        self.currentOrderID = 0
         super().__init__(parent)
         self.setupUi(self)
         #calls clickEdit function
@@ -22,8 +23,6 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         self.globalRow = 0
         self.globalCol = 0
         n = 0
-        self.menuItems = menuItems
-        self.orderItems = orderItems
         nameList = []
         quantList = []
         notesList = []
