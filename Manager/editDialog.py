@@ -11,16 +11,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_ManagerOrder_MainWindow(object):
-    def setupUi(self, ManagerOrder_MainWindow):
-        ManagerOrder_MainWindow.setObjectName("ManagerOrder_MainWindow")
-        ManagerOrder_MainWindow.resize(643, 315)
+class Ui_editDialog_MainWindow(object):
+    def setupUi(self, editDialog_MainWindow):
+        editDialog_MainWindow.setObjectName("editDialog_MainWindow")
+        editDialog_MainWindow.resize(651, 315)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(ManagerOrder_MainWindow.sizePolicy().hasHeightForWidth())
-        ManagerOrder_MainWindow.setSizePolicy(sizePolicy)
-        self.centralwidget = QtWidgets.QWidget(ManagerOrder_MainWindow)
+        sizePolicy.setHeightForWidth(editDialog_MainWindow.sizePolicy().hasHeightForWidth())
+        editDialog_MainWindow.setSizePolicy(sizePolicy)
+        self.centralwidget = QtWidgets.QWidget(editDialog_MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -162,29 +162,29 @@ class Ui_ManagerOrder_MainWindow(object):
         self.horizontalLayout.addItem(spacerItem2)
         self.verticalLayout_3.addWidget(self.widget_2)
         self.verticalLayout_2.addWidget(self.widget)
-        ManagerOrder_MainWindow.setCentralWidget(self.centralwidget)
+        editDialog_MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(ManagerOrder_MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(ManagerOrder_MainWindow)
+        self.retranslateUi(editDialog_MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(editDialog_MainWindow)
 
-    def retranslateUi(self, ManagerOrder_MainWindow):
+    def retranslateUi(self, editDialog_MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        ManagerOrder_MainWindow.setWindowTitle(_translate("ManagerOrder_MainWindow", "MainWindow"))
-        self.editMenuItems_label.setText(_translate("ManagerOrder_MainWindow", "EDIT MENU ITEMS"))
-        self.description_label.setText(_translate("ManagerOrder_MainWindow", "Description:"))
-        self.itemName_label.setText(_translate("ManagerOrder_MainWindow", "Item Name:"))
-        self.price_label.setText(_translate("ManagerOrder_MainWindow", "Price:"))
-        self.image_label.setText(_translate("ManagerOrder_MainWindow", "Image:"))
-        self.image_pushButton.setText(_translate("ManagerOrder_MainWindow", "Choose Image"))
-        self.ok_pushButton.setText(_translate("ManagerOrder_MainWindow", "OK"))
-        self.cancel_pushButton.setText(_translate("ManagerOrder_MainWindow", "CANCEL"))
+        editDialog_MainWindow.setWindowTitle(_translate("editDialog_MainWindow", "MainWindow"))
+        self.editMenuItems_label.setText(_translate("editDialog_MainWindow", "EDIT MENU ITEMS"))
+        self.description_label.setText(_translate("editDialog_MainWindow", "Description:"))
+        self.itemName_label.setText(_translate("editDialog_MainWindow", "Item Name:"))
+        self.price_label.setText(_translate("editDialog_MainWindow", "Price:"))
+        self.image_label.setText(_translate("editDialog_MainWindow", "Image:"))
+        self.image_pushButton.setText(_translate("editDialog_MainWindow", "Choose Image"))
+        self.ok_pushButton.setText(_translate("editDialog_MainWindow", "OK"))
+        self.cancel_pushButton.setText(_translate("editDialog_MainWindow", "CANCEL"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    ManagerOrder_MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_ManagerOrder_MainWindow()
-    ui.setupUi(ManagerOrder_MainWindow)
-    ManagerOrder_MainWindow.show()
+    editDialog_MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_editDialog_MainWindow()
+    ui.setupUi(editDialog_MainWindow)
+    editDialog_MainWindow.show()
     sys.exit(app.exec_())

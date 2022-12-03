@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ManagerOrder_MainWindow</class>
- <widget class="QMainWindow" name="ManagerOrder_MainWindow">
+ <class>editDialog_MainWindow</class>
+ <widget class="QMainWindow" name="editDialog_MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
+    <width>651</width>
     <height>315</height>
    </rect>
   </property>
