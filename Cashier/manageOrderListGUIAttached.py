@@ -8,6 +8,7 @@ import sys
 class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
     #constructor
     def __init__(self, mass, parent = None):
+        
         self.currentOrderID = 0
         super().__init__(parent)
         self.setupUi(self)
@@ -39,23 +40,8 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
         self.increment_spinBox.valueChanged.connect(self.spinSelected)
         self.orderList_TableWidget.cellClicked.connect(self.cellClickPosition)
-        for item in orderItems:
-            name = next(i.item_name for i in self.menuItems if i.item_id == item.item_id)
-            nameList.append(name)
-            print("name", str(name))
-            quantity = next(j.quantity for j in self.orderItems if j.quantity == item.quantity)
-            quantList.append(quantity)
-            print("quantity", str(quantity))
-            # self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(quantity)))
-            notes = next(k.notes for k in self.orderItems if k.notes == item.notes)
-            notesList.append(notes)
-            print("notes", str(notes))
-        self.orderList_TableWidget.setRowCount(len(nameList))
-        for num in range(len(nameList)):
-            self.orderList_TableWidget.setItem(num, 0, QtWidgets.QTableWidgetItem(nameList[num]))
-            self.orderList_TableWidget.setItem(num, 1, QtWidgets.QTableWidgetItem(str(quantList[num])))
-            self.orderList_TableWidget.setItem(num, 2, QtWidgets.QTableWidgetItem(notesList[num]))
-
+        menuItems = self.mass.menuItems
+        orderItems = self.mass.orderItems
         self.show()
         
     #allows the editing of order    
