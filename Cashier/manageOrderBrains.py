@@ -8,16 +8,18 @@ import manageOrderListGUIAttached
 
 
 
-class manageOrder(Ui_MainWindow, QMainWindow):
+class manageOrderClass(Ui_MainWindow, QMainWindow):
     def __init__(self, mass, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-
-
         self.mass = mass
+        print(self.ordersList)
         self.setupDisplay(mass.orders)
         self.setupButtons()
         self.show()
+        self.manageOrderItems_win = QtWidgets.QMainWindow()
+        self.josh = manageOrderListGUIAttached.manageOrderListGUIAttached(self.mass, self.manageOrderItems_win)
+        
         #button clickability
 
 
@@ -29,14 +31,12 @@ class manageOrder(Ui_MainWindow, QMainWindow):
     
     def clickManage(self):
         orderName = self.ordersList.currentItem().text()
+
         for order in self.mass.orders:
             orderID = next(i.order_id for i in self.mass.orders if i.customer_name == orderName)
+        self.josh.currentOrderID = orderID
         print(orderID)
-        self.manageOrderItems = QtWidgets.QMainWindow()
-        self.ui = manageOrderListGUIAttached.Ui_MainWindow()
-        self.ui.setupUi(self.manageOrderItems)
-        manageOrderListGUIAttached.Ui_MainWindow(orderID , self.mass.menu_items)
-        self.manageOrderItems.show()
+        self.manageOrderItems_win.show()
         
         
 
