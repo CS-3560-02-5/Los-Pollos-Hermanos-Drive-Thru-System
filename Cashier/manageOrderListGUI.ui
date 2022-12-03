@@ -56,7 +56,7 @@ background-color: rgb(89, 89, 89);
          <property name="styleSheet">
           <string notr="true">color: rgb(0, 255, 0);
 background-color: rgb(136, 136, 136);
-font: 36pt &quot;Arial&quot;;
+font: 100 28pt &quot;Arial&quot;;
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>
@@ -88,14 +88,32 @@ border-color: rgb(0, 0, 0);</string>
            <height>16777215</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(136, 136, 136);
-border: 2px solid #ccc;
+          <string notr="true">border: 1px solid #ccc;
 border-color: rgb(0, 0, 0);
-font: 8pt &quot;Arial&quot;;</string>
+font: 12pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
          </property>
          <property name="alternatingRowColors">
           <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
          </property>
          <property name="showGrid">
           <bool>false</bool>
@@ -122,7 +140,7 @@ font: 8pt &quot;Arial&quot;;</string>
          </column>
          <column>
           <property name="text">
-           <string>Quantity</string>
+           <string>Amt.</string>
           </property>
           <property name="background">
            <color>
@@ -153,13 +171,47 @@ font: 8pt &quot;Arial&quot;;</string>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QSpinBox" name="increment_spinBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>22</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 22pt &quot;Arial&quot;;
+border: 1px solid #ccc;
+border-color: rgb(0, 0, 0);
+background-color: rgb(136, 136, 136);
+color: rgb(0, 255, 0);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
          <property name="minimum">
           <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>99</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="edit_but">
+        <widget class="QPushButton" name="accept_but">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -175,12 +227,12 @@ font: 8pt &quot;Arial&quot;;</string>
          <property name="styleSheet">
           <string notr="true">color: rgb(0, 255, 0);
 background-color: rgb(136, 136, 136);
-font: 20pt &quot;Arial&quot;;
+font: 100 20pt &quot;Arial&quot;;
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="text">
-          <string>EDIT</string>
+          <string>ACCEPT CHANGES</string>
          </property>
         </widget>
        </item>
@@ -201,12 +253,12 @@ border-color: rgb(0, 0, 0);</string>
          <property name="styleSheet">
           <string notr="true">color: rgb(0, 255, 0);
 background-color: rgb(136, 136, 136);
-font: 20pt &quot;Arial&quot;;
+font: 100 20pt &quot;Arial&quot;;
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="text">
-          <string>VOID</string>
+          <string>VOID ITEM</string>
          </property>
         </widget>
        </item>
@@ -227,7 +279,7 @@ border-color: rgb(0, 0, 0);</string>
          <property name="styleSheet">
           <string notr="true">color: rgb(0, 255, 0);
 background-color: rgb(136, 136, 136);
-font: 15pt &quot;Arial&quot;;
+font: 100 15pt &quot;Arial&quot;;
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>

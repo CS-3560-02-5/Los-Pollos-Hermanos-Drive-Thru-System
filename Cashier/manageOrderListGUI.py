@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.manageOrderList_label = QtWidgets.QLabel(self.orderListWidget)
         self.manageOrderList_label.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
-"font: 36pt \"Arial\";\n"
+"font: 100 28pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
         self.manageOrderList_label.setAlignment(QtCore.Qt.AlignCenter)
@@ -53,11 +53,21 @@ class Ui_MainWindow(object):
         self.orderList_TableWidget.setSizePolicy(sizePolicy)
         self.orderList_TableWidget.setMinimumSize(QtCore.QSize(400, 0))
         self.orderList_TableWidget.setMaximumSize(QtCore.QSize(10000000, 16777215))
-        self.orderList_TableWidget.setStyleSheet("background-color: rgb(136, 136, 136);\n"
-"border: 2px solid #ccc;\n"
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.orderList_TableWidget.setFont(font)
+        self.orderList_TableWidget.setAutoFillBackground(False)
+        self.orderList_TableWidget.setStyleSheet("border: 1px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);\n"
-"font: 8pt \"Arial\";")
+"font: 12pt \"Arial\";\n"
+"color: rgb(0, 0, 0);")
+        self.orderList_TableWidget.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
         self.orderList_TableWidget.setAlternatingRowColors(False)
+        self.orderList_TableWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.orderList_TableWidget.setShowGrid(False)
         self.orderList_TableWidget.setCornerButtonEnabled(False)
         self.orderList_TableWidget.setObjectName("orderList_TableWidget")
@@ -86,23 +96,43 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.OrderListButtonWidget)
         self.verticalLayout.setObjectName("verticalLayout")
         self.increment_spinBox = QtWidgets.QSpinBox(self.OrderListButtonWidget)
-        self.increment_spinBox.setMinimum(1)
-        self.increment_spinBox.setObjectName("increment_spinBox")
-        self.verticalLayout.addWidget(self.increment_spinBox)
-        self.edit_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.edit_but.sizePolicy().hasHeightForWidth())
-        self.edit_but.setSizePolicy(sizePolicy)
-        self.edit_but.setMinimumSize(QtCore.QSize(300, 100))
-        self.edit_but.setStyleSheet("color: rgb(0, 255, 0);\n"
+        sizePolicy.setHeightForWidth(self.increment_spinBox.sizePolicy().hasHeightForWidth())
+        self.increment_spinBox.setSizePolicy(sizePolicy)
+        self.increment_spinBox.setMinimumSize(QtCore.QSize(300, 100))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(22)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.increment_spinBox.setFont(font)
+        self.increment_spinBox.setStyleSheet("font: 75 22pt \"Arial\";\n"
+"border: 1px solid #ccc;\n"
+"border-color: rgb(0, 0, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
-"font: 20pt \"Arial\";\n"
+"color: rgb(0, 255, 0);")
+        self.increment_spinBox.setAlignment(QtCore.Qt.AlignCenter)
+        self.increment_spinBox.setMinimum(1)
+        self.increment_spinBox.setMaximum(99)
+        self.increment_spinBox.setObjectName("increment_spinBox")
+        self.verticalLayout.addWidget(self.increment_spinBox)
+        self.accept_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.accept_but.sizePolicy().hasHeightForWidth())
+        self.accept_but.setSizePolicy(sizePolicy)
+        self.accept_but.setMinimumSize(QtCore.QSize(300, 100))
+        self.accept_but.setStyleSheet("color: rgb(0, 255, 0);\n"
+"background-color: rgb(136, 136, 136);\n"
+"font: 100 20pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
-        self.edit_but.setObjectName("edit_but")
-        self.verticalLayout.addWidget(self.edit_but)
+        self.accept_but.setObjectName("accept_but")
+        self.verticalLayout.addWidget(self.accept_but)
         self.void_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -112,7 +142,7 @@ class Ui_MainWindow(object):
         self.void_but.setMinimumSize(QtCore.QSize(300, 100))
         self.void_but.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
-"font: 20pt \"Arial\";\n"
+"font: 100 20pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
         self.void_but.setObjectName("void_but")
@@ -126,7 +156,7 @@ class Ui_MainWindow(object):
         self.back_but.setMinimumSize(QtCore.QSize(100, 50))
         self.back_but.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
-"font: 15pt \"Arial\";\n"
+"font: 100 15pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
         self.back_but.setObjectName("back_but")
@@ -144,11 +174,11 @@ class Ui_MainWindow(object):
         item = self.orderList_TableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Item"))
         item = self.orderList_TableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Quantity"))
+        item.setText(_translate("MainWindow", "Amt."))
         item = self.orderList_TableWidget.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "Notes"))
-        self.edit_but.setText(_translate("MainWindow", "EDIT"))
-        self.void_but.setText(_translate("MainWindow", "VOID"))
+        self.accept_but.setText(_translate("MainWindow", "ACCEPT CHANGES"))
+        self.void_but.setText(_translate("MainWindow", "VOID ITEM"))
         self.back_but.setText(_translate("MainWindow", "BACK"))
 
 
