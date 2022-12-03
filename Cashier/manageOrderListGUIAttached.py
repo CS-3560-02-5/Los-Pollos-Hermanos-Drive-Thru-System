@@ -7,11 +7,11 @@ import sys
 
 class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
     #constructor
-    def __init__(self, orderItems, menuItems, parent = None):
+    def __init__(self, mass, parent = None):
         super().__init__(parent)
         self.setupUi(self)
         #calls clickEdit function
-        self.edit_but.clicked.connect(self.clickEdit)
+        self.accept_but.clicked.connect(self.clickAccept)
         #calls clickVoid function
         self.void_but.clicked.connect(self.clickVoid)
         #calls clickBack function
@@ -22,8 +22,9 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         self.globalRow = 0
         self.globalCol = 0
         n = 0
-        self.menuItems = menuItems
-        self.orderItems = orderItems
+        self.currentOrderID = None
+        self.menuItems = mass.menu_items
+        self.orderItems = mass.log[self.currentOrderID]
         nameList = []
         quantList = []
         notesList = []
@@ -31,26 +32,19 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         self.orderList_TableWidget.setColumnWidth(0,100)
         self.orderList_TableWidget.setColumnWidth(1,75)
         self.orderList_TableWidget.setColumnWidth(2,200)
-
-        # for x in range(10):
-        #     self.orderList_TableWidget.setItem(x, 0, QtWidgets.QTableWidgetItem("mack"))
-        #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
-        # for x in range(5):
-        #     self.orderList_TableWidget.setItem(x, 0, QtWidgets.QTableWidgetItem("wang bang"))
-        #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
         self.increment_spinBox.valueChanged.connect(self.spinSelected)
         self.orderList_TableWidget.cellClicked.connect(self.cellClickPosition)
-        for item in orderItems:
+        for item in self.orderItems:
             name = next(i.item_name for i in self.menuItems if i.item_id == item.item_id)
             nameList.append(name)
             print("name", str(name))
             quantity = next(j.quantity for j in self.orderItems if j.quantity == item.quantity)
             quantList.append(quantity)
             print("quantity", str(quantity))
-            # self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(quantity)))
             notes = next(k.notes for k in self.orderItems if k.notes == item.notes)
             notesList.append(notes)
             print("notes", str(notes))
+        
         self.orderList_TableWidget.setRowCount(len(nameList))
         for num in range(len(nameList)):
             self.orderList_TableWidget.setItem(num, 0, QtWidgets.QTableWidgetItem(nameList[num]))
@@ -60,8 +54,18 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         self.show()
         
     #allows the editing of order    
-    def clickEdit(self):
-        print("edit works")
+    def clickAccept(self):
+        nameList_Complete = []
+        quantList_Complete = []
+        notesList_Complete = []
+        print("accept works")
+        numRows = self.orderList_TableWidget.rowCount()
+        for row in range(numRows):
+            nameList_Complete.append(self.orderList_TableWidget.item(row, 0).text())
+            quantList_Complete.append(self.orderList_TableWidget.item(row, 1).text())
+            notesList_Complete.append(self.orderList_TableWidget.item(row, 2).text())
+        
+
     
     #deletes order from db
     def clickVoid(self):
@@ -73,14 +77,13 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         print("back works")
     
     #edits quantity of clicked cell
-
     def cellClickPosition(self, row, col):
         self.globalRow, self.globalCol = row, col
         
     
     #increments the quantity
     def spinSelected(self):
-        if self.globalCol != 0:
+        if self.globalCol == 1:
             self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QtWidgets.QTableWidgetItem(str(self.increment_spinBox.value())))
     
     
