@@ -3,6 +3,7 @@ import OrderItem
 import Order
 import data_bridge
 import sys
+import sqlalchemy
 from PyQt5 import QtCore, QtWidgets 
 sys.path.append("Manager")
 sys.path.append("Cook")
@@ -10,7 +11,7 @@ sys.path.append("Cashier")
 import manageOrderListGUI
 import manageOrderListGUIAttached
 import managerAttatched
-import cookAttatched
+import cookAttached
 import manageOrderBrains
 from traits.api import *
 
@@ -61,9 +62,7 @@ class Event(HasTraits):
         else:
             print('The {} trait changed from {} to {} '.format(name, old, (getattr(obj, name))))
 
-
 mass = collector()
-
 
 
 
@@ -72,3 +71,6 @@ manager_win = QtWidgets.QMainWindow()
 managerAttatched.managerAttatched(mass.menu_items, manager_win)
 manage_order = QtWidgets.QMainWindow()
 manageOrderBrains.manageOrder(mass, manage_order)
+cook_dis = QtWidgets.QMainWindow()
+cookAttached.cookAttached(mass, cook_dis)
+app.exec_()

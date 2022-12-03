@@ -1,20 +1,38 @@
 from cookGUI import *
-
 import sys
 from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt
-from PyQt5.uic import loadUi
+
+
 
 class cookAttached(Ui_cookGUI, QMainWindow):
     #making constructor
-
-    def __init__(self, parent = None, menuItems = None, quantity = None, notes = None):
+    def __init__(self, mass, parent = None):
         super().__init__(parent)
         self.setupUi(self)
-        self.menu_items = menuItems
-        self.quantity = quantity
-        self.notes = notes
+        self.mass = mass
+        self.setupDisplay(self, mass.orders)
+
+    def clickDone(self):
+        #initializing lists for all variables needed
+        orderIDList = []
+        queueNumList = []
+        menuItemsList = []
+        orderItemList = []
+        orderItemQuantityList = []
+        orderItemNotesList = []
+
+        menuItemsList = self.mass.menu_items
+        for item in self.mass.orders:
+            orderID = next(i.order_id for i in self.mass.orders if i.order_status == 's')
+            orderIDList.append(orderID)
+        print(orderIDList)
+        
+
+
+    def setupDisplay(self, mass):
+        self.textArea1.setText([x.customer_name for x in mass])
 
         #set up buttons to reset each slot everytime it is presses
         self.doneButton1.clicked.connect(self.updateOrderSlot1)     #update slot 1
@@ -27,6 +45,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
     #edit slot 1
     def updateOrderSlot1(self):
         #find all active orders in db and add them to active_order
+
 
         #initializing test array to pull data from
         orderArray = [1,"walter's Nuggies",14,"medium rare"]
@@ -94,9 +113,11 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.orderNum4.setText(str(orderArray[0]))
         self.textArea4.setText(orderStr)
 
+'''
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = cookAttached(MainWindow)
     app.exec_()
+    '''
 
