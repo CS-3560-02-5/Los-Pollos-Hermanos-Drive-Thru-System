@@ -36,15 +36,22 @@ class Ui_MainWindow(object):
         self.orderListWidget.setObjectName("orderListWidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.orderListWidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.manageOrderList_label = QtWidgets.QLabel(self.orderListWidget)
-        self.manageOrderList_label.setStyleSheet("color: rgb(0, 255, 0);\n"
+        self.custName_LineEdit = QtWidgets.QLineEdit(self.orderListWidget)
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.custName_LineEdit.setFont(font)
+        self.custName_LineEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.custName_LineEdit.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
-"font: 100 28pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
-        self.manageOrderList_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.manageOrderList_label.setObjectName("manageOrderList_label")
-        self.verticalLayout_2.addWidget(self.manageOrderList_label)
+        self.custName_LineEdit.setText("")
+        self.custName_LineEdit.setAlignment(QtCore.Qt.AlignCenter)
+        self.custName_LineEdit.setObjectName("custName_LineEdit")
+        self.verticalLayout_2.addWidget(self.custName_LineEdit)
         self.orderList_TableWidget = QtWidgets.QTableWidget(self.orderListWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -82,8 +89,8 @@ class Ui_MainWindow(object):
         self.orderList_TableWidget.setHorizontalHeaderItem(2, item)
         self.orderList_TableWidget.horizontalHeader().setVisible(True)
         self.orderList_TableWidget.horizontalHeader().setHighlightSections(True)
-        self.orderList_TableWidget.verticalHeader().setVisible(True)
-        self.orderList_TableWidget.verticalHeader().setHighlightSections(True)
+        self.orderList_TableWidget.verticalHeader().setVisible(False)
+        self.orderList_TableWidget.verticalHeader().setHighlightSections(False)
         self.verticalLayout_2.addWidget(self.orderList_TableWidget)
         self.horizontalLayout.addWidget(self.orderListWidget)
         self.OrderListButtonWidget = QtWidgets.QWidget(self.centralwidget)
@@ -170,7 +177,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.manageOrderList_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Order #foo</span></p></body></html>"))
         item = self.orderList_TableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Item"))
         item = self.orderList_TableWidget.horizontalHeaderItem(1)

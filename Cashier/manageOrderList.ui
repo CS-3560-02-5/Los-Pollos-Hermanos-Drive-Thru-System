@@ -52,16 +52,26 @@ background-color: rgb(89, 89, 89);
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="manageOrderList_label">
+        <widget class="QLineEdit" name="custName_LineEdit">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(0, 255, 0);
 background-color: rgb(136, 136, 136);
-font: 100 28pt &quot;Arial&quot;;
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Order #foo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -128,10 +138,10 @@ color: rgb(0, 0, 0);</string>
           <bool>true</bool>
          </attribute>
          <attribute name="verticalHeaderVisible">
-          <bool>true</bool>
+          <bool>false</bool>
          </attribute>
          <attribute name="verticalHeaderHighlightSections">
-          <bool>true</bool>
+          <bool>false</bool>
          </attribute>
          <column>
           <property name="text">
