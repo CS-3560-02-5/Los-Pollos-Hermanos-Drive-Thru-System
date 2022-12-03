@@ -1,64 +1,93 @@
-from cookGUI import Ui_Dialog
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow
-
-class cookAttatched(Ui_Dialog, QMainWindow):
-    def __init__(self, df, parent=None):
-        super().__init__(parent)
-        self.setupUi(self)
-        self.queue = []
-        self.connectSignalsSlots()
-        self.load(df)
-    
-    def connectSignalsSlots(self):
-        pass
-
-    def load(self, df):
-        for index, item in df.iterrows():
-            self.queue.append(SeriesModel(item))
-        self.listView_4.setModel(self.queue[0])
+from cookGUI import *
+import sys
 
 
-class PandasModel(QtGui.QStandardItemModel):
-    def __init__(self, data, parent=None):
-        QtGui.QStandardItemModel.__init__(self, parent)
-        self._data = data
-        for col in data.columns:
-            data_col = [QtGui.QStandardItem("{}".format(x)) for x in data[col].values]
-            self.appendColumn(data_col)
-        return
+class cookGUIAttached(Ui_cookGUI):
+    #constructor
+    def __init__(self, window):
+        self.setupUi(window)
 
-    def rowCount(self, parent=None):
-        return len(self._data.values)
+        self.doneButton1.clicked.connect(self.updateOrderSlot1)
+        self.doneButton2.clicked.connect(self.updateOrderSlot2)
+        self.doneButton3.clicked.connect(self.updateOrderSlot3)
+        self.doneButton4.clicked.connect(self.updateOrderSlot4)
 
-    def columnCount(self, parent=None):
-        return self._data.columns.size
+    def updateOrderSlot1(self):
+        test1 = 1
+        test2 = "Walter's Nuggies"
+        test3 = 14
+        test4 = "medium rare"
 
-    def headerData(self, x, orientation, role):
-        if orientation == Qt.Horizontal and role == Qt.DisplayRole:
-            return self._data.columns[x]
-        if orientation == Qt.Vertical and role == Qt.DisplayRole:
-            return self._data.index[x]
-        return None
+        orderlength = 3
+        orderStr = ""
+        for item in range(orderlength):
+                quantity = str(test3)
+                name = str(test2)
+                note = str(test4)
+                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-class SeriesModel(QtGui.QStandardItemModel):
-    def __init__(self, data, parent=None):
-        QtGui.QStandardItemModel.__init__(self, parent)
-        self._data = data
-        data_col = [QtGui.QStandardItem("{}".format(x)) for x in data.values]
-        self.appendColumn(data_col)
-        return
+        self.orderNum1.setText(str(test1))
+        self.textArea1.setText(orderStr)
+        print(orderStr)
 
-    def rowCount(self, parent=None):
-        return len(self._data.values)
+    def updateOrderSlot2(self):
+        test1 = 2
+        test2 = "glizzy"
+        test3 = 420
+        test4 = "extra small"
 
-    def columnCount(self, parent=None):
-        return 1
+        orderlength = 3
+        orderStr = ""
+        for item in range(orderlength):
+                quantity = str(test3)
+                name = str(test2)
+                note = str(test4)
+                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-    def headerData(self, x, orientation, role):
-        if orientation == Qt.Horizontal and role == Qt.DisplayRole:
-            return self._data.columns[x]
-        if orientation == Qt.Vertical and role == Qt.DisplayRole:
-            return self._data.index[x]
-        return None
+        self.orderNum2.setText(str(test1))
+        self.textArea2.setText(orderStr)
+        print(orderStr)
+
+    def updateOrderSlot3(self):
+        test1 = 3
+        test2 = "dirt water"
+        test3 = 2
+        test4 = "extra dirty"
+
+        orderlength = 3
+        orderStr = ""
+        for item in range(orderlength):
+                quantity = str(test3)
+                name = str(test2)
+                note = str(test4)
+                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
+
+        self.orderNum3.setText(str(test1))
+        self.textArea3.setText(orderStr)
+        print(orderStr)
+
+    def updateOrderSlot4(self):
+        test1 = 4
+        test2 = "poop"
+        test3 = 14
+        test4 = "ur mom"
+
+        orderlength = 3
+        orderStr = ""
+        for item in range(orderlength):
+                quantity = str(test3)
+                name = str(test2)
+                note = str(test4)
+                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
+
+        self.orderNum4.setText(str(test1))
+        self.textArea4.setText(orderStr)
+        print(orderStr)
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = cookGUIAttached(MainWindow)
+    MainWindow.show()
+    app.exec_()
+
