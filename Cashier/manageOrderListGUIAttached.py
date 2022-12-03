@@ -40,8 +40,6 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
         self.increment_spinBox.valueChanged.connect(self.spinSelected)
         self.orderList_TableWidget.cellClicked.connect(self.cellClickPosition)
-        menuItems = self.mass.menuItems
-        orderItems = self.mass.orderItems
         self.show()
         
     #allows the editing of order    
