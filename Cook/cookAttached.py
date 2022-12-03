@@ -137,4 +137,3 @@ if __name__ == "__main__":
     ui = cookAttached(MainWindow)
     app.exec_()
     '''
-
