@@ -26,15 +26,6 @@ class manageOrder(Ui_MainWindow, QMainWindow):
     def setupButtons(self):
         self.backButton.clicked.connect(lambda:self.close())
         self.manageButton.clicked.connect(self.clickManage)
-    #this literally crashes the program but it closes it :)
-    def clickBack(self):
-        print("back test")
-        self.ordersList.addItem("Russel Rickards")
-        ''' app = QtGui.QGuiApplication(sys.argv)
-        myapp = manageOrder()
-        myapp.show()
-        ret = app.exec()
-        sys.exit(ret)'''
     
     def clickManage(self):
         orderName = self.ordersList.currentItem().text()
