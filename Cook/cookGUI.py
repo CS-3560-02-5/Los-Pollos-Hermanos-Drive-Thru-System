@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\cookGUI.ui'
+# Form implementation generated from reading ui file 'cookGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -78,6 +78,10 @@ class Ui_cookGUI(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_5)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.listWidget = QtWidgets.QListWidget(self.widget_5)
+        self.listWidget.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
         self.listWidget.setObjectName("listWidget")
         self.verticalLayout_2.addWidget(self.listWidget)
         self.doneButton1 = QtWidgets.QPushButton(self.widget_5)
@@ -136,6 +140,10 @@ class Ui_cookGUI(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_9)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.listWidget_2 = QtWidgets.QListWidget(self.widget_9)
+        self.listWidget_2.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
         self.listWidget_2.setObjectName("listWidget_2")
         self.verticalLayout_3.addWidget(self.listWidget_2)
         self.doneButton2 = QtWidgets.QPushButton(self.widget_9)
@@ -194,6 +202,10 @@ class Ui_cookGUI(object):
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget_10)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.listWidget_3 = QtWidgets.QListWidget(self.widget_10)
+        self.listWidget_3.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
         self.listWidget_3.setObjectName("listWidget_3")
         self.verticalLayout_4.addWidget(self.listWidget_3)
         self.doneButton3 = QtWidgets.QPushButton(self.widget_10)
@@ -252,6 +264,10 @@ class Ui_cookGUI(object):
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.widget_11)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.listWidget_4 = QtWidgets.QListWidget(self.widget_11)
+        self.listWidget_4.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
         self.listWidget_4.setObjectName("listWidget_4")
         self.verticalLayout_5.addWidget(self.listWidget_4)
         self.doneButton4 = QtWidgets.QPushButton(self.widget_11)
