@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'managerOrderListGUI.ui'
+# Form implementation generated from reading ui file 'manageOrderListGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -17,6 +17,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         MainWindow.setMinimumSize(QtCore.QSize(0, 0))
         MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         MainWindow.setStyleSheet("QMainWindow#MainWindow\n"
 "{\n"
 "background-color: rgb(89, 89, 89);\n"
@@ -44,20 +45,49 @@ class Ui_MainWindow(object):
         self.manageOrderList_label.setAlignment(QtCore.Qt.AlignCenter)
         self.manageOrderList_label.setObjectName("manageOrderList_label")
         self.verticalLayout_2.addWidget(self.manageOrderList_label)
-        self.orderList_ListWidget = QtWidgets.QListWidget(self.orderListWidget)
+        self.orderList_TableWidget = QtWidgets.QTableWidget(self.orderListWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.orderList_ListWidget.sizePolicy().hasHeightForWidth())
-        self.orderList_ListWidget.setSizePolicy(sizePolicy)
-        self.orderList_ListWidget.setMinimumSize(QtCore.QSize(400, 0))
-        self.orderList_ListWidget.setMaximumSize(QtCore.QSize(10000, 16777215))
-        self.orderList_ListWidget.setStyleSheet("background-color: rgb(136, 136, 136);\n"
-"color: rgb(0, 255, 0);\n"
+        sizePolicy.setHeightForWidth(self.orderList_TableWidget.sizePolicy().hasHeightForWidth())
+        self.orderList_TableWidget.setSizePolicy(sizePolicy)
+        self.orderList_TableWidget.setMinimumSize(QtCore.QSize(400, 0))
+        self.orderList_TableWidget.setMaximumSize(QtCore.QSize(10000000, 16777215))
+        self.orderList_TableWidget.setStyleSheet("background-color: rgb(136, 136, 136);\n"
 "border: 2px solid #ccc;\n"
-"border-color: rgb(0, 0, 0);")
-        self.orderList_ListWidget.setObjectName("orderList_ListWidget")
-        self.verticalLayout_2.addWidget(self.orderList_ListWidget)
+"border-color: rgb(0, 0, 0);\n"
+"font: 8pt \"Arial\";")
+        self.orderList_TableWidget.setAlternatingRowColors(False)
+        self.orderList_TableWidget.setShowGrid(False)
+        self.orderList_TableWidget.setCornerButtonEnabled(True)
+        self.orderList_TableWidget.setObjectName("orderList_TableWidget")
+        self.orderList_TableWidget.setColumnCount(2)
+        self.orderList_TableWidget.setRowCount(1)
+        item = QtWidgets.QTableWidgetItem()
+        self.orderList_TableWidget.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.orderList_TableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setBackground(QtGui.QColor(255, 255, 255))
+        self.orderList_TableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setBackground(brush)
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setForeground(brush)
+        self.orderList_TableWidget.setItem(0, 0, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setForeground(brush)
+        self.orderList_TableWidget.setItem(0, 1, item)
+        self.orderList_TableWidget.horizontalHeader().setVisible(True)
+        self.orderList_TableWidget.horizontalHeader().setHighlightSections(True)
+        self.orderList_TableWidget.verticalHeader().setVisible(True)
+        self.orderList_TableWidget.verticalHeader().setHighlightSections(True)
+        self.verticalLayout_2.addWidget(self.orderList_TableWidget)
         self.horizontalLayout.addWidget(self.orderListWidget)
         self.OrderListButtonWidget = QtWidgets.QWidget(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
@@ -68,34 +98,38 @@ class Ui_MainWindow(object):
         self.OrderListButtonWidget.setObjectName("OrderListButtonWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.OrderListButtonWidget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.editOrder_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
+        self.increment_spinBox = QtWidgets.QSpinBox(self.OrderListButtonWidget)
+        self.increment_spinBox.setMinimum(1)
+        self.increment_spinBox.setObjectName("increment_spinBox")
+        self.verticalLayout.addWidget(self.increment_spinBox)
+        self.edit_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.editOrder_but.sizePolicy().hasHeightForWidth())
-        self.editOrder_but.setSizePolicy(sizePolicy)
-        self.editOrder_but.setMinimumSize(QtCore.QSize(300, 100))
-        self.editOrder_but.setStyleSheet("color: rgb(0, 255, 0);\n"
+        sizePolicy.setHeightForWidth(self.edit_but.sizePolicy().hasHeightForWidth())
+        self.edit_but.setSizePolicy(sizePolicy)
+        self.edit_but.setMinimumSize(QtCore.QSize(300, 100))
+        self.edit_but.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
 "font: 20pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
-        self.editOrder_but.setObjectName("editOrder_but")
-        self.verticalLayout.addWidget(self.editOrder_but)
-        self.voidOrder_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
+        self.edit_but.setObjectName("edit_but")
+        self.verticalLayout.addWidget(self.edit_but)
+        self.void_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.voidOrder_but.sizePolicy().hasHeightForWidth())
-        self.voidOrder_but.setSizePolicy(sizePolicy)
-        self.voidOrder_but.setMinimumSize(QtCore.QSize(300, 100))
-        self.voidOrder_but.setStyleSheet("color: rgb(0, 255, 0);\n"
+        sizePolicy.setHeightForWidth(self.void_but.sizePolicy().hasHeightForWidth())
+        self.void_but.setSizePolicy(sizePolicy)
+        self.void_but.setMinimumSize(QtCore.QSize(300, 100))
+        self.void_but.setStyleSheet("color: rgb(0, 255, 0);\n"
 "background-color: rgb(136, 136, 136);\n"
 "font: 20pt \"Arial\";\n"
 "border: 2px solid #ccc;\n"
 "border-color: rgb(0, 0, 0);")
-        self.voidOrder_but.setObjectName("voidOrder_but")
-        self.verticalLayout.addWidget(self.voidOrder_but)
+        self.void_but.setObjectName("void_but")
+        self.verticalLayout.addWidget(self.void_but)
         self.back_but = QtWidgets.QPushButton(self.OrderListButtonWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -120,8 +154,17 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.manageOrderList_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Order #foo</span></p></body></html>"))
-        self.editOrder_but.setText(_translate("MainWindow", "EDIT ORDER"))
-        self.voidOrder_but.setText(_translate("MainWindow", "VOID ORDER"))
+        item = self.orderList_TableWidget.verticalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Row 1"))
+        item = self.orderList_TableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Item"))
+        item = self.orderList_TableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Quantity"))
+        __sortingEnabled = self.orderList_TableWidget.isSortingEnabled()
+        self.orderList_TableWidget.setSortingEnabled(False)
+        self.orderList_TableWidget.setSortingEnabled(__sortingEnabled)
+        self.edit_but.setText(_translate("MainWindow", "EDIT"))
+        self.void_but.setText(_translate("MainWindow", "VOID"))
         self.back_but.setText(_translate("MainWindow", "BACK"))
 
 

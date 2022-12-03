@@ -90,7 +90,6 @@ border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(136, 136, 136);
-color: rgb(0, 255, 0);
 border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);
 font: 8pt &quot;Arial&quot;;</string>
@@ -190,33 +189,14 @@ font: 8pt &quot;Arial&quot;;</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QPushButton" name="editOrder_but">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>300</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(0, 255, 0);
-background-color: rgb(136, 136, 136);
-font: 20pt &quot;Arial&quot;;
-border: 2px solid #ccc;
-border-color: rgb(0, 0, 0);</string>
-         </property>
-         <property name="text">
-          <string>EDIT ORDER</string>
+        <widget class="QSpinBox" name="increment_spinBox">
+         <property name="minimum">
+          <number>1</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="voidOrder_but">
+        <widget class="QPushButton" name="edit_but">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -237,7 +217,33 @@ border: 2px solid #ccc;
 border-color: rgb(0, 0, 0);</string>
          </property>
          <property name="text">
-          <string>VOID ORDER</string>
+          <string>EDIT</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="void_but">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 255, 0);
+background-color: rgb(136, 136, 136);
+font: 20pt &quot;Arial&quot;;
+border: 2px solid #ccc;
+border-color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>VOID</string>
          </property>
         </widget>
        </item>
