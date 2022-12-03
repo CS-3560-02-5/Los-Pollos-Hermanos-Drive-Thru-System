@@ -107,18 +107,7 @@ color: rgb(0, 170, 0);</string>
         <widget class="QWidget" name="widget_5" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QLabel" name="textArea1">
-            <property name="styleSheet">
-             <string notr="true">font: 16pt &quot;Arial&quot;;
-color: rgb(0, 170, 0);</string>
-            </property>
-            <property name="text">
-             <string>this is a test</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-           </widget>
+           <widget class="QListWidget" name="listWidget"/>
           </item>
           <item>
            <widget class="QPushButton" name="doneButton1">
@@ -214,18 +203,7 @@ color: rgb(0, 170, 0);</string>
         <widget class="QWidget" name="widget_9" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QLabel" name="textArea2">
-            <property name="styleSheet">
-             <string notr="true">font: 16pt &quot;Arial&quot;;
-color: rgb(0, 170, 0);</string>
-            </property>
-            <property name="text">
-             <string>this is a test</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-           </widget>
+           <widget class="QListWidget" name="listWidget_2"/>
           </item>
           <item>
            <widget class="QPushButton" name="doneButton2">
@@ -321,18 +299,7 @@ color: rgb(0, 170, 0);</string>
         <widget class="QWidget" name="widget_10" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
-           <widget class="QLabel" name="textArea3">
-            <property name="styleSheet">
-             <string notr="true">font: 16pt &quot;Arial&quot;;
-color: rgb(0, 170, 0);</string>
-            </property>
-            <property name="text">
-             <string>this is a test</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-           </widget>
+           <widget class="QListWidget" name="listWidget_3"/>
           </item>
           <item>
            <widget class="QPushButton" name="doneButton3">
@@ -428,18 +395,7 @@ color: rgb(0, 170, 0);</string>
         <widget class="QWidget" name="widget_11" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <widget class="QLabel" name="textArea4">
-            <property name="styleSheet">
-             <string notr="true">font: 16pt &quot;Arial&quot;;
-color: rgb(0, 170, 0);</string>
-            </property>
-            <property name="text">
-             <string>this is a test</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-           </widget>
+           <widget class="QListWidget" name="listWidget_4"/>
           </item>
           <item>
            <widget class="QPushButton" name="doneButton4">

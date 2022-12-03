@@ -5,45 +5,62 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt
 
 
-
 class cookAttached(Ui_cookGUI, QMainWindow):
     #making constructor
     def __init__(self, mass, parent = None):
         super().__init__(parent)
         self.setupUi(self)
         self.mass = mass
-        self.setupDisplay(self, mass.orders)
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
+        self.updateOrderSlots()
+        self.show()
+
+
 
     def clickDone(self):
-        #initializing lists for all variables needed
-        orderIDList = []
-        queueNumList = []
-        menuItemsList = []
-        orderItemList = []
-        orderItemQuantityList = []
-        orderItemNotesList = []
-
-        menuItemsList = self.mass.menu_items
-        for item in self.mass.orders:
-            orderID = next(i.order_id for i in self.mass.orders if i.order_status == 's')
-            orderIDList.append(orderID)
-        print(orderIDList)
+        pass
         
 
 
-    def setupDisplay(self, mass):
-        self.textArea1.setText([x.customer_name for x in mass])
 
+    def setupDisplay(self):
         #set up buttons to reset each slot everytime it is presses
         self.doneButton1.clicked.connect(self.updateOrderSlot1)     #update slot 1
         self.doneButton2.clicked.connect(self.updateOrderSlot2)     #update slot 2
         self.doneButton3.clicked.connect(self.updateOrderSlot3)     #update slot 3
         self.doneButton4.clicked.connect(self.updateOrderSlot4)     #update slot 4
 
-        self.show()
 
     #edit slot 1
-    def updateOrderSlot1(self):
+    def updateOrderSlots(self):
+        try:
+            self.orderNum1.setText(self.submittedOrders[3].queue_number)
+            for item in self.mass[self.submittedOrders[3].order_id]:
+                self.listWidget.addItem("x" + item.quantity + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes)
+        except:
+            print("No orders in queue 4")
+        try:
+            self.orderNum2.setText(self.submittedOrders[2].queue_number)
+            for item in self.mass[self.submittedOrders[2].order_id]:
+                self.listWidget_2.addItem("x" + item.quantity + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes)
+        except:
+            print("No orders in queue 3")
+
+        try:
+            self.orderNum3.setText(self.submittedOrders[1].queue_number)
+            for item in self.mass[self.submittedOrders[1].order_id]:
+                self.listWidget_3.addItem("x" + item.quantity + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes)
+        except:
+            print("No orders in queue 2")
+        try:
+            self.orderNum4.setText(self.submittedOrders[0].queue_number)
+            for item in self.mass[self.submittedOrders[0].order_id]:
+                self.listWidget_4.addItem("x" + item.quantity + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes)
+        except:
+            print("No orders in queue 1")
+
+
+    def updateOrderSlot1(self, order):
         #find all active orders in db and add them to active_order
 
 
