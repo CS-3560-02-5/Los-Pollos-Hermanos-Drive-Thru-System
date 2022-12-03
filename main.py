@@ -7,8 +7,6 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-import managerAttatched
-import cookAttatched
 import manageOrderAttached
 from traits.api import *
 

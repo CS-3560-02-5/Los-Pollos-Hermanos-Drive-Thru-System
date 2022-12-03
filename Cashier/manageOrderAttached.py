@@ -41,7 +41,12 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         orderID = next(i.order_id for i in self.mass.orders if i.customer_name == orderName)
         self.josh.currentOrderID = orderID
         orderItems = self.mass.log[self.josh.currentOrderID]
+        
+        self.josh.custName_var = orderName
+        self.josh.custName_LineEdit.setText(self.josh.custName_var + "'s Order:")
         print(orderID)
+        print("josh.custName", self.josh.custName_var)
+        print("order name", orderName)
         
         # for each item in given order, it puts each attribute into it's respective list
         for item in orderItems:
