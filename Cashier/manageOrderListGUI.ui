@@ -132,6 +132,11 @@ font: 8pt &quot;Arial&quot;;</string>
            </color>
           </property>
          </column>
+         <column>
+          <property name="text">
+           <string>Notes</string>
+          </property>
+         </column>
         </widget>
        </item>
       </layout>

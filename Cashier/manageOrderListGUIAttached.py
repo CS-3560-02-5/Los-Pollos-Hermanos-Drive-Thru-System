@@ -7,7 +7,7 @@ import sys
 
 class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
     #constructor
-    def __init__(self, orderItems, menuItems, quantity, notes, parent = None):
+    def __init__(self, orderItems, menuItems, parent = None):
         super().__init__(parent)
         self.setupUi(self)
         #calls clickEdit function
@@ -21,35 +21,42 @@ class manageOrderListGUIAttached(Ui_MainWindow, QMainWindow):
         #initializing variables
         self.globalRow = 0
         self.globalCol = 0
+        n = 0
         self.menuItems = menuItems
         self.orderItems = orderItems
-        self.quantity = quantity
-        self.notes = notes
-        
+        nameList = []
+        quantList = []
+        notesList = []
         # self.orderList_ListWidget
-        self.orderList_TableWidget.setColumnWidth(0,340)
-        
+        self.orderList_TableWidget.setColumnWidth(0,100)
         self.orderList_TableWidget.setColumnWidth(1,75)
-        n = 10
-        self.orderList_TableWidget.setRowCount(n)
-        for n in range(10):
-            self.orderList_TableWidget.setItem(n, 0, QtWidgets.QTableWidgetItem("mack"))
-            self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem("3"))
-        for n in range(5):
-            self.orderList_TableWidget.setItem(n, 0, QtWidgets.QTableWidgetItem("wang bang"))
-            self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem("3"))
+        self.orderList_TableWidget.setColumnWidth(2,200)
+
+        # for x in range(10):
+        #     self.orderList_TableWidget.setItem(x, 0, QtWidgets.QTableWidgetItem("mack"))
+        #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
+        # for x in range(5):
+        #     self.orderList_TableWidget.setItem(x, 0, QtWidgets.QTableWidgetItem("wang bang"))
+        #     self.orderList_TableWidget.setItem(x, 1, QtWidgets.QTableWidgetItem("3"))
         self.increment_spinBox.valueChanged.connect(self.spinSelected)
         self.orderList_TableWidget.cellClicked.connect(self.cellClickPosition)
         for item in orderItems:
-            n = 0
             name = next(i.item_name for i in self.menuItems if i.item_id == item.item_id)
-            self.orderList_TableWidget.setItem(n, 0, QtWidgets.QTableWidgetItem(name))
+            nameList.append(name)
+            print("name", str(name))
             quantity = next(j.quantity for j in self.orderItems if j.quantity == item.quantity)
-            self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(quantity)))
-            # notes = next(k.notes for k in self.orderItems if k.notes == item.notes)
-            # self.orderList_TableWidget.setItem(n, 3, QtWidgets.QTableWidgetItem(str(notes)))
-            n+=1
-        
+            quantList.append(quantity)
+            print("quantity", str(quantity))
+            # self.orderList_TableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(quantity)))
+            notes = next(k.notes for k in self.orderItems if k.notes == item.notes)
+            notesList.append(notes)
+            print("notes", str(notes))
+        self.orderList_TableWidget.setRowCount(len(nameList))
+        for num in range(len(nameList)):
+            self.orderList_TableWidget.setItem(num, 0, QtWidgets.QTableWidgetItem(nameList[num]))
+            self.orderList_TableWidget.setItem(num, 1, QtWidgets.QTableWidgetItem(str(quantList[num])))
+            self.orderList_TableWidget.setItem(num, 2, QtWidgets.QTableWidgetItem(notesList[num]))
+
         self.show()
         
     #allows the editing of order    
