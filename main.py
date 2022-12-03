@@ -33,6 +33,7 @@ class collector(HasTraits):
             self.log[order.order_id] = []
             for index, item in self.bridge.get_order_items(order).iterrows():
                 self.log[order.order_id].append(OrderItem.OrderItem(**item))
+    
         # Rebuild all menu items
         self.menu_items = []
         for index, item in self.bridge.get_menu_items().iterrows():
@@ -70,5 +71,5 @@ app = QtWidgets.QApplication(sys.argv)
 # manage_order = QtWidgets.QMainWindow()
 # manageOrderBrains.manageOrder(mass, manage_order)
 manageOrderList_win = QtWidgets.QMainWindow()
-manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
+manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, mass.log[0].quantity, mass.log[0].notes, manageOrderList_win)
 app.exec_()

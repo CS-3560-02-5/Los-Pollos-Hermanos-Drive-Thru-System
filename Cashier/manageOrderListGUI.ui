@@ -101,7 +101,7 @@ font: 8pt &quot;Arial&quot;;</string>
           <bool>false</bool>
          </property>
          <property name="cornerButtonEnabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <attribute name="horizontalHeaderVisible">
           <bool>true</bool>
@@ -115,11 +115,6 @@ font: 8pt &quot;Arial&quot;;</string>
          <attribute name="verticalHeaderHighlightSections">
           <bool>true</bool>
          </attribute>
-         <row>
-          <property name="text">
-           <string>Row 1</string>
-          </property>
-         </row>
          <column>
           <property name="text">
            <string>Item</string>
@@ -137,43 +132,6 @@ font: 8pt &quot;Arial&quot;;</string>
            </color>
           </property>
          </column>
-         <item row="0" column="0">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="background">
-           <brush brushstyle="NoBrush">
-            <color alpha="255">
-             <red>0</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
-          <property name="foreground">
-           <brush brushstyle="NoBrush">
-            <color alpha="255">
-             <red>0</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
-         </item>
-         <item row="0" column="1">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="foreground">
-           <brush brushstyle="NoBrush">
-            <color alpha="255">
-             <red>0</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
-         </item>
         </widget>
        </item>
       </layout>
