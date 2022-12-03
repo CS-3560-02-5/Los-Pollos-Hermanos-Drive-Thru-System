@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\managerGUI.ui'
+# Form implementation generated from reading ui file 'managerGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,70 +11,120 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_manager_QWidget(object):
-    def setupUi(self, manager_QWidget):
-        manager_QWidget.setObjectName("manager_QWidget")
-        manager_QWidget.resize(567, 499)
-        manager_QWidget.setStyleSheet("background-color: rgb(0, 0, 0);")
-        self.menuItems_label = QtWidgets.QLabel(manager_QWidget)
-        self.menuItems_label.setGeometry(QtCore.QRect(40, 50, 151, 41))
+class Ui_ManagerOrder_MainWindow(object):
+    def setupUi(self, ManagerOrder_MainWindow):
+        ManagerOrder_MainWindow.setObjectName("ManagerOrder_MainWindow")
+        ManagerOrder_MainWindow.resize(648, 263)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(ManagerOrder_MainWindow.sizePolicy().hasHeightForWidth())
+        ManagerOrder_MainWindow.setSizePolicy(sizePolicy)
+        self.centralwidget = QtWidgets.QWidget(ManagerOrder_MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setStyleSheet("background-color: rgb(89, 89, 89);")
+        self.widget.setObjectName("widget")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.widget_3 = QtWidgets.QWidget(self.widget)
+        self.widget_3.setObjectName("widget_3")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget_3)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.menuItems_label = QtWidgets.QLabel(self.widget_3)
         self.menuItems_label.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-color: rgb(0, 255, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
-"font: 18pt \"MS Shell Dlg 2\";\n"
+"font: 13pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.menuItems_label.setObjectName("menuItems_label")
-        self.addItem_pushButton = QtWidgets.QPushButton(manager_QWidget)
-        self.addItem_pushButton.setGeometry(QtCore.QRect(40, 430, 121, 31))
+        self.verticalLayout.addWidget(self.menuItems_label)
+        self.menuItems_listWidget = QtWidgets.QListWidget(self.widget_3)
+        self.menuItems_listWidget.setStyleSheet("background-color: rgb(89, 89, 89);\n"
+"font: 36pt \"Courier New\";\n"
+"color: rgb(0, 255, 0);\n"
+"border-color: rgb(0, 255, 0);\n"
+"selection-background-color: rgb(255, 0, 0);\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.menuItems_listWidget.setObjectName("menuItems_listWidget")
+        self.verticalLayout.addWidget(self.menuItems_listWidget)
+        self.verticalLayout_3.addWidget(self.widget_3)
+        self.widget_2 = QtWidgets.QWidget(self.widget)
+        self.widget_2.setObjectName("widget_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem = QtWidgets.QSpacerItem(50, 40, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.addItem_pushButton = QtWidgets.QPushButton(self.widget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.addItem_pushButton.sizePolicy().hasHeightForWidth())
+        self.addItem_pushButton.setSizePolicy(sizePolicy)
         self.addItem_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 13pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.addItem_pushButton.setObjectName("addItem_pushButton")
-        self.editItem_pushButton = QtWidgets.QPushButton(manager_QWidget)
-        self.editItem_pushButton.setGeometry(QtCore.QRect(220, 430, 121, 31))
+        self.horizontalLayout.addWidget(self.addItem_pushButton)
+        spacerItem1 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.editItem_pushButton = QtWidgets.QPushButton(self.widget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.editItem_pushButton.sizePolicy().hasHeightForWidth())
+        self.editItem_pushButton.setSizePolicy(sizePolicy)
         self.editItem_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 13pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.editItem_pushButton.setObjectName("editItem_pushButton")
-        self.removeItem_pushButton = QtWidgets.QPushButton(manager_QWidget)
-        self.removeItem_pushButton.setGeometry(QtCore.QRect(400, 430, 121, 31))
+        self.horizontalLayout.addWidget(self.editItem_pushButton)
+        spacerItem2 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
+        self.removeItem_pushButton = QtWidgets.QPushButton(self.widget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.removeItem_pushButton.sizePolicy().hasHeightForWidth())
+        self.removeItem_pushButton.setSizePolicy(sizePolicy)
         self.removeItem_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 13pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
         self.removeItem_pushButton.setObjectName("removeItem_pushButton")
-        self.menuItems_listWidget = QtWidgets.QListWidget(manager_QWidget)
-        self.menuItems_listWidget.setGeometry(QtCore.QRect(40, 110, 491, 211))
-        self.menuItems_listWidget.setStyleSheet("color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"font: 12pt \"MS Shell Dlg 2\";\n"
-"border-style: outset;\n"
-"border-width: 3px;")
-        self.menuItems_listWidget.setObjectName("menuItems_listWidget")
+        self.horizontalLayout.addWidget(self.removeItem_pushButton)
+        spacerItem3 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem3)
+        self.verticalLayout_3.addWidget(self.widget_2)
+        self.verticalLayout_2.addWidget(self.widget)
+        ManagerOrder_MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(manager_QWidget)
-        QtCore.QMetaObject.connectSlotsByName(manager_QWidget)
+        self.retranslateUi(ManagerOrder_MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(ManagerOrder_MainWindow)
 
-    def retranslateUi(self, manager_QWidget):
+    def retranslateUi(self, ManagerOrder_MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        manager_QWidget.setWindowTitle(_translate("manager_QWidget", "Form"))
-        self.menuItems_label.setText(_translate("manager_QWidget", "Menu Items"))
-        self.addItem_pushButton.setText(_translate("manager_QWidget", "Add Item"))
-        self.editItem_pushButton.setText(_translate("manager_QWidget", "Edit Item"))
-        self.removeItem_pushButton.setText(_translate("manager_QWidget", "Remove Item"))
-        self.menuItems_listWidget.setWhatsThis(_translate("manager_QWidget", "<html><head/><body><p><br/></p></body></html>"))
+        ManagerOrder_MainWindow.setWindowTitle(_translate("ManagerOrder_MainWindow", "MainWindow"))
+        self.menuItems_label.setText(_translate("ManagerOrder_MainWindow", "MENU ITEMS"))
+        self.addItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "ADD ITEM"))
+        self.editItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "EDIT ITEM"))
+        self.removeItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "REMOVE ITEM"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    manager_QWidget = QtWidgets.QWidget()
-    ui = Ui_manager_QWidget()
-    ui.setupUi(manager_QWidget)
-    manager_QWidget.show()
+    ManagerOrder_MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_ManagerOrder_MainWindow()
+    ui.setupUi(ManagerOrder_MainWindow)
+    ManagerOrder_MainWindow.show()
     sys.exit(app.exec_())
