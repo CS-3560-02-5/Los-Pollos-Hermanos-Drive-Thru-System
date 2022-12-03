@@ -7,11 +7,9 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-import manageOrderListGUI
-import manageOrderListGUIAttached
 import managerAttatched
 import cookAttatched
-import manageOrderBrains
+import manageOrderAttached
 from traits.api import *
 
 
@@ -64,12 +62,8 @@ class Event(HasTraits):
 
 mass = collector()
 
-#This runs manageOrderListGUIAttached
+#This runs manageOrderListAttached
 app = QtWidgets.QApplication(sys.argv)
-# manager_win = QtWidgets.QMainWindow()
-# managerAttatched.managerAttatched(mass.menu_items, manager_win)
 manage_order = QtWidgets.QMainWindow()
-manageOrderBrains.manageOrderClass(mass, manage_order)
-#manageOrderList_win = QtWidgets.QMainWindow()
-#manageOrderListGUIAttached.manageOrderListGUIAttached(mass.log[mass.orders[0].order_id], mass.menu_items, manageOrderList_win)
+manageOrderAttached.manageOrderAttached(mass, manage_order)
 app.exec_()
