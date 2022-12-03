@@ -1,7 +1,7 @@
 import MenuItem
 import OrderItem
-import Order
 import data_bridge
+import Order
 import sys
 from PyQt5 import QtCore, QtWidgets 
 sys.path.append("Manager")
@@ -18,6 +18,7 @@ from traits.api import *
 ####### Initial setup of running environment
 
 
+<<<<<<< Updated upstream
 
 class collector(HasTraits):
     def __init__(self):
@@ -57,6 +58,9 @@ class collector(HasTraits):
 mass = collector()
 mass.orders[1].complete()
 print(mass.orders[1].__dict__)
+=======
+mass = data_bridge.bridge()
+>>>>>>> Stashed changes
 
 
 
