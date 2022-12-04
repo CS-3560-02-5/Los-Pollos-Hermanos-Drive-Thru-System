@@ -850,7 +850,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Walter's Nuggies</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1007,7 +1007,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Wang Bang</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1164,7 +1164,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Last Friday's Fries</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1321,7 +1321,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Holy Bread</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1475,7 +1475,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Mack</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1635,7 +1635,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Seasond Water</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1795,7 +1795,7 @@ color: black;</string>
 color: black;</string>
                   </property>
                   <property name="text">
-                   <string>chick Sen</string>
+                   <string>Dihydrogen Monoxide</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
