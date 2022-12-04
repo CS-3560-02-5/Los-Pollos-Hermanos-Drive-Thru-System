@@ -22,18 +22,18 @@ class bridge:
 
         # Rebuild all currently active orders
         self.orders = []
-        for index, order in self.bridge.db_get_active_orders().sort_values(by=["queue_num"]).iterrows():
+        for index, order in self.db_get_active_orders().sort_values(by=["queue_num"]).iterrows():
             self.orders.append(Order.Order(**order))
 
         # Rebuild all items attatched to the active orders
         self.log = {}
         for order in self.orders:
             self.log[order.order_id] = []
-            for index, item in self.bridge.db_get_order_items(order).iterrows():
+            for index, item in self.db_get_order_items(order).iterrows():
                 self.log[order.order_id].append(OrderItem.OrderItem(**item))
         # Rebuild all menu items
         self.menu_items = []
-        for index, item in self.bridge.db_get_menu_items().iterrows():
+        for index, item in self.db_get_menu_items().iterrows():
             self.menu_items.append(MenuItem.MenuItem(**item))
 
     def add_order(self, order: Order.Order):
