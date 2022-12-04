@@ -7,13 +7,15 @@ from welcomeScreen import *
 from selectingItems import *
 from finishOrder import *
 
-class buttonsFunctions(Ui_welcomeScreen):
+class welcomeScreenAttatched(Ui_welcomeScreen, QMainWindow):
 
-    def __init__(self, window):
-        self.setupUi(window)
-
+    def __init__(self, mass, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
+        self.mass = mass
         self.createOrderBtn.clicked.connect(self.switchToSelectingItems)
         self.manageOrderBtn.clicked.connect(self.trythis)
+        self.show()
 
     def switchToSelectingItems(self):
         self.selectingItemsWindow = QtWidgets.QMainWindow()
@@ -23,12 +25,3 @@ class buttonsFunctions(Ui_welcomeScreen):
 
     def trythis(self):
         self.selectingItemsWindow.hide()
-
-
-
-app = QtWidgets.QApplication(sys.argv)
-
-WelcomeScreenWindow = QtWidgets.QMainWindow()
-ui = buttonsFunctions(WelcomeScreenWindow)
-WelcomeScreenWindow.show()
-app.exec_()
