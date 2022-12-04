@@ -42,6 +42,7 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         self.josh.currentOrderID = orderID
         orderItems = self.mass.log[self.josh.currentOrderID]
         
+        #current custName sent to josh.custName_LineEdit
         self.josh.custName_var = orderName
         self.josh.custName_LineEdit.setText(self.josh.custName_var + "'s Order:")
         print(orderID)
