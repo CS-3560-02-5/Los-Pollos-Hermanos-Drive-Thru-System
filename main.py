@@ -8,7 +8,6 @@ sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
 import manageOrderAttached
-import managerGUI
 import managerAttatched
 
 
@@ -18,6 +17,11 @@ import managerAttatched
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-manager_ui = managerAttatched.managerAttatched(mass, manager_win)
+manage_win = QtWidgets.QMainWindow()
+manage_ui = manageOrderAttached.manageOrderAttached(mass, manage_win)
 app.exec_()
+
+# app = QtWidgets.QApplication(sys.argv)
+# manage_win = QtWidgets.QMainWindow()
+# manage_ui = managerAttatched.managerAttatched(mass, manage_win)
+# app.exec_()
