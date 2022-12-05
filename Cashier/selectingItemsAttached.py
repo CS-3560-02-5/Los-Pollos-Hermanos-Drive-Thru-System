@@ -1,13 +1,6 @@
-import sys
-from PyQt5 import *
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import *
-
-from welcomeScreen import *
-from selectingItems import *
-from finishOrderAttached import *
-import Order
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
+from selectingItems import Ui_selectingItems
+from finishOrderAttached import finishOrderAttatched
 
 class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
 
@@ -57,7 +50,7 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.itemsQty = [None]*8
         self.itemsNotes = [None]*8
 
-        self.finishOrderWindow = QtWidgets.QMainWindow()
+        self.finishOrderWindow = QMainWindow()
         self.finishOrderUI = finishOrderAttatched(self.mass, self.finishOrderWindow)
 
         if(len(self.mass.orders) == 0):

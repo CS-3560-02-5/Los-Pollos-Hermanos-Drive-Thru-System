@@ -1,10 +1,5 @@
-import sys
-from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
-
-from selectingItemsAttached import *
-from finishOrder import *
+from finishOrder import Ui_finishOrder
 import Order
 
 class finishOrderAttatched(Ui_finishOrder, QMainWindow):

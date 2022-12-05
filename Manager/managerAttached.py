@@ -1,6 +1,4 @@
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QDialog
+from PyQt5.QtWidgets import QMainWindow
 from managerGUI import Ui_ManagerOrder_MainWindow
 from editDialog import Ui_editDialog_MainWindow
 import MenuItem
@@ -27,6 +25,9 @@ class managerAttached(Ui_ManagerOrder_MainWindow, QMainWindow):
 
     def addMenuItem_GUI(self):
         self.edit_dlg.function = "add"
+        self.edit_dlg.itemName_plainTextEdit.clear()
+        self.edit_dlg.description_plainTextEdit.clear()
+        self.edit_dlg.price_plainTextEdit.clear()
         self.edit_dlg.show()
 
 
@@ -78,9 +79,6 @@ class editDialog(Ui_editDialog_MainWindow, QMainWindow):
         elif self.function == "add":
             newItem = MenuItem.MenuItem(self.itemName_plainTextEdit.toPlainText(), self.mass.menu_items[-1].item_id + 1, float(self.price_plainTextEdit.toPlainText()), self.description_plainTextEdit.toPlainText(), None)
             self.mass.add_menu_item(newItem)
-        self.itemName_plainTextEdit.clear()
-        self.description_plainTextEdit.clear()
-        self.price_plainTextEdit.clear()
         
 
         

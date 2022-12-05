@@ -1,12 +1,7 @@
-import sys
-from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
-
-from welcomeScreen import *
-from selectingItemsAttached import *
-from manageOrderAttached import *
-from finishOrder import *
+from welcomeScreen import Ui_welcomeScreen
+from selectingItemsAttached import selectingItemsAttatched
+from manageOrderAttached import manageOrderAttached
 
 class welcomeScreenAttatched(Ui_welcomeScreen, QMainWindow):
 
@@ -19,11 +14,11 @@ class welcomeScreenAttatched(Ui_welcomeScreen, QMainWindow):
         self.manageOrderBtn.clicked.connect(self.switchToManagerOrder)
 
     def switchToSelectingItems(self):
-        self.selectingItemsWindow = QtWidgets.QMainWindow()
+        self.selectingItemsWindow = QMainWindow()
         self.selectingItemsUi = selectingItemsAttatched(self.mass, self.selectingItemsWindow)
         self.selectingItemsUi.show()
     
     def switchToManagerOrder(self):
-        self.manageOrderWindow = QtWidgets.QMainWindow()
+        self.manageOrderWindow = QMainWindow()
         self.manageOrderUi = manageOrderAttached(self.mass, self.manageOrderWindow)
         self.manageOrderUi.show()

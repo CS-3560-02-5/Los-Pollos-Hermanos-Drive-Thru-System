@@ -240,6 +240,3 @@ class bridge:
                                + OrderItem.order_id + "\" and item_id = "
                                + str(OrderItem.item_id))
             self.mydb.commit()
-
-if __name__ == "__main__":
-    mass = bridge("sql.json")

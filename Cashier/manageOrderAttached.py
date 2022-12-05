@@ -1,9 +1,5 @@
-from manageOrder import *
-import sys
-from PyQt5 import *
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
-import manageOrderList
+from manageOrder import Ui_MainWindow
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 import manageOrderListAttached
 
 
@@ -16,7 +12,7 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         self.setupDisplay(mass.orders)
         self.setupButtons()
         self.show()
-        self.manageOrderItems_win = QtWidgets.QMainWindow()
+        self.manageOrderItems_win = QMainWindow()
         self.josh = manageOrderListAttached.manageOrderListAttached(self.mass, self.manageOrderItems_win)
         
         #button clickability
@@ -60,9 +56,9 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         
         #taking the previously populated lists and putting them into the table
         for num in range(len(nameList)):
-            self.josh.orderList_TableWidget.setItem(num, 0, QtWidgets.QTableWidgetItem(nameList[num]))
-            self.josh.orderList_TableWidget.setItem(num, 1, QtWidgets.QTableWidgetItem(str(quantList[num])))
-            self.josh.orderList_TableWidget.setItem(num, 2, QtWidgets.QTableWidgetItem(notesList[num]))
+            self.josh.orderList_TableWidget.setItem(num, 0, QTableWidgetItem(nameList[num]))
+            self.josh.orderList_TableWidget.setItem(num, 1, QTableWidgetItem(str(quantList[num])))
+            self.josh.orderList_TableWidget.setItem(num, 2, QTableWidgetItem(notesList[num]))
 
         self.josh.show()
         

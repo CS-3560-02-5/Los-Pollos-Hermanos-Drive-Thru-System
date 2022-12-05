@@ -1,10 +1,7 @@
-from manageOrderList import *
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QDialog
-from PyQt5.uic import loadUi
+from manageOrderList import Ui_MainWindow
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 import OrderItem
-import sys
+
 class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     #constructor
     def __init__(self, mass, parent = None):  
@@ -78,4 +75,4 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     #increments the quantity
     def spinSelected(self):
         if self.globalCol == 1:
-            self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QtWidgets.QTableWidgetItem(str(self.increment_spinBox.value())))
+            self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QTableWidgetItem(str(self.increment_spinBox.value())))

@@ -1,11 +1,6 @@
 import uuid
 from itertools import cycle
 import OrderItem
-import MenuItem
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow
-import sys
 
 
 class Order:
