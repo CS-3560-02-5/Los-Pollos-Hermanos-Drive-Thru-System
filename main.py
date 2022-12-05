@@ -12,12 +12,8 @@ import managerGUI
 import managerAttatched
 
 
+
 ####### Initial setup of running environment
 
 
-mass = data_bridge.bridge("sql.json")
 
-app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-manager_ui = managerAttatched.managerAttatched(mass, manager_win)
-app.exec_()

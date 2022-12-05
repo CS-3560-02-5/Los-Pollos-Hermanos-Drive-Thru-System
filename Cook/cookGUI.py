@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\cookGUI.ui'
+# Form implementation generated from reading ui file 'cookGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -9,6 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
+
 class Ui_cookGUI(object):
     def setupUi(self, cookGUI):
         cookGUI.setObjectName("cookGUI")
@@ -59,8 +61,14 @@ class Ui_cookGUI(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.orderNum1 = QtWidgets.QLabel(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.orderNum1.sizePolicy().hasHeightForWidth())
+        self.orderNum1.setSizePolicy(sizePolicy)
         self.orderNum1.setStyleSheet("font: 16pt \"Arial\";\n"
 "color: rgb(0, 170, 0);")
+        self.orderNum1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.orderNum1.setObjectName("orderNum1")
         self.horizontalLayout_3.addWidget(self.orderNum1)
         self.horizontalLayout_2.addWidget(self.frame)
@@ -69,12 +77,13 @@ class Ui_cookGUI(object):
         self.widget_5.setObjectName("widget_5")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_5)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.textArea1 = QtWidgets.QLabel(self.widget_5)
-        self.textArea1.setStyleSheet("font: 16pt \"Arial\";\n"
-"color: rgb(0, 170, 0);")
-        self.textArea1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.textArea1.setObjectName("textArea1")
-        self.verticalLayout_2.addWidget(self.textArea1)
+        self.listWidget = QtWidgets.QListWidget(self.widget_5)
+        self.listWidget.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
+        self.listWidget.setObjectName("listWidget")
+        self.verticalLayout_2.addWidget(self.listWidget)
         self.doneButton1 = QtWidgets.QPushButton(self.widget_5)
         self.doneButton1.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"MS Shell Dlg 2\";")
@@ -130,12 +139,13 @@ class Ui_cookGUI(object):
         self.widget_9.setObjectName("widget_9")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_9)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.textArea2 = QtWidgets.QLabel(self.widget_9)
-        self.textArea2.setStyleSheet("font: 16pt \"Arial\";\n"
-"color: rgb(0, 170, 0);")
-        self.textArea2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.textArea2.setObjectName("textArea2")
-        self.verticalLayout_3.addWidget(self.textArea2)
+        self.listWidget_2 = QtWidgets.QListWidget(self.widget_9)
+        self.listWidget_2.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
+        self.listWidget_2.setObjectName("listWidget_2")
+        self.verticalLayout_3.addWidget(self.listWidget_2)
         self.doneButton2 = QtWidgets.QPushButton(self.widget_9)
         self.doneButton2.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"Arial\";")
@@ -191,12 +201,13 @@ class Ui_cookGUI(object):
         self.widget_10.setObjectName("widget_10")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget_10)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.textArea3 = QtWidgets.QLabel(self.widget_10)
-        self.textArea3.setStyleSheet("font: 16pt \"Arial\";\n"
-"color: rgb(0, 170, 0);")
-        self.textArea3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.textArea3.setObjectName("textArea3")
-        self.verticalLayout_4.addWidget(self.textArea3)
+        self.listWidget_3 = QtWidgets.QListWidget(self.widget_10)
+        self.listWidget_3.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
+        self.listWidget_3.setObjectName("listWidget_3")
+        self.verticalLayout_4.addWidget(self.listWidget_3)
         self.doneButton3 = QtWidgets.QPushButton(self.widget_10)
         self.doneButton3.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font:20pt \"Arial\";")
@@ -252,12 +263,13 @@ class Ui_cookGUI(object):
         self.widget_11.setObjectName("widget_11")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.widget_11)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.textArea4 = QtWidgets.QLabel(self.widget_11)
-        self.textArea4.setStyleSheet("font: 16pt \"Arial\";\n"
-"color: rgb(0, 170, 0);")
-        self.textArea4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.textArea4.setObjectName("textArea4")
-        self.verticalLayout_5.addWidget(self.textArea4)
+        self.listWidget_4 = QtWidgets.QListWidget(self.widget_11)
+        self.listWidget_4.setStyleSheet("font: 12pt \"Arial\";\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);")
+        self.listWidget_4.setObjectName("listWidget_4")
+        self.verticalLayout_5.addWidget(self.listWidget_4)
         self.doneButton4 = QtWidgets.QPushButton(self.widget_11)
         self.doneButton4.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 20pt \"Arial\";")
@@ -266,6 +278,7 @@ class Ui_cookGUI(object):
         self.verticalLayout_8.addWidget(self.widget_11)
         self.horizontalLayout.addWidget(self.orderSlot4)
         cookGUI.setCentralWidget(self.centralwidget)
+
         self.retranslateUi(cookGUI)
         QtCore.QMetaObject.connectSlotsByName(cookGUI)
 
@@ -274,19 +287,15 @@ class Ui_cookGUI(object):
         cookGUI.setWindowTitle(_translate("cookGUI", "MainWindow"))
         self.label.setText(_translate("cookGUI", "Order: "))
         self.orderNum1.setText(_translate("cookGUI", "00"))
-        self.textArea1.setText(_translate("cookGUI", "this is a test"))
         self.doneButton1.setText(_translate("cookGUI", "DONE"))
         self.label_4.setText(_translate("cookGUI", "Order: "))
         self.orderNum2.setText(_translate("cookGUI", "00"))
-        self.textArea2.setText(_translate("cookGUI", "this is a test"))
         self.doneButton2.setText(_translate("cookGUI", "DONE"))
         self.label_6.setText(_translate("cookGUI", "Order: "))
         self.orderNum3.setText(_translate("cookGUI", "00"))
-        self.textArea3.setText(_translate("cookGUI", "this is a test"))
         self.doneButton3.setText(_translate("cookGUI", "DONE"))
         self.label_8.setText(_translate("cookGUI", "Order: "))
         self.orderNum4.setText(_translate("cookGUI", "00"))
-        self.textArea4.setText(_translate("cookGUI", "this is a test"))
         self.doneButton4.setText(_translate("cookGUI", "DONE"))
 
 
