@@ -19,8 +19,6 @@ import cookGUI
 
 
 
-
-
 ####### Initial setup of running environment
 mass = data_bridge.bridge("sql.json")
 
@@ -32,6 +30,4 @@ welcomeUI = welcomeScreenAttatched.welcomeScreenAttatched(mass, welcome_win)
 cookGUIWindow = QtWidgets.QMainWindow()
 CookWindowUI = cookAttached.cookAttached(mass, cookGUIWindow)
 app.exec()
-
-
 
