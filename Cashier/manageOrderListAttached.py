@@ -62,6 +62,8 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
         
     #deletes order from db
     def clickVoid(self):
+        delItemID = next(item.item_id for item in self.mass.menu_items if item.item_name == self.orderList_TableWidget.item(self.globalRow, 0).text())
+        self.mass.remove_order_item(next(item for item in self.mass.log[self.currentOrderID] if item.item_id == delItemID))
         self.orderList_TableWidget.removeRow(self.globalRow)
     
     #goes back to manageOrder    
@@ -77,12 +79,3 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     def spinSelected(self):
         if self.globalCol == 1:
             self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QtWidgets.QTableWidgetItem(str(self.increment_spinBox.value())))
-    
-    
-#runs the application
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = manageOrderListAttached(MainWindow)
-    MainWindow.show()
-    app.exec_()
