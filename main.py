@@ -8,7 +8,8 @@ sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
 import manageOrderAttached
-from traits.api import *
+import managerGUI
+import managerAttatched
 
 
 ####### Initial setup of running environment
@@ -17,4 +18,6 @@ from traits.api import *
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
-manage_order = QtWidgets.QMainWindow()
+manager_win = QtWidgets.QMainWindow()
+manager_ui = managerAttatched.managerAttatched(mass, manager_win)
+app.exec_()

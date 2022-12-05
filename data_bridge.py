@@ -42,11 +42,11 @@ class bridge:
         self.log[order.order_id] = []
         self.db_add_order(order)
     
-    def remove_order(self, order: Order.Order):
+    def cancel_order(self, order: Order.Order):
         """Remove a single order from the database and runtime"""
         self.orders.remove(order)
         del self.log[order.order_id]
-        self.db_remove_order(order)
+        self.db_update_order(order)
     
     def update_order(self, order: Order.Order):
         """Update an order in the runtime"""
