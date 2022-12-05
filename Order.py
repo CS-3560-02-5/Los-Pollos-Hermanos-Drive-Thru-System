@@ -17,10 +17,9 @@ class Order:
         self.queue_num = next(self.queue)
         self.order_status = order_status
 
-    def getQueue(self):
-        return self.queue_num
     def prepare(self):
         self.order_status = 'p'
+        return self
 
     def complete(self):
         self.order_status = "c"
@@ -29,6 +28,7 @@ class Order:
     def cancel(self):
         self.order_status = 'x'
         self.queue_num = 0
+
     def createOrderItem(self, item_id, *, quantity=1, notes=None):
         return OrderItem.OrderItem(self.order_id, item_id, quantity=quantity, notes=notes)
         

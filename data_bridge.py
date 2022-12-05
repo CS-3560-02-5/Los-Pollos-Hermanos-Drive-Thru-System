@@ -18,7 +18,7 @@ class bridge:
               + info["database"] + "\"...")
         self.mydb = mysql.connector.connect(**info)
         f.close()
-    #################################CLASS ATTRIBUTES#################################
+       #################################CLASS ATTRIBUTES#################################
 
         # Rebuild all currently active orders
         self.orders = []
@@ -42,12 +42,25 @@ class bridge:
         self.log[order.order_id] = []
         self.db_add_order(order)
     
-    def remove_order(self, order: Order.Order):
+    def cancel_order(self, order: Order.Order):
         """Remove a single order from the database and runtime"""
+        order.cancel()
         self.orders.remove(order)
         del self.log[order.order_id]
-        self.db_remove_order(order)
-    
+        self.db_update_order(order)
+
+    def complete_order(self, order: Order.Order):
+        """Update the  of an order to completed"""
+        order.complete()
+        self.orders.remove(order)
+        del self.log[order.order_id]
+        self.db_update_order(order)
+
+    def edit_order(self, order: Order.Order, attr: str, value):
+        """Edit a single order atribute in the database and runtime"""
+        self.orders[self.orders.index(order)].__dict__[attr] = value
+        self.db_edit_order(order, attr, value)
+
     def update_order(self, order: Order.Order):
         """Update an order in the runtime"""
         for attr in order.__dict__:
@@ -74,6 +87,22 @@ class bridge:
         """Add a single MenuItem into the runtime"""
         self.menu_items.append(menuItem)
         self.db_add_menu_item(menuItem)
+
+    def remove_menu_item(self, menuItem: MenuItem.MenuItem):
+        """Remove a single MenuItem from the runtime"""
+        self.menu_items.remove(menuItem)
+        self.db_remove_menu_item(menuItem)
+
+    def edit_menu_item(self, menuItem: MenuItem.MenuItem, attr: str, value):
+        """Edit a single MenuItem atribute in the database and runtime"""
+        self.menu_items[self.menu_items.index(menuItem)].__dict__[attr] = value
+        self.db_edit_menu_item(menuItem, attr, value)
+    
+    def update_menu_item(self, menuItem: MenuItem.MenuItem):
+        """Update a single MenuItem in the database"""
+        for attr in menuItem.__dict__:
+            self.edit_menu_item(menuItem, attr, menuItem.__dict__[attr])
+
 
     #################################DATABASE EDITING METHODS#################################
     ################# Getter Operations #################

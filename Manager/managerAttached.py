@@ -1,12 +1,10 @@
-from managerGUI import Ui_manager_QWidget
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QDialog
 import sys
-from Manager.editDialog import Ui_edit_Dialog
+from managerGUI import Ui_ManagerOrder_MainWindow
 
-
-class managerAttatched(Ui_manager_QWidget, QMainWindow):
+class managerAttached(Ui_ManagerOrder_MainWindow, QMainWindow):
     def __init__(self, menu_items, parent=None):
         super().__init__(parent)
         self.setupUi(self)
@@ -55,5 +53,12 @@ class editDialog(QDialog):
         self.ui = Ui_edit_Dialog()
         # Run the .setupUi() method to show the GUI
         self.ui.setupUi(self)
+        self.connectSignalsSlots()
+    def connectSignalsSlots(self):
+        self.ui.save_pushButton.clicked.connect(self.save)
+    
+    def save(self):
+        self.close()
+
         
         
