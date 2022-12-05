@@ -29,7 +29,7 @@ class Order:
     def cancel(self):
         self.order_status = 'x'
         self.queue_num = 0
-    def createOrderItem(self, menuItem: MenuItem, *, quantity=1, notes=None):
-        return OrderItem.OrderItem(self.order_id, menuItem.item_id, quantity=quantity, notes=notes)
+    def createOrderItem(self, item_id, *, quantity=1, notes=None):
+        return OrderItem.OrderItem(self.order_id, item_id, quantity=quantity, notes=notes)
         
         
