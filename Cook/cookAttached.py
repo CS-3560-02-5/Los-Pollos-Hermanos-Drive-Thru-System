@@ -55,9 +55,6 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             self.orderNum4.setText(str(self.submittedOrders[0].queue_num))
             for item in self.mass.log[self.submittedOrders[0].order_id]:
                 self.listWidget_4.addItem("x" + str(item.quantity) + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
-            #test for abdul
-            for i in range(50):
-                self.listWidget_4.addItem("test")
         except:
             pass
 
