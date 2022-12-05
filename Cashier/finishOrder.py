@@ -78,10 +78,24 @@ class Ui_finishOrder(object):
         self.orderLstWid.setObjectName("orderLstWid")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.orderLstWid)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.orderLstLabel = QtWidgets.QLabel(self.orderLstWid)
-        self.orderLstLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.orderLstLabel.setObjectName("orderLstLabel")
-        self.horizontalLayout_6.addWidget(self.orderLstLabel)
+        self.orderTableWidget = QtWidgets.QTableWidget(self.orderLstWid)
+        self.orderTableWidget.setStyleSheet("QHeaderView::section {\n"
+"    background-color: rgb(213, 248, 255);\n"
+"    padding: 2px;\n"
+"    border: 1px solid;\n"
+"\n"
+"    font: 18pt \"Arial\";\n"
+"}")
+        self.orderTableWidget.setObjectName("orderTableWidget")
+        self.orderTableWidget.setColumnCount(3)
+        self.orderTableWidget.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.orderTableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.orderTableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.orderTableWidget.setHorizontalHeaderItem(2, item)
+        self.horizontalLayout_6.addWidget(self.orderTableWidget)
         self.verticalLayout_2.addWidget(self.orderLstWid)
         self.horizontalLayout_2.addWidget(self.leftWidget)
         self.rightWidget = QtWidgets.QWidget(self.topside)
@@ -130,26 +144,26 @@ class Ui_finishOrder(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
         self.horizontalLayout.setContentsMargins(-1, 0, -1, 5)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton_2 = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton_2.setStyleSheet("color: rgb(255, 0, 0);\n"
+        self.backBtn = QtWidgets.QPushButton(self.widget_2)
+        self.backBtn.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
 "font: 75 26pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.backBtn.setObjectName("backBtn")
+        self.horizontalLayout.addWidget(self.backBtn)
         spacerItem = QtWidgets.QSpacerItem(800, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
-        self.pushButton = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton.setStyleSheet("color: rgb(255, 0, 0);\n"
+        self.submitOrderBtn = QtWidgets.QPushButton(self.widget_2)
+        self.submitOrderBtn.setStyleSheet("color: rgb(255, 0, 0);\n"
 "background-color: rgb(111, 210, 255);\n"
 "font: 75 26pt \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 5px;\n"
 "border-color: rgb(21, 76, 152);")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.submitOrderBtn.setObjectName("submitOrderBtn")
+        self.horizontalLayout.addWidget(self.submitOrderBtn)
         self.verticalLayout.addWidget(self.widget_2)
         finishOrder.setCentralWidget(self.centralwidget)
 
@@ -161,10 +175,15 @@ class Ui_finishOrder(object):
         finishOrder.setWindowTitle(_translate("finishOrder", "MainWindow"))
         self.orderLabel.setText(_translate("finishOrder", "Order: "))
         self.orderNumLabel.setText(_translate("finishOrder", "00"))
-        self.orderLstLabel.setText(_translate("finishOrder", "TextLabel"))
+        item = self.orderTableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("finishOrder", "Menu Item "))
+        item = self.orderTableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("finishOrder", "Quantity"))
+        item = self.orderTableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("finishOrder", "Notes"))
         self.nameLabel.setText(_translate("finishOrder", "Name:"))
-        self.pushButton_2.setText(_translate("finishOrder", "Back"))
-        self.pushButton.setText(_translate("finishOrder", "Submit Order"))
+        self.backBtn.setText(_translate("finishOrder", "Back"))
+        self.submitOrderBtn.setText(_translate("finishOrder", "Submit Order"))
 
 
 if __name__ == "__main__":
