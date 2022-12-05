@@ -1,89 +1,102 @@
 from cookGUI import *
 import sys
+from PyQt5 import *
+from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtCore import Qt
 
 
-class cookGUIAttached(Ui_cookGUI):
-    #constructor
-    def __init__(self, window):
-        self.setupUi(window)
+class cookAttached(Ui_cookGUI, QMainWindow):
+    #making constructor
+    def __init__(self, mass, parent = None):
+        super().__init__(parent)
+        self.setupUi(self)
+        self.mass = mass
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
+        self.updateOrderSlots()
+        self.show()
+        
 
-        self.doneButton1.clicked.connect(self.updateOrderSlot1)
-        self.doneButton2.clicked.connect(self.updateOrderSlot2)
-        self.doneButton3.clicked.connect(self.updateOrderSlot3)
-        self.doneButton4.clicked.connect(self.updateOrderSlot4)
+        self.doneButton1.clicked.connect(self.prepareOrderSlot1)     #update slot 1
+        self.doneButton2.clicked.connect(self.prepareOrderSlot2)     #update slot 2
+        self.doneButton3.clicked.connect(self.prepareOrderSlot3)     #update slot 3
+        self.doneButton4.clicked.connect(self.prepareOrderSlot4)     #update slot 4
 
-    def updateOrderSlot1(self):
-        test1 = 1
-        test2 = "Walter's Nuggies"
-        test3 = 14
-        test4 = "medium rare"
+        
 
-        orderlength = 3
-        orderStr = ""
-        for item in range(orderlength):
-                quantity = str(test3)
-                name = str(test2)
-                note = str(test4)
-                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-        self.orderNum1.setText(str(test1))
-        self.textArea1.setText(orderStr)
+    #edit slot 1
+    def updateOrderSlots(self):
+        try:
+            self.orderNum1.clear()
+            self.listWidget.clear()
+            self.orderNum1.setText(str(self.submittedOrders[3].queue_num))
+            for item in self.mass.log[self.submittedOrders[3].order_id]:
+                self.listWidget.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+        except:
+            pass
 
-    def updateOrderSlot2(self):
-        test1 = 2
-        test2 = "glizzy"
-        test3 = 420
-        test4 = "extra small"
+        try:
+            self.orderNum2.clear()
+            self.listWidget_2.clear()
+            self.orderNum2.setText(str(self.submittedOrders[2].queue_num))
+            for item in self.mass.log[self.submittedOrders[2].order_id]:
+                self.listWidget_2.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+        except:
+            pass
 
-        orderlength = 3
-        orderStr = ""
-        for item in range(orderlength):
-                quantity = str(test3)
-                name = str(test2)
-                note = str(test4)
-                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
+        try:
+            self.orderNum3.clear()
+            self.listWidget_3.clear()
+            self.orderNum3.setText(str(self.submittedOrders[1].queue_num))
+            for item in self.mass.log[self.submittedOrders[1].order_id]:
+                self.listWidget_3.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+        except:
+            pass
 
-        self.orderNum2.setText(str(test1))
-        self.textArea2.setText(orderStr)
+        try:
+            self.orderNum4.clear()
+            self.listWidget_4.clear()
+            self.orderNum4.setText(str(self.submittedOrders[0].queue_num))
+            for item in self.mass.log[self.submittedOrders[0].order_id]:
+                self.listWidget_4.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+        except:
+            pass
 
-    def updateOrderSlot3(self):
-        test1 = 3
-        test2 = "dirt water"
-        test3 = 2
-        test4 = "extra dirty"
+    def prepareOrderSlot1(self, order):
+        self.mass.complete_order(self.submittedOrders[0])
+        try:
+            (self.submittedOrders.pop(3))
+        except:
+            pass
+        self.updateOrderSlots()
 
-        orderlength = 3
-        orderStr = ""
-        for item in range(orderlength):
-                quantity = str(test3)
-                name = str(test2)
-                note = str(test4)
-                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
 
-        self.orderNum3.setText(str(test1))
-        self.textArea3.setText(orderStr)
+    def prepareOrderSlot2(self, order):
+        self.mass.complete_order(self.submittedOrders[0])
+        try:
+            (self.submittedOrders.pop(2))
+        except:
+            pass
+        self.updateOrderSlots()
 
-    def updateOrderSlot4(self):
-        test1 = 4
-        test2 = "poop"
-        test3 = 14
-        test4 = "ur mom"
 
-        orderlength = 3
-        orderStr = ""
-        for item in range(orderlength):
-                quantity = str(test3)
-                name = str(test2)
-                note = str(test4)
-                orderStr += (quantity + "  " + name + "\n" + note + "\n\n")
+    def prepareOrderSlot3(self, order):
+        self.mass.complete_order(self.submittedOrders[0])
+        try:
+            (self.submittedOrders.pop(1))
+        except:
+            pass
+        self.updateOrderSlots()
 
-        self.orderNum4.setText(str(test1))
-        self.textArea4.setText(orderStr)
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = cookGUIAttached(MainWindow)
-    MainWindow.show()
-    app.exec_()
-
+    def prepareOrderSlot4(self, order):
+        self.mass.complete_order(self.submittedOrders[0])
+        try:
+            (self.submittedOrders.pop(0))
+        except:
+            pass
+        self.updateOrderSlots()
