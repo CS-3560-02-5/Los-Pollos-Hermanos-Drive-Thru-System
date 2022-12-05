@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import *
 from welcomeScreen import *
 from selectingItems import *
 from finishOrderAttached import *
+import Order
 
 class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
 
@@ -130,14 +131,20 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             self.itemsNotes[7] = notes8
 
         row = 0
+        totalPrice = 0
         for i in range(8):
             if(self.itemsName[i] != None):
                 self.finishOrderUI.orderTableWidget.insertRow(row)
                 self.finishOrderUI.orderTableWidget.setItem(row,0, QTableWidgetItem(self.itemsName[i]))
                 self.finishOrderUI.orderTableWidget.setItem(row,1, QTableWidgetItem(str(self.itemsQty[i])))
                 self.finishOrderUI.orderTableWidget.setItem(row,2, QTableWidgetItem(self.itemsNotes[i]))
+                print(self.itemsName[i])
+                totalItemPrice = next(x.price for x in self.mass.menu_items if x.item_name == self.itemsName[i])*self.itemsQty[i]
+                self.finishOrderUI.orderTableWidget.setItem(row,3, QTableWidgetItem("$ %.2f" % totalItemPrice))
+                totalPrice += totalItemPrice
                 row += 1
 
+        self.finishOrderUI.displayTotal.setText("$ %.2f" % totalPrice)
         self.finishOrderUI.show()
 
     def closeWindow(self):
