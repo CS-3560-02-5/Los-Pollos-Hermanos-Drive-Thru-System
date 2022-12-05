@@ -15,7 +15,10 @@ class Order:
         self.customer_name = customer_name
         self.order_id = order_id
         self.queue_num = next(self.queue)
-        self.order_id = uuid.uuid1().hex
+        if order_id == "null":
+            self.order_id = uuid.uuid1().hex
+        else:
+            self.order_id = order_id
         self.order_status = order_status
 
     def prepare(self):
