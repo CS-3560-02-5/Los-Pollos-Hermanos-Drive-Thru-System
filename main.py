@@ -18,7 +18,6 @@ import cookGUI
 
 
 ####### Initial setup of running environment
-mass = data_bridge.bridge()
 
 
 mass = data_bridge.bridge("sql.json")
