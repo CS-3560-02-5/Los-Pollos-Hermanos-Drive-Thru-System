@@ -32,6 +32,7 @@ class bridge:
             for index, item in self.db_get_order_items(order).iterrows():
                 self.log[order.order_id].append(OrderItem.OrderItem(**item))
         # Rebuild all menu items
+        print(self.log.keys())
         self.menu_items = []
         for index, item in self.db_get_menu_items().iterrows():
             self.menu_items.append(MenuItem.MenuItem(**item))
@@ -246,3 +247,6 @@ class bridge:
             self.mydb.commit()
         else:
             print("The attribute " + str(attribute) + " is not a valid value")
+
+if __name__ == "__main__":
+    mass = bridge("sql.json")

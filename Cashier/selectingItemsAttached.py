@@ -66,6 +66,7 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
 
     
     def switchToFinishOrder(self):
+        self.finishOrderUI.submitOrderBtn.clicked.connect(self.hide)
         qty1 = self.order1Qty.value()
         qty2 = self.order2Qty.value()
         qty3 = self.order3Qty.value()
@@ -102,9 +103,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             self.itemsQty[7] = qty8
             nums += 1
 
-        print(self.itemsName)
-        print(self.itemsQty)
-
         notes1 = self.order1Notes.text()
         notes2 = self.order2Notes.text()
         notes3 = self.order3Notes.text()
@@ -131,8 +129,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         if(notes8 != ""):
             self.itemsNotes[7] = notes8
 
-        print(self.itemsNotes)
-
         row = 0
         for i in range(8):
             if(self.itemsName[i] != None):
@@ -143,7 +139,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
                 row += 1
 
         self.finishOrderUI.show()
-        self.finishOrderUI.submitOrderBtn.clicked.connect(self.hide)
 
     def closeWindow(self):
         self.hide()
@@ -159,7 +154,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[0] = name
-            print(self.itemsName)
     
     def showWNFrm(self):
         self.orderFrame2.show()
@@ -172,7 +166,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[1] = name
-            print(self.itemsName)
     
     def showWBFrm(self):
         self.orderFrame3.show()
@@ -185,7 +178,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[2] = name
-            print(self.itemsName)
     
     def showLFFFrm(self):
         self.orderFrame4.show()
@@ -198,7 +190,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[3] = name
-            print(self.itemsName)
     
     def showHBFrm(self):
         self.orderFrame5.show()
@@ -211,7 +202,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[4] = name
-            print(self.itemsName)
     
     def showMFrm(self):
         self.orderFrame6.show()
@@ -224,7 +214,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[5] = name
-            print(self.itemsName)
     
     def showSWFrm(self):
         self.orderFrame7.show()
@@ -237,7 +226,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[6] = name
-            print(self.itemsName)
     
     def showDMFrm(self):
         self.orderFrame8.show()
@@ -250,13 +238,11 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             pass
         else:
             self.itemsName[7] = name
-            print(self.itemsName)
 
     def hideCSFrm(self):
         self.orderFrame1.hide()
         self.chickSanWid.setStyleSheet("")
         self.itemsName[0] = None
-        print(self.itemsName)
         self.order1Notes.setText("")
         self.order1Qty.setValue(0)
     
@@ -264,7 +250,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame2.hide()
         self.waltersNuggiesWid.setStyleSheet("")
         self.itemsName[1] = None
-        print(self.itemsName)
         self.order2Notes.setText("")
         self.order2Qty.setValue(0)
 
@@ -272,7 +257,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame3.hide()
         self.wangBangWid.setStyleSheet("")
         self.itemsName[2] = None
-        print(self.itemsName)
         self.order3Notes.setText("")
         self.order3Qty.setValue(0)
     
@@ -280,7 +264,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame4.hide()
         self.lastFFriesWid.setStyleSheet("")
         self.itemsName[3] = None
-        print(self.itemsName)
         self.order4Notes.setText("")
         self.order4Qty.setValue(0)
     
@@ -288,7 +271,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame5.hide()
         self.holyBreadWid.setStyleSheet("")
         self.itemsName[4] = None
-        print(self.itemsName)
         self.order5Notes.setText("")
         self.order5Qty.setValue(0)
     
@@ -296,7 +278,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame6.hide()
         self.mackWid.setStyleSheet("")
         self.itemsName[5] = None
-        print(self.itemsName)
         self.order6Notes.setText("")
         self.order6Qty.setValue(0)
     
@@ -304,7 +285,6 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame7.hide()
         self.seaWtrWid.setStyleSheet("")
         self.itemsName[6] = None
-        print(self.itemsName)
         self.order7Notes.setText("")
         self.order7Qty.setValue(0)
     
@@ -312,6 +292,5 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.orderFrame8.hide()
         self.diMoxWid.setStyleSheet("")
         self.itemsName[7] = None
-        print(self.itemsName)
         self.order8Notes.setText("")
         self.order8Qty.setValue(0)
