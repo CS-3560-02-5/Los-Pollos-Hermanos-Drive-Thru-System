@@ -104,13 +104,31 @@ font: 26pt &quot;Arial&quot;;</string>
            <widget class="QWidget" name="orderLstWid" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
-              <widget class="QLabel" name="orderLstLabel">
-               <property name="text">
-                <string>TextLabel</string>
+              <widget class="QTableWidget" name="orderTableWidget">
+               <property name="styleSheet">
+                <string notr="true">QHeaderView::section {
+    background-color: rgb(213, 248, 255);
+    padding: 2px;
+    border: 1px solid;
+
+	font: 18pt &quot;Arial&quot;;
+}</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
+               <column>
+                <property name="text">
+                 <string>Menu Item </string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Quantity</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Notes</string>
+                </property>
+               </column>
               </widget>
              </item>
             </layout>
@@ -196,7 +214,7 @@ font: 26pt &quot;Forte&quot;;</string>
         <number>5</number>
        </property>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="backBtn">
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);
@@ -227,7 +245,7 @@ border-color: rgb(21, 76, 152);</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="submitOrderBtn">
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 0, 0);
 background-color: rgb(111, 210, 255);

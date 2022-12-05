@@ -7,7 +7,11 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-import manageOrderAttached
+
+
+import managerAttached
+import welcomeScreenAttatched
+
 
 import cookAttached
 import cookGUI
@@ -23,8 +27,13 @@ import cookGUI
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
+
+welcome_win = QtWidgets.QMainWindow()
+welcomeUI = welcomeScreenAttatched.welcomeScreenAttatched(mass, welcome_win)
+
 cookGUIWindow = QtWidgets.QMainWindow()
 CookWindowUI = cookAttached.cookAttached(mass, cookGUIWindow)
 app.exec()
+
 
 
