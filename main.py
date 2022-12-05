@@ -22,8 +22,6 @@ import cookGUI
 
 
 ####### Initial setup of running environment
-
-
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)

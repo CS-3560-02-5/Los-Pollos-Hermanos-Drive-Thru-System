@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QDialog
 from PyQt5.uic import loadUi
+import OrderItem
 import sys
 class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     #constructor
@@ -32,6 +33,7 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
         
     #allows the editing of order    
     def clickAccept(self):
+        self.hide()
         nameList_Complete = []
         quantList_Complete = []
         notesList_Complete = []
@@ -51,6 +53,12 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
         for item in nameList_Complete:
             menuID = next(i.item_id for i in self.mass.menu_items if i.item_name == item)
             menuIDList_Complete.append(menuID)
+        
+        for i in range(numRows):
+            #creates OrderItem object
+            orderItemObject = OrderItem.OrderItem(self.currentOrderID, menuIDList_Complete[i], quantList_Complete[i], notesList_Complete[i])
+            #adds OrderItem object to database
+            self.mass.update_order_item(orderItemObject)
         
     #deletes order from db
     def clickVoid(self):
