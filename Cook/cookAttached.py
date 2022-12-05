@@ -14,8 +14,6 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         self.updateOrderSlots()
         self.show()
-        
-
         self.doneButton1.clicked.connect(self.prepareOrderSlot1)     #update slot 1
         self.doneButton2.clicked.connect(self.prepareOrderSlot2)     #update slot 2
         self.doneButton3.clicked.connect(self.prepareOrderSlot3)     #update slot 3
@@ -65,25 +63,25 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             pass
 
     def prepareOrderSlot1(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[3])
         try:
-            (self.submittedOrders.pop(3))
+            self.submittedOrders.pop(3)
             self.updateOrderSlots()
         except:
             pass
 
     def prepareOrderSlot2(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[2])
         try:
-            (self.submittedOrders.pop(2))
+            self.submittedOrders.pop(2)
             self.updateOrderSlots()
         except:
             pass
 
     def prepareOrderSlot3(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[1])
         try:
-            (self.submittedOrders.pop(1))
+            self.submittedOrders.pop(1)
             self.updateOrderSlots()
         except:
             pass
@@ -91,7 +89,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
     def prepareOrderSlot4(self, order):
         self.mass.complete_order(self.submittedOrders[0])
         try:
-            (self.submittedOrders.pop(0))
+            self.submittedOrders.pop(0)
             self.updateOrderSlots()
         except:
             pass
