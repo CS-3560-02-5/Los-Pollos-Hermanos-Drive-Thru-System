@@ -16,7 +16,7 @@ from traits.api import *
 
 
 ####### Initial setup of running environment
-mass = data_bridge.bridge()
+mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
 welcome_win = QtWidgets.QMainWindow()
