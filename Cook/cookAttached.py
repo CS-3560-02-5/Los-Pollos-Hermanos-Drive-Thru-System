@@ -14,16 +14,12 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         self.updateOrderSlots()
         self.show()
-        
-
         self.doneButton1.clicked.connect(self.prepareOrderSlot1)     #update slot 1
         self.doneButton2.clicked.connect(self.prepareOrderSlot2)     #update slot 2
         self.doneButton3.clicked.connect(self.prepareOrderSlot3)     #update slot 3
         self.doneButton4.clicked.connect(self.prepareOrderSlot4)     #update slot 4
 
         
-
-
     #edit slot 1
     def updateOrderSlots(self):
         try:
@@ -67,36 +63,49 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             pass
 
     def prepareOrderSlot1(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         try:
-            (self.submittedOrders.pop(3))
+            self.mass.complete_order(self.submittedOrders[3])
+            self.submittedOrders.pop(3)
         except:
             pass
-        self.updateOrderSlots()
-
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot2(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         try:
-            (self.submittedOrders.pop(2))
+            self.mass.complete_order(self.submittedOrders[2])
+            self.submittedOrders.pop(2)
         except:
             pass
-        self.updateOrderSlots()
-
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot3(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         try:
-            (self.submittedOrders.pop(1))
+            self.mass.complete_order(self.submittedOrders[1])
+            self.submittedOrders.pop(1)
         except:
             pass
-        self.updateOrderSlots()
-
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot4(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         try:
-            (self.submittedOrders.pop(0))
+            self.mass.complete_order(self.submittedOrders[0])
+            self.submittedOrders.pop(0)
         except:
             pass
-        self.updateOrderSlots()
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
