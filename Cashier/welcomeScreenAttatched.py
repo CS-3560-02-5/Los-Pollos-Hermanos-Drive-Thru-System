@@ -6,6 +6,7 @@ from PyQt5.QtCore import Qt
 from welcomeScreen import *
 from selectingItemsAttached import *
 from manageOrderAttached import *
+from finishOrder import *
 
 class welcomeScreenAttatched(Ui_welcomeScreen, QMainWindow):
 

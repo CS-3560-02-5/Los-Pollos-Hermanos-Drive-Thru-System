@@ -939,7 +939,7 @@ class Ui_selectingItems(object):
         self.order5Lbl.setText(_translate("selectingItems", "Notes: "))
         self.order6Label.setText(_translate("selectingItems", "Mack"))
         self.order6Lbl.setText(_translate("selectingItems", "Notes: "))
-        self.order7Label.setText(_translate("selectingItems", "Seasond Water"))
+        self.order7Label.setText(_translate("selectingItems", "Seasoned Water"))
         self.order7Lbl.setText(_translate("selectingItems", "Notes: "))
         self.order8Label.setText(_translate("selectingItems", "Dihydrogen Monoxide"))
         self.order8Lbl.setText(_translate("selectingItems", "Notes: "))
