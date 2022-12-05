@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\edit_dialog.ui'
+# Form implementation generated from reading ui file 'editDialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,27 +11,45 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_edit_Dialog(object):
-    def setupUi(self, edit_Dialog):
-        edit_Dialog.setObjectName("edit_Dialog")
-        edit_Dialog.resize(589, 327)
-        self.buttonBox = QtWidgets.QDialogButtonBox(edit_Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(220, 290, 341, 32))
-        self.buttonBox.setStyleSheet("color: rgb(0, 170, 0);\n"
+class Ui_editDialog_MainWindow(object):
+    def setupUi(self, editDialog_MainWindow):
+        editDialog_MainWindow.setObjectName("editDialog_MainWindow")
+        editDialog_MainWindow.resize(651, 315)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(editDialog_MainWindow.sizePolicy().hasHeightForWidth())
+        editDialog_MainWindow.setSizePolicy(sizePolicy)
+        self.centralwidget = QtWidgets.QWidget(editDialog_MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setStyleSheet("background-color: rgb(89, 89, 89);")
+        self.widget.setObjectName("widget")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.widget_3 = QtWidgets.QWidget(self.widget)
+        self.widget_3.setObjectName("widget_3")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget_3)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.editMenuItems_label = QtWidgets.QLabel(self.widget_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.editMenuItems_label.sizePolicy().hasHeightForWidth())
+        self.editMenuItems_label.setSizePolicy(sizePolicy)
+        self.editMenuItems_label.setStyleSheet("color: rgb(0, 170, 0);\n"
+"border-color: rgb(0, 255, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 13pt \"MS Shell Dlg 2\";\n"
 "border-style: outset;\n"
 "border-width: 3px;")
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
-        self.gridLayoutWidget = QtWidgets.QWidget(edit_Dialog)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(50, 80, 451, 182))
-        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.editMenuItems_label.setObjectName("editMenuItems_label")
+        self.verticalLayout.addWidget(self.editMenuItems_label)
+        self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.description_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.description_label = QtWidgets.QLabel(self.widget_3)
         self.description_label.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
@@ -39,7 +57,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.description_label.setObjectName("description_label")
         self.gridLayout.addWidget(self.description_label, 1, 0, 1, 1)
-        self.itemName_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.itemName_label = QtWidgets.QLabel(self.widget_3)
         self.itemName_label.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
@@ -47,7 +65,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.itemName_label.setObjectName("itemName_label")
         self.gridLayout.addWidget(self.itemName_label, 0, 0, 1, 1)
-        self.price_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.price_label = QtWidgets.QLabel(self.widget_3)
         self.price_label.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
@@ -55,7 +73,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.price_label.setObjectName("price_label")
         self.gridLayout.addWidget(self.price_label, 2, 0, 1, 1)
-        self.image_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.image_label = QtWidgets.QLabel(self.widget_3)
         self.image_label.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
@@ -63,7 +81,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.image_label.setObjectName("image_label")
         self.gridLayout.addWidget(self.image_label, 3, 0, 1, 1)
-        self.itemName_plainTextEdit = QtWidgets.QPlainTextEdit(self.gridLayoutWidget)
+        self.itemName_plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_3)
         self.itemName_plainTextEdit.setMaximumSize(QtCore.QSize(16777214, 36))
         self.itemName_plainTextEdit.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -72,7 +90,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.itemName_plainTextEdit.setObjectName("itemName_plainTextEdit")
         self.gridLayout.addWidget(self.itemName_plainTextEdit, 0, 1, 1, 1)
-        self.description_plainTextEdit = QtWidgets.QPlainTextEdit(self.gridLayoutWidget)
+        self.description_plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_3)
         self.description_plainTextEdit.setMaximumSize(QtCore.QSize(16777214, 60))
         self.description_plainTextEdit.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -81,7 +99,7 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.description_plainTextEdit.setObjectName("description_plainTextEdit")
         self.gridLayout.addWidget(self.description_plainTextEdit, 1, 1, 1, 1)
-        self.price_plainTextEdit = QtWidgets.QPlainTextEdit(self.gridLayoutWidget)
+        self.price_plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_3)
         self.price_plainTextEdit.setMaximumSize(QtCore.QSize(16777214, 36))
         self.price_plainTextEdit.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -90,7 +108,12 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.price_plainTextEdit.setObjectName("price_plainTextEdit")
         self.gridLayout.addWidget(self.price_plainTextEdit, 2, 1, 1, 1)
-        self.image_pushButton = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.image_pushButton = QtWidgets.QPushButton(self.widget_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(15)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.image_pushButton.sizePolicy().hasHeightForWidth())
+        self.image_pushButton.setSizePolicy(sizePolicy)
         self.image_pushButton.setMaximumSize(QtCore.QSize(140, 16777215))
         self.image_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -99,31 +122,69 @@ class Ui_edit_Dialog(object):
 "border-width: 3px;")
         self.image_pushButton.setObjectName("image_pushButton")
         self.gridLayout.addWidget(self.image_pushButton, 3, 1, 1, 1)
-        self.title_label = QtWidgets.QLabel(edit_Dialog)
-        self.title_label.setGeometry(QtCore.QRect(50, 40, 81, 16))
-        self.title_label.setObjectName("title_label")
+        self.verticalLayout.addLayout(self.gridLayout)
+        self.verticalLayout_3.addWidget(self.widget_3)
+        self.widget_2 = QtWidgets.QWidget(self.widget)
+        self.widget_2.setObjectName("widget_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem = QtWidgets.QSpacerItem(250, 40, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.ok_pushButton = QtWidgets.QPushButton(self.widget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ok_pushButton.sizePolicy().hasHeightForWidth())
+        self.ok_pushButton.setSizePolicy(sizePolicy)
+        self.ok_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);\n"
+"font: 13pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.ok_pushButton.setObjectName("ok_pushButton")
+        self.horizontalLayout.addWidget(self.ok_pushButton)
+        spacerItem1 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.cancel_pushButton = QtWidgets.QPushButton(self.widget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.cancel_pushButton.sizePolicy().hasHeightForWidth())
+        self.cancel_pushButton.setSizePolicy(sizePolicy)
+        self.cancel_pushButton.setStyleSheet("color: rgb(0, 170, 0);\n"
+"background-color: rgb(0, 0, 0);\n"
+"font: 13pt \"MS Shell Dlg 2\";\n"
+"border-style: outset;\n"
+"border-width: 3px;")
+        self.cancel_pushButton.setObjectName("cancel_pushButton")
+        self.horizontalLayout.addWidget(self.cancel_pushButton)
+        spacerItem2 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
+        self.verticalLayout_3.addWidget(self.widget_2)
+        self.verticalLayout_2.addWidget(self.widget)
+        editDialog_MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(edit_Dialog)
-        self.buttonBox.accepted.connect(edit_Dialog.accept) # type: ignore
-        self.buttonBox.rejected.connect(edit_Dialog.reject) # type: ignore
-        QtCore.QMetaObject.connectSlotsByName(edit_Dialog)
+        self.retranslateUi(editDialog_MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(editDialog_MainWindow)
 
-    def retranslateUi(self, edit_Dialog):
+    def retranslateUi(self, editDialog_MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        edit_Dialog.setWindowTitle(_translate("edit_Dialog", "Edit Menu Item"))
-        self.description_label.setText(_translate("edit_Dialog", "Description:"))
-        self.itemName_label.setText(_translate("edit_Dialog", "Item Name:"))
-        self.price_label.setText(_translate("edit_Dialog", "Price:"))
-        self.image_label.setText(_translate("edit_Dialog", "Image:"))
-        self.image_pushButton.setText(_translate("edit_Dialog", "Choose Image"))
-        self.title_label.setText(_translate("edit_Dialog", "Edit Menu Item:"))
+        editDialog_MainWindow.setWindowTitle(_translate("editDialog_MainWindow", "MainWindow"))
+        self.editMenuItems_label.setText(_translate("editDialog_MainWindow", "EDIT MENU ITEMS"))
+        self.description_label.setText(_translate("editDialog_MainWindow", "Description:"))
+        self.itemName_label.setText(_translate("editDialog_MainWindow", "Item Name:"))
+        self.price_label.setText(_translate("editDialog_MainWindow", "Price:"))
+        self.image_label.setText(_translate("editDialog_MainWindow", "Image:"))
+        self.image_pushButton.setText(_translate("editDialog_MainWindow", "Choose Image"))
+        self.ok_pushButton.setText(_translate("editDialog_MainWindow", "OK"))
+        self.cancel_pushButton.setText(_translate("editDialog_MainWindow", "CANCEL"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    edit_Dialog = QtWidgets.QDialog()
-    ui = Ui_edit_Dialog()
-    ui.setupUi(edit_Dialog)
-    edit_Dialog.show()
+    editDialog_MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_editDialog_MainWindow()
+    ui.setupUi(editDialog_MainWindow)
+    editDialog_MainWindow.show()
     sys.exit(app.exec_())
