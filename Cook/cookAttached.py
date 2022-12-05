@@ -14,6 +14,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.submittedOrders = [i for i in self.mass.orders if i.order_status == 's']
         self.updateOrderSlots()
         self.show()
+        
 
         self.doneButton1.clicked.connect(self.prepareOrderSlot1)     #update slot 1
         self.doneButton2.clicked.connect(self.prepareOrderSlot2)     #update slot 2
@@ -32,6 +33,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
                  + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
         except:
             pass
+
         try:
             self.orderNum2.clear()
             self.listWidget_2.clear()
@@ -66,26 +68,26 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
-        self.submittedOrders[0].order_status = 'c'
+        #self.submittedOrders[0].order_status = 'c'
         print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot2(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
-        self.submittedOrders[0].order_status = 'c'
+        #self.submittedOrders[0].order_status = 'c'
         print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot3(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
-        self.submittedOrders[0].order_status = 'c'
+        #self.submittedOrders[0].order_status = 'c'
         print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot4(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
-        self.submittedOrders[0].order_status = 'c'
+        #self.submittedOrders[0].order_status = 'c'
         print(self.submittedOrders[0].order_status)
