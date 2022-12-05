@@ -11,10 +11,9 @@ sys.path.append("Cashier")
 
 import managerAttached
 import welcomeScreenAttatched
-
-
 import cookAttached
-from traits.api import *
+
+
 
 
 
