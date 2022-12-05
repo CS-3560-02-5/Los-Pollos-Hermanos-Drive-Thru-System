@@ -14,10 +14,7 @@ import welcomeScreenAttatched
 
 
 import cookAttached
-import cookGUI
-
-
-
+from traits.api import *
 
 ####### Initial setup of running environment
 mass = data_bridge.bridge("sql.json")
