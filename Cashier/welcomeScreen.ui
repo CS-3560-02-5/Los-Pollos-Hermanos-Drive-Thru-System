@@ -73,7 +73,7 @@ font: 86pt &quot;Gabriola&quot;;</string>
           <string notr="true">image: url(:/logo/Los_Pollos.webp);</string>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
