@@ -148,14 +148,14 @@ class bridge:
                 cursor.execute("update menu_items set "
                                + attribute + " = "
                                + str(value) + " where item_id = "
-                               + menuItem.item_id)
+                               + str(menuItem.item_id))
             self.mydb.commit()
         elif attribute == "item_name" or attribute == "item_description":
             with self.mydb.cursor() as cursor:
                 cursor.execute("update menu_items set "
                                + attribute + " = "
                                + "\"" + value + "\" where item_id = "
-                               + str(MenuItem.item_id))
+                               + str(menuItem.item_id))
             self.mydb.commit()
         else:
             print("The attribute " + str(attribute) + " is not a valid value")
