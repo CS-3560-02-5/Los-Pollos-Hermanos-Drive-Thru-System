@@ -8,7 +8,6 @@ sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
 import manageOrderAttached
-import managerAttatched
 
 
 ####### Initial setup of running environment
