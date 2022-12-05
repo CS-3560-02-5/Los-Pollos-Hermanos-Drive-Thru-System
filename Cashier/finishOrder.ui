@@ -129,6 +129,11 @@ font: 26pt &quot;Arial&quot;;</string>
                  <string>Notes</string>
                 </property>
                </column>
+               <column>
+                <property name="text">
+                 <string>Price</string>
+                </property>
+               </column>
               </widget>
              </item>
             </layout>
@@ -148,7 +153,7 @@ font: 26pt &quot;Arial&quot;;</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
               <widget class="QLabel" name="nameLabel">
                <property name="styleSheet">
@@ -163,30 +168,85 @@ font: 26pt &quot;Forte&quot;;</string>
                </property>
               </widget>
              </item>
+             <item alignment="Qt::AlignBottom">
+              <widget class="QLabel" name="totalLabel">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 0, 0);
+font: 26pt &quot;Forte&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Total:</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
-          <item alignment="Qt::AlignTop">
-           <widget class="QFrame" name="inputNameFrm">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
+          <item>
+           <widget class="QFrame" name="frame">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_9">
-             <item>
-              <widget class="QLineEdit" name="inputNameLineEdit">
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 0, 0);
-font: 26pt &quot;Forte&quot;;</string>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item alignment="Qt::AlignTop">
+              <widget class="QFrame" name="inputNameFrm">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLineEdit" name="inputNameLineEdit">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 0, 0);
+font: 26pt &quot;Arial&quot;;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="inputTotalFrm">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item alignment="Qt::AlignBottom">
+                 <widget class="QLabel" name="displayTotal">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 0, 0);
+font: 26pt &quot;Arial&quot;;</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>

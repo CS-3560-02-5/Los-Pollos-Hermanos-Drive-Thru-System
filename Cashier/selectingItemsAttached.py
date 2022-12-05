@@ -1,12 +1,6 @@
-import sys
-from PyQt5 import *
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import *
-
-from welcomeScreen import *
-from selectingItems import *
-from finishOrderAttached import *
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
+from selectingItems import Ui_selectingItems
+from finishOrderAttached import finishOrderAttatched
 
 class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
 
@@ -56,7 +50,7 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.itemsQty = [None]*8
         self.itemsNotes = [None]*8
 
-        self.finishOrderWindow = QtWidgets.QMainWindow()
+        self.finishOrderWindow = QMainWindow()
         self.finishOrderUI = finishOrderAttatched(self.mass, self.finishOrderWindow)
 
         if(len(self.mass.orders) == 0):
@@ -130,14 +124,20 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
             self.itemsNotes[7] = notes8
 
         row = 0
+        totalPrice = 0
         for i in range(8):
             if(self.itemsName[i] != None):
                 self.finishOrderUI.orderTableWidget.insertRow(row)
                 self.finishOrderUI.orderTableWidget.setItem(row,0, QTableWidgetItem(self.itemsName[i]))
                 self.finishOrderUI.orderTableWidget.setItem(row,1, QTableWidgetItem(str(self.itemsQty[i])))
                 self.finishOrderUI.orderTableWidget.setItem(row,2, QTableWidgetItem(self.itemsNotes[i]))
+                print(self.itemsName[i])
+                totalItemPrice = next(x.price for x in self.mass.menu_items if x.item_name == self.itemsName[i])*self.itemsQty[i]
+                self.finishOrderUI.orderTableWidget.setItem(row,3, QTableWidgetItem("$ %.2f" % totalItemPrice))
+                totalPrice += totalItemPrice
                 row += 1
 
+        self.finishOrderUI.displayTotal.setText("$ %.2f" % totalPrice)
         self.finishOrderUI.show()
 
     def closeWindow(self):

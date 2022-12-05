@@ -1,10 +1,7 @@
-from manageOrderList import *
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QDialog
-from PyQt5.uic import loadUi
+from manageOrderList import Ui_MainWindow
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 import OrderItem
-import sys
+
 class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     #constructor
     def __init__(self, mass, parent = None):  
@@ -62,6 +59,8 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
         
     #deletes order from db
     def clickVoid(self):
+        delItemID = next(item.item_id for item in self.mass.menu_items if item.item_name == self.orderList_TableWidget.item(self.globalRow, 0).text())
+        self.mass.remove_order_item(next(item for item in self.mass.log[self.currentOrderID] if item.item_id == delItemID))
         self.orderList_TableWidget.removeRow(self.globalRow)
     
     #goes back to manageOrder    
@@ -76,13 +75,4 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
     #increments the quantity
     def spinSelected(self):
         if self.globalCol == 1:
-            self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QtWidgets.QTableWidgetItem(str(self.increment_spinBox.value())))
-    
-    
-#runs the application
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = manageOrderListAttached(MainWindow)
-    MainWindow.show()
-    app.exec_()
+            self.orderList_TableWidget.setItem(self.globalRow, self.globalCol, QTableWidgetItem(str(self.increment_spinBox.value())))

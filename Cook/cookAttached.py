@@ -1,8 +1,6 @@
 from cookGUI import *
-import sys
 from PyQt5 import *
 from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtCore import Qt
 
 
 class cookAttached(Ui_cookGUI, QMainWindow):
