@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QDialog
 import sys
 from managerGUI import Ui_ManagerOrder_MainWindow
 
-class managerAttatched(Ui_ManagerOrder_MainWindow, QMainWindow):
+class managerAttached(Ui_ManagerOrder_MainWindow, QMainWindow):
     def __init__(self, menu_items, parent=None):
         super().__init__(parent)
         self.setupUi(self)
