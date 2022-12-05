@@ -26,9 +26,10 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
     def setupDisplay(self, orders):
         self.ordersList.addItems([x.customer_name for x in orders])
     def setupButtons(self):
-        self.backButton.clicked.connect(lambda:self.close())
+        self.backButton.clicked.connect(self.clickBack)
         self.manageButton.clicked.connect(self.clickManage)
-    
+    def clickBack(self):
+        self.hide()
     def clickManage(self):
         #list & menuItem intilization
         nameList = []
