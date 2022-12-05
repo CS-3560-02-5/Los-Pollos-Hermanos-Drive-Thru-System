@@ -68,30 +68,42 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.mass.complete_order(self.submittedOrders[0])
         try:
             (self.submittedOrders.pop(3))
-            self.updateOrderSlots()
         except:
             pass
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot2(self, order):
         self.mass.complete_order(self.submittedOrders[0])
         try:
             (self.submittedOrders.pop(2))
-            self.updateOrderSlots()
         except:
             pass
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot3(self, order):
         self.mass.complete_order(self.submittedOrders[0])
         try:
             (self.submittedOrders.pop(1))
-            self.updateOrderSlots()
         except:
             pass
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
 
     def prepareOrderSlot4(self, order):
         self.mass.complete_order(self.submittedOrders[0])
         try:
             (self.submittedOrders.pop(0))
-            self.updateOrderSlots()
         except:
             pass
+        try:
+            self.updateOrderSlots()
+        except:
+            print("no actice orders: cook GUI closed")
