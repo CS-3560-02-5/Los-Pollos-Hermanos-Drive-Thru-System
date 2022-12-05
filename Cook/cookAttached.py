@@ -28,7 +28,8 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             self.listWidget.clear()
             self.orderNum1.setText(str(self.submittedOrders[3].queue_num))
             for item in self.mass.log[self.submittedOrders[3].order_id]:
-                self.listWidget.addItem("x" + str(item.quantity) + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+                self.listWidget.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
         except:
             pass
         try:
@@ -36,7 +37,8 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             self.listWidget_2.clear()
             self.orderNum2.setText(str(self.submittedOrders[2].queue_num))
             for item in self.mass.log[self.submittedOrders[2].order_id]:
-                self.listWidget_2.addItem("x" + str(item.quantity) + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+                self.listWidget_2.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
         except:
             pass
 
@@ -45,7 +47,8 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             self.listWidget_3.clear()
             self.orderNum3.setText(str(self.submittedOrders[1].queue_num))
             for item in self.mass.log[self.submittedOrders[1].order_id]:
-                self.listWidget_3.addItem("x" + str(item.quantity) + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+                self.listWidget_3.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
         except:
             pass
 
@@ -54,7 +57,8 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             self.listWidget_4.clear()
             self.orderNum4.setText(str(self.submittedOrders[0].queue_num))
             for item in self.mass.log[self.submittedOrders[0].order_id]:
-                self.listWidget_4.addItem("x" + str(item.quantity) + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
+                self.listWidget_4.addItem("x" + str(item.quantity)\
+                 + "  " + next(i.item_name for i in self.mass.menu_items if i.item_id == item.item_id) + "\n" +item.notes + "\n")
         except:
             pass
 
@@ -62,18 +66,26 @@ class cookAttached(Ui_cookGUI, QMainWindow):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
+        self.submittedOrders[0].order_status = 'c'
+        print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot2(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
+        self.submittedOrders[0].order_status = 'c'
+        print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot3(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
+        self.submittedOrders[0].order_status = 'c'
+        print(self.submittedOrders[0].order_status)
 
     def prepareOrderSlot4(self, order):
         self.submittedOrders[0].prepare()
         self.submittedOrders.pop(0)
         self.updateOrderSlots()
+        self.submittedOrders[0].order_status = 'c'
+        print(self.submittedOrders[0].order_status)
