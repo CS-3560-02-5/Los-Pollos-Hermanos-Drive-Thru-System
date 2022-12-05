@@ -59,7 +59,10 @@ class selectingItemsAttatched(Ui_selectingItems, QMainWindow):
         self.finishOrderWindow = QtWidgets.QMainWindow()
         self.finishOrderUI = finishOrderAttatched(self.mass, self.finishOrderWindow)
 
-        self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
+        if(len(self.mass.orders) == 0):
+            self.orderNumLabel.setText(str(1))
+        else:
+            self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
 
     
     def switchToFinishOrder(self):
