@@ -67,7 +67,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
             pass
 
     def prepareOrderSlot1(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[3])
         try:
             (self.submittedOrders.pop(3))
         except:
@@ -76,7 +76,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
 
 
     def prepareOrderSlot2(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[2])
         try:
             (self.submittedOrders.pop(2))
         except:
@@ -85,7 +85,7 @@ class cookAttached(Ui_cookGUI, QMainWindow):
 
 
     def prepareOrderSlot3(self, order):
-        self.mass.complete_order(self.submittedOrders[0])
+        self.mass.complete_order(self.submittedOrders[1])
         try:
             (self.submittedOrders.pop(1))
         except:
