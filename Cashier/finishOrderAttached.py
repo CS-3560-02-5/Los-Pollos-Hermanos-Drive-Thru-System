@@ -17,6 +17,7 @@ class finishOrderAttatched(Ui_finishOrder, QMainWindow):
         self.orderTableWidget.setColumnWidth(0, 200)
         self.orderTableWidget.setColumnWidth(1, 200)
         self.orderTableWidget.setColumnWidth(2, 400)
+        self.orderTableWidget.setColumnWidth(3, 200)
         self.backBtn.clicked.connect(self.goBack)
 
         if(len(self.mass.orders) == 0):
