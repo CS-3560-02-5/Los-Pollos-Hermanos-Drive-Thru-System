@@ -7,12 +7,8 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-
-
 import managerAttached
 import welcomeScreenAttatched
-
-
 import cookAttached
 from traits.api import *
 
@@ -23,8 +19,6 @@ app = QtWidgets.QApplication(sys.argv)
 
 welcome_win = QtWidgets.QMainWindow()
 welcomeUI = welcomeScreenAttatched.welcomeScreenAttatched(mass, welcome_win)
-
 cookGUIWindow = QtWidgets.QMainWindow()
 CookWindowUI = cookAttached.cookAttached(mass, cookGUIWindow)
-app.exec()
-
+app.exec_()
