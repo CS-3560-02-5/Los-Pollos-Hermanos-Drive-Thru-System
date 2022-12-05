@@ -8,21 +8,20 @@ sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
 import manageOrderAttached
-
+import managerGUI
+#import managerAttached
+#import welcomeScreenAttatched
 import cookAttached
-import cookGUI
-
-
-
+from traits.api import *
 
 
 
 ####### Initial setup of running environment
-
-
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
+welcome_win = QtWidgets.QMainWindow()
+#welcomeUI = welcomeScreenAttatched.welcomeScreenAttatched(mass, welcomewin)
 cookGUIWindow = QtWidgets.QMainWindow()
 CookWindowUI = cookAttached.cookAttached(mass, cookGUIWindow)
 app.exec()
