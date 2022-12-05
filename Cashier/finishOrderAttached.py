@@ -18,7 +18,11 @@ class finishOrderAttatched(Ui_finishOrder, QMainWindow):
         self.orderTableWidget.setColumnWidth(1, 200)
         self.orderTableWidget.setColumnWidth(2, 400)
         self.backBtn.clicked.connect(self.goBack)
-        self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
+        print(len(self.mass.orders))
+        if(len(self.mass.orders) == 0):
+            self.orderNumLabel.setText(str(1))
+        else:
+            self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
         self.submitOrderBtn.clicked.connect(self.sendToDatabase)
 
     def goBack(self):
