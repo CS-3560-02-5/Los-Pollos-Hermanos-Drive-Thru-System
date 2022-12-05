@@ -7,12 +7,8 @@ from PyQt5 import QtCore, QtWidgets
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
-
-
 import managerAttached
 import welcomeScreenAttatched
-
-
 import cookAttached
 import cookGUI
 
