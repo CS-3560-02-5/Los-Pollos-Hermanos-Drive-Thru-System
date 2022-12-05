@@ -18,6 +18,8 @@ import managerAttatched
 mass = data_bridge.bridge("sql.json")
 
 app = QtWidgets.QApplication(sys.argv)
-manager_win = QtWidgets.QMainWindow()
-manager_ui = managerAttatched.managerAttatched(mass, manager_win)
+#manager_win = QtWidgets.QMainWindow()
+#manager_ui = managerAttatched.managerAttatched(mass, manager_win)
+manageOrder = QtWidgets.QMainWindow()
+manage_ui = manageOrderAttached.manageOrderAttached(mass, manageOrder)
 app.exec_()

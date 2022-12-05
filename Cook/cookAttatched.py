@@ -28,7 +28,6 @@ class cookGUIAttached(Ui_cookGUI):
 
         self.orderNum1.setText(str(test1))
         self.textArea1.setText(orderStr)
-        print(orderStr)
 
     def updateOrderSlot2(self):
         test1 = 2
@@ -46,7 +45,6 @@ class cookGUIAttached(Ui_cookGUI):
 
         self.orderNum2.setText(str(test1))
         self.textArea2.setText(orderStr)
-        print(orderStr)
 
     def updateOrderSlot3(self):
         test1 = 3
@@ -64,7 +62,6 @@ class cookGUIAttached(Ui_cookGUI):
 
         self.orderNum3.setText(str(test1))
         self.textArea3.setText(orderStr)
-        print(orderStr)
 
     def updateOrderSlot4(self):
         test1 = 4
@@ -82,7 +79,6 @@ class cookGUIAttached(Ui_cookGUI):
 
         self.orderNum4.setText(str(test1))
         self.textArea4.setText(orderStr)
-        print(orderStr)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

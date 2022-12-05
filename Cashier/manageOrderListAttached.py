@@ -40,31 +40,24 @@ class manageOrderListAttached(Ui_MainWindow, QMainWindow):
         
         #pulls customer name from custName_LineEdit (cuts off suffix)
         custName_Complete = self.custName_LineEdit.text()[:-9]
-        print("custName_Complete:", custName_Complete)
         
         #adds all the edited attributes to respective lists
         for row in range(numRows):
             nameList_Complete.append(self.orderList_TableWidget.item(row, 0).text())
             quantList_Complete.append(self.orderList_TableWidget.item(row, 1).text())
             notesList_Complete.append(self.orderList_TableWidget.item(row, 2).text())
-        print("nameList_Complete:", nameList_Complete)
-        print("quantList_Complete:", quantList_Complete)
-        print("notesList_Complete:", notesList_Complete)
             
         #changes nameList into menuID's in menuIDList_Complete
         for item in nameList_Complete:
             menuID = next(i.item_id for i in self.mass.menu_items if i.item_name == item)
             menuIDList_Complete.append(menuID)
-            print("menuIDList_Complete:", menuIDList_Complete)
         
     #deletes order from db
     def clickVoid(self):
         self.orderList_TableWidget.removeRow(self.globalRow)
-        print("void works")
     
     #goes back to manageOrder    
     def clickBack(self):
-        print("back works")
         self.hide()
     
     #edits quantity of clicked cell
