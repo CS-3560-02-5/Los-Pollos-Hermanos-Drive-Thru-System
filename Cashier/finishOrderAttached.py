@@ -18,7 +18,11 @@ class finishOrderAttatched(Ui_finishOrder, QMainWindow):
         self.orderTableWidget.setColumnWidth(1, 200)
         self.orderTableWidget.setColumnWidth(2, 400)
         self.backBtn.clicked.connect(self.goBack)
-        self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
+        print(len(self.mass.orders))
+        if(len(self.mass.orders) == 0):
+            self.orderNumLabel.setText(str(1))
+        else:
+            self.orderNumLabel.setText(str(self.mass.orders[-1].queue_num+1))
         self.submitOrderBtn.clicked.connect(self.sendToDatabase)
 
     def goBack(self):
@@ -29,6 +33,7 @@ class finishOrderAttatched(Ui_finishOrder, QMainWindow):
         self.hide()
 
     def sendToDatabase(self):
+        self.hide()
         newOrder = Order.Order(self.inputNameLineEdit.text())
         self.mass.add_order(newOrder)
         row = self.orderTableWidget.rowCount()
@@ -39,4 +44,3 @@ class finishOrderAttatched(Ui_finishOrder, QMainWindow):
             orderNotes = self.orderTableWidget.item(row, 2).text()
             temp = newOrder.createOrderItem(int(orderId), quantity=int(orderQty), notes=orderNotes)
             self.mass.add_order_item(temp)
-        self.hide()

@@ -13,7 +13,6 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         super().__init__(parent)
         self.setupUi(self)
         self.mass = mass
-        print(self.ordersList)
         self.setupDisplay(mass.orders)
         self.setupButtons()
         self.show()
@@ -46,21 +45,15 @@ class manageOrderAttached(Ui_MainWindow, QMainWindow):
         #current custName sent to josh.custName_LineEdit
         self.josh.custName_var = orderName
         self.josh.custName_LineEdit.setText(self.josh.custName_var + "'s Order:")
-        print(orderID)
-        print("josh.custName", self.josh.custName_var)
-        print("order name", orderName)
         
         # for each item in given order, it puts each attribute into it's respective list
         for item in orderItems:
             name = next(i.item_name for i in menuItems if i.item_id == item.item_id)
             nameList.append(name)
-            print("name", str(name))
             quantity = item.quantity
             quantList.append(quantity)
-            print("quantity", str(quantity))
             notes = item.notes
             notesList.append(notes)
-            print("notes", str(notes))
             
         #initialize row count
         self.josh.orderList_TableWidget.setRowCount(len(nameList))
