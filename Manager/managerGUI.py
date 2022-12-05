@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'managerGUI.ui'
+# Form implementation generated from reading ui file '.\managerGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -118,13 +118,3 @@ class Ui_ManagerOrder_MainWindow(object):
         self.addItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "ADD ITEM"))
         self.editItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "EDIT ITEM"))
         self.removeItem_pushButton.setText(_translate("ManagerOrder_MainWindow", "REMOVE ITEM"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    ManagerOrder_MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_ManagerOrder_MainWindow()
-    ui.setupUi(ManagerOrder_MainWindow)
-    ManagerOrder_MainWindow.show()
-    sys.exit(app.exec_())
