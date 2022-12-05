@@ -56,6 +56,7 @@ class Ui_welcomeScreen(object):
         self.logoLabel.setSizePolicy(sizePolicy)
         self.logoLabel.setFocusPolicy(QtCore.Qt.NoFocus)
         self.logoLabel.setStyleSheet("image: url(:/logo/Los_Pollos.webp);")
+        self.logoLabel.setText("")
         self.logoLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.logoLabel.setObjectName("logoLabel")
         self.horizontalLayout_3.addWidget(self.logoLabel)
@@ -105,7 +106,6 @@ class Ui_welcomeScreen(object):
         _translate = QtCore.QCoreApplication.translate
         welcomeScreen.setWindowTitle(_translate("welcomeScreen", "MainWindow"))
         self.welcomeLabel.setText(_translate("welcomeScreen", "Welcome"))
-        self.logoLabel.setText(_translate("welcomeScreen", "TextLabel"))
         self.manageOrderBtn.setText(_translate("welcomeScreen", "Manage Order"))
         self.createOrderBtn.setText(_translate("welcomeScreen", "Create Order"))
 import logosource
