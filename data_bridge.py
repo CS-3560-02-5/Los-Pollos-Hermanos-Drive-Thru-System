@@ -245,8 +245,6 @@ class bridge:
                                + OrderItem.order_id + "\" and item_id = "
                                + str(OrderItem.item_id))
             self.mydb.commit()
-        else:
-            print("The attribute " + str(attribute) + " is not a valid value")
 
 if __name__ == "__main__":
     mass = bridge("sql.json")
