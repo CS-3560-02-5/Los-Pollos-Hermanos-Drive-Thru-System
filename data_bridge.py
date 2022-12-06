@@ -148,18 +148,15 @@ class bridge:
                 cursor.execute("update menu_items set "
                                + attribute + " = "
                                + str(value) + " where item_id = "
-                               + menuItem.item_id)
+                               + str(menuItem.item_id))
             self.mydb.commit()
         elif attribute == "item_name" or attribute == "item_description":
             with self.mydb.cursor() as cursor:
                 cursor.execute("update menu_items set "
                                + attribute + " = "
                                + "\"" + value + "\" where item_id = "
-                               + str(MenuItem.item_id))
+                               + str(menuItem.item_id))
             self.mydb.commit()
-        else:
-            print("The attribute " + str(attribute) + " is not a valid value")
-
     ################# Order Operations #################
 
     def db_add_order(self, order: Order.Order):
@@ -199,8 +196,6 @@ class bridge:
                                + "\"" + value + "\" where order_id = \""
                                + Order.order_id + "\"")
             self.mydb.commit()
-        else:
-            print("The attribute " + str(attribute) + " is not a valid value")
     
     def db_update_order(self, Order: Order):
         """Update an every attribute of a single order in the database"""
@@ -245,6 +240,3 @@ class bridge:
                                + OrderItem.order_id + "\" and item_id = "
                                + str(OrderItem.item_id))
             self.mydb.commit()
-
-if __name__ == "__main__":
-    mass = bridge("sql.json")

@@ -1,9 +1,6 @@
-import MenuItem
-import OrderItem
 import data_bridge
-import Order
 import sys
-from PyQt5 import QtCore, QtWidgets 
+from PyQt5 import QtWidgets 
 sys.path.append("Manager")
 sys.path.append("Cook")
 sys.path.append("Cashier")
@@ -22,4 +19,6 @@ welcome_win = QtWidgets.QMainWindow()
 welcomeUI = welcomeScreenAttatched.welcomeScreenAttatched(mass, welcome_win)
 cookGUIWindow = QtWidgets.QMainWindow()
 CookWindowUI = cookAttached.cookAttached(mass, cookGUIWindow)
+manager_win = QtWidgets.QMainWindow()
+manager_ui = managerAttached.managerAttached(mass, manager_win)
 app.exec_()
